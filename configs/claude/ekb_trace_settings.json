@@ -1,0 +1,92 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=SessionStart python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=UserPromptSubmit python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=PreToolUse python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=PostToolUse python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=PostToolUseFailure python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=Stop python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=StopFailure python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "EKB_HOOK_EVENT=SessionEnd python3 \"$CLAUDE_PROJECT_DIR\"/scripts/_claude_trace_hook.py"
+          }
+        ]
+      }
+    ]
+  }
+}

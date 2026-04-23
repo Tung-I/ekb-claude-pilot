@@ -1,0 +1,24 @@
+data/*
+results/*
+traces/*
+.env
+
+# local secrets
+.env
+.env.*
+
+# experiment outputs
+results/
+outputs/
+checkpoints/
+wandb/
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.pkl
+*.mp4
+*.zip
+*.tar
+*.tar.gz
