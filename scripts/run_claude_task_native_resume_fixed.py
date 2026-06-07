@@ -20,7 +20,7 @@ source .env
 set +a
 
 Dry run:
-python scripts/run_claude_task_native_resume.py \
+python scripts/run_claude_task_native_resume_fixed.py \
   --input data/gaia_paraphrases/gaia_level1_expanded.jsonl \
   --run-name gaia_level1_expanded_claude_dryrun \
   --limit 2 \
@@ -30,7 +30,7 @@ python scripts/run_claude_task_native_resume.py \
   --disable-session-archive
 
 Full run:
-python scripts/run_claude_task_native_resume.py \
+python scripts/run_claude_task_native_resume_fixed.py \
   --input data/gaia_paraphrases/gaia_level1_expanded.jsonl \
   --run-name gaia_level1_expanded_claude_native_maxturn12 \
   --model sonnet \
@@ -229,6 +229,21 @@ def append_jsonl(path: Path, obj: Dict[str, Any]) -> None:
 
 def safe_task_id(task_id: str) -> str:
     return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in str(task_id))
+
+
+def reset_task_dirs(task_trace_dir: Path, task_result_dir: Path) -> None:
+    """
+    Remove stale per-task trace/result directories before a rerun.
+    This prevents old hook_events / stdout / output JSON from being
+    concatenated into a new execution trace.
+    """
+    if task_trace_dir.exists():
+        shutil.rmtree(task_trace_dir)
+    if task_result_dir.exists():
+        shutil.rmtree(task_result_dir)
+
+    task_trace_dir.mkdir(parents=True, exist_ok=True)
+    task_result_dir.mkdir(parents=True, exist_ok=True)
 
 
 def parse_cli_json(stdout_text: str) -> Optional[Dict[str, Any]]:
@@ -700,8 +715,7 @@ def run_one_task(
     safe_id = safe_task_id(task["task_id"])
     task_trace_dir = trace_root / "claude_native" / run_name / safe_id
     task_result_dir = result_root / "claude_native" / run_name / safe_id
-    task_trace_dir.mkdir(parents=True, exist_ok=True)
-    task_result_dir.mkdir(parents=True, exist_ok=True)
+    reset_task_dirs(task_trace_dir, task_result_dir)
 
     prompt = build_prompt(task)
     write_text(task_trace_dir / "task_prompt.txt", prompt)

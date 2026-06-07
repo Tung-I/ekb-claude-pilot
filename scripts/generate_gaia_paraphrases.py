@@ -33,7 +33,7 @@ Full run:
     --input data/gaia/prepared/gaia_level1_prepared.jsonl \
     --output-root results/gaia_paraphrases \
     --model sonnet \
-    --effort low
+    --effort medium
 
 Resume next day:
   run the exact same command again; completed tasks will be skipped.
