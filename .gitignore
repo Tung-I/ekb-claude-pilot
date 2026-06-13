@@ -1,15 +1,9 @@
-data/*
-results/*
-traces/*
-.env
-
 # local secrets
 .env
 .env.*
 
 # experiment outputs
-results/
-outputs/
+traces/
 checkpoints/
 wandb/
 *.pt

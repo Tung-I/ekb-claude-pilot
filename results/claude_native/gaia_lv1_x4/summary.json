@@ -1,0 +1,15 @@
+{
+  "input": "/tmp/lv1_final4_rerun.jsonl",
+  "run_name": "gaia_lv1_x4",
+  "started_at": "2026-06-12T22:56:26.892469+00:00",
+  "ended_at": "2026-06-12T23:45:30.831954+00:00",
+  "selected_tasks": 4,
+  "completed": 3,
+  "failed": 1,
+  "skipped": 0,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 1311686,
+  "settings_path": "/work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}

@@ -1,0 +1,7 @@
+# gaia_lv1 Removed Tasks Record
+# Format: task_id | reason | date_removed
+# This file records tasks removed from data/gaia/gaia_lv1.jsonl
+# and data/gaia_paraphrased/gaia_lv1_x4.jsonl, along with their
+# output trace folders under traces/claude_native/gaia_lv1_x4/.
+
+4b6bb5f7-f634-410e-815d-e673ab7f8632 | Exhausted both --max-turns 64 and --timeout-sec 600 across all 4 variants (base + para1-3) without producing a final answer. The task involves fetching and analyzing a PDF screenplay requiring excessive tool calls (60-69+) and runtime (>600s). Para1 and para2 hit error_max_turns at turn 65; base and para3 hit the 600s timeout. Deemed too resource-intensive to include. | 2026-06-12
