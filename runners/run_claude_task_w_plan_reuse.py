@@ -1,50 +1,61 @@
 #!/usr/bin/env python3
 """
-Run GAIA test tasks with execution-plan reuse from the knowledge base.
+Run GAIA test tasks with execution-plan reuse from a paraphrase knowledge base.
 
-For each test task the script looks up traces/plan-caching-study/test/<task_id>/3nn_meta.json,
-selects the best knowledge-base neighbor that passes the similarity threshold, and
-instructs the agent to follow that neighbor's tool sequence exactly (cache hit).
-If no eligible neighbor exists the agent plans freely (cache miss).
+KB / retrieval approach
+-----------------------
+At startup the script builds an in-memory knowledge-base index from:
+  1. A KB task-ID list JSONL  (--kb-jsonl, e.g. data/gaia_paraphrased/gaia_lv1_x4_kb.jsonl)
+  2. Pre-computed query embeddings  (embeddings/claude_native/<kb-embedding-run>/<task_id>/query_embedding.npy)
+  3. Normalized traces  (traces/claude_native/<kb-trace-run>/<task_id>/normalized_trace.json)
 
-The "best" neighbor is chosen by sorting eligible neighbors (similarity >= --min-similarity)
-on the metric given by --plan-rank-by (lower is better, default: total_tokens).
+For each test task:
+  1. Load its query embedding (pre-computed from the KB embedding run; compute at
+     runtime if not found).
+  2. Find the top-k (default 5, --top-k) KB neighbors by cosine similarity.
+  3. Filter out neighbors with similarity < --min-similarity (default 0.8).
+  4. Among survivors, rank by {"total_tool_calls", "total_tokens", "total_latency_ms"} ascending (fewer = better).
+  5. Inject the winner's tool sequence as a plan template into the prompt.
+  6. If no neighbor survives filtering → cache miss; agent plans freely.
 
-The output traces are structurally identical to those produced by
-run_claude_task_native_resume_fixed.py with three extra fields added to
-normalized_trace.json:
-    cache_hit              bool
-    cache_source_task_id   str | null
-    cache_source_similarity float | null
-    cached_tool_sequence   list[str] | null
-    plan_rank_by           str
-    min_similarity_threshold float
+The prompt on a cache hit is identical to run_claude_task.py EXCEPT for the
+appended plan-template block, making the plan template the sole independent
+variable.
 
-Env vars required (same as the original runner):
-    EKB_ROOT    – repo root
-    TRACE_ROOT  – where raw per-task trace files are written
-    RESULT_ROOT – where normalized_trace.json is written
+Output structure
+----------------
+Same as run_claude_task.py:
+  traces/claude_native/<run-name>/<task_id>/  — all per-task files including
+      normalized_trace.json (with extra cache_* fields)
+  results/claude_native/<run-name>/results.jsonl
+  results/claude_native/<run-name>/summary.json
 
-Dry run:
-python runners/run_claude_task_w_plan_reuse.py \\
-  --input data/gaia/gaia_lv1.jsonl \\
-  --run-name gaia_test_plan_reuse_dryrun \\
-  --limit 2 \\
-  --model sonnet \\
-  --effort medium \\
-  --max-turns 16 \\
-  --disable-session-archive
+Run LV1 and LV2 separately (they have different KB jsonl and trace runs):
 
-Full run:
-python runners/run_claude_task_w_plan_reuse.py \
-  --input data/gaia/gaia_lv1.jsonl \
-  --run-name gaia_test_plan_reuse_rank_token \
-  --model sonnet \
-  --effort medium \
-  --max-turns 16 \
-  --plan-rank-by total_tokens \
-  --min-similarity 0.8 \
-  --disable-session-archive
+  python runners/run_claude_task_w_plan_reuse.py \
+    --input data/gaia/gaia_lv1.jsonl \
+    --run-name gaia_lv1_plan_reuse_rank_by_step \
+    --kb-jsonl data/gaia_paraphrased/gaia_lv1_x4_kb.jsonl \
+    --kb-trace-run gaia_lv1_x4 \
+    --model sonnet --effort medium --max-turns 64 \
+    --timeout-sec 600 \
+    --plan-rank-by total_tool_calls \
+    --disable-session-archive
+
+  python runners/run_claude_task_w_plan_reuse.py \
+    --input data/gaia/gaia_lv2.jsonl \
+    --run-name gaia_lv2_plan_reuse_rank_by_step \
+    --kb-jsonl data/gaia_paraphrased/gaia_lv2_x3_kb.jsonl \
+    --kb-trace-run gaia_lv2_x3 \
+    --model sonnet --effort medium --max-turns 64 \
+    --timeout-sec 900 \
+    --plan-rank-by total_tool_calls \
+    --disable-session-archive
+
+Env vars (same as run_claude_task.py):
+  EKB_ROOT    – repo root
+  TRACE_ROOT  – per-task trace directories
+  RESULT_ROOT – run-level results.jsonl / summary.json
 """
 
 from __future__ import annotations
@@ -52,31 +63,31 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import textwrap
 import time
-import uuid
-
-import re
 import unicodedata
-from decimal import Decimal, InvalidOperation
-from typing import Optional
-
+import uuid
 from collections import defaultdict, deque
 from datetime import datetime, timezone
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
+import numpy as np
+
 try:
     from dotenv import load_dotenv
+    load_dotenv()
 except ImportError:
-    load_dotenv = None
+    pass
 
-LEADING_STRIP_CHARS = "\"'`“”‘’([{<"
-TRAILING_STRIP_CHARS = "\"'`“”‘’.,;:!?)]}>"
-CURRENCY_CHARS = "$€\xa3\xa5₹₩₽₪฿₫₴₦₱₲₵₡₺₸₼₭₮₨"
 
+# ---------------------------------------------------------------------------
+# Embedded hook script
+# ---------------------------------------------------------------------------
 HOOK_SCRIPT = r'''#!/usr/bin/env python3
 import json
 import os
@@ -119,6 +130,9 @@ if __name__ == "__main__":
     raise SystemExit(main())
 '''
 
+# ---------------------------------------------------------------------------
+# Constants
+# ---------------------------------------------------------------------------
 FINAL_OUTPUT_SCHEMA = {
     "type": "object",
     "properties": {
@@ -130,28 +144,31 @@ FINAL_OUTPUT_SCHEMA = {
     "additionalProperties": False,
 }
 
-DEFAULT_ALLOWED_TOOLS = ",".join(
-    [
-        "Read",
-        "Glob",
-        "Grep",
-        "WebSearch",
-        "WebFetch",
-        "Bash(python *)",
-        "Bash(python3 *)",
-        "Bash(cat *)",
-        "Bash(head *)",
-        "Bash(ls *)",
-        "Bash(find *)",
-        "Bash(grep *)",
-        "Bash(file *)",
-        "Bash(unzip *)",
-        "Bash(jq *)",
-    ]
-)
+# Identical to run_claude_task.py — must not diverge (control variable).
+DEFAULT_ALLOWED_TOOLS = ",".join([
+    "Read",
+    "Glob",
+    "Grep",
+    "WebSearch",
+    "WebFetch",
+    "Bash(python *)",
+    "Bash(python3 *)",
+    "Bash(cat *)",
+    "Bash(head *)",
+    "Bash(tail *)",
+    "Bash(ls *)",
+    "Bash(find *)",
+    "Bash(grep *)",
+    "Bash(sed *)",
+    "Bash(awk *)",
+    "Bash(file *)",
+    "Bash(unzip *)",
+    "Bash(jq *)",
+    "Bash(date *)",
+])
 
-APPEND_SYSTEM_PROMPT = textwrap.dedent(
-    """
+# Identical to run_claude_task.py — must not diverge (control variable).
+APPEND_SYSTEM_PROMPT = textwrap.dedent("""
     You are running exactly one benchmark task. Work efficiently and stop early.
 
     Rules:
@@ -165,8 +182,7 @@ APPEND_SYSTEM_PROMPT = textwrap.dedent(
     - Do not create or edit files unless absolutely unavoidable.
     - The final answer should be concise and match the benchmark's expected format.
     - Return the final answer through the structured output only.
-    """
-).strip()
+""").strip()
 
 LIMIT_PATTERNS = [
     "you've hit your limit",
@@ -186,14 +202,21 @@ LIMIT_PATTERNS = [
     "capacity",
 ]
 
+LEADING_STRIP_CHARS  = "'\"‘’“”`([{<"
+TRAILING_STRIP_CHARS = "'\"‘’“”`.,;:!?)]}>"
+CURRENCY_CHARS = "$€\xa3\xa5₹₩₽₪฿₫₴₦₱₲₵₡₺₸₼₭₮₨"
+
+TOOL_RESULT_MAX_CHARS = 10_000
+
 # Tools that are infrastructure overhead, not part of the semantic plan.
-# Filtered out when extracting the plan template from a KB trace.
 _INFRA_TOOLS = {"ToolSearch"}
 
+AUDIO_EXTENSIONS = {".mp3", ".wav", ".m4a", ".flac", ".ogg", ".opus", ".aac"}
 
-# -----------------------------
-# Utility helpers (unchanged from original runner)
-# -----------------------------
+
+# ---------------------------------------------------------------------------
+# Utility helpers  (identical to run_claude_task.py)
+# ---------------------------------------------------------------------------
 def utcnow() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -236,13 +259,10 @@ def safe_task_id(task_id: str) -> str:
     return "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in str(task_id))
 
 
-def reset_task_dirs(task_trace_dir: Path, task_result_dir: Path) -> None:
+def reset_task_dir(task_trace_dir: Path) -> None:
     if task_trace_dir.exists():
         shutil.rmtree(task_trace_dir)
-    if task_result_dir.exists():
-        shutil.rmtree(task_result_dir)
     task_trace_dir.mkdir(parents=True, exist_ok=True)
-    task_result_dir.mkdir(parents=True, exist_ok=True)
 
 
 def parse_cli_json(stdout_text: str) -> Optional[Dict[str, Any]]:
@@ -277,14 +297,14 @@ def install_hook_assets(ekb_root: Path) -> Tuple[Path, Path]:
     hook_cmd = 'python3 "$CLAUDE_PROJECT_DIR"/tools/_claude_trace_hook.py'
     settings_obj = {
         "hooks": {
-            "SessionStart": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=SessionStart {hook_cmd}'}]}],
-            "UserPromptSubmit": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=UserPromptSubmit {hook_cmd}'}]}],
-            "PreToolUse": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=PreToolUse {hook_cmd}'}]}],
-            "PostToolUse": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=PostToolUse {hook_cmd}'}]}],
+            "SessionStart":       [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=SessionStart {hook_cmd}'}]}],
+            "UserPromptSubmit":   [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=UserPromptSubmit {hook_cmd}'}]}],
+            "PreToolUse":         [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=PreToolUse {hook_cmd}'}]}],
+            "PostToolUse":        [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=PostToolUse {hook_cmd}'}]}],
             "PostToolUseFailure": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=PostToolUseFailure {hook_cmd}'}]}],
-            "Stop": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=Stop {hook_cmd}'}]}],
-            "StopFailure": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=StopFailure {hook_cmd}'}]}],
-            "SessionEnd": [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=SessionEnd {hook_cmd}'}]}],
+            "Stop":               [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=Stop {hook_cmd}'}]}],
+            "StopFailure":        [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=StopFailure {hook_cmd}'}]}],
+            "SessionEnd":         [{"matcher": "", "hooks": [{"type": "command", "command": f'EKB_HOOK_EVENT=SessionEnd {hook_cmd}'}]}],
         }
     }
     settings_path = ekb_root / "configs" / "claude" / "ekb_trace_settings.json"
@@ -299,8 +319,9 @@ def extract_usage(parsed_cli: Optional[Dict[str, Any]]) -> Dict[str, Any]:
     if isinstance(usage, dict):
         return usage
     out: Dict[str, Any] = {}
-    for key in ("cost_usd", "cost", "duration_ms", "duration", "input_tokens",
-                "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens"):
+    for key in ("cost_usd", "cost", "duration_ms", "duration",
+                "input_tokens", "output_tokens",
+                "cache_creation_input_tokens", "cache_read_input_tokens"):
         if key in parsed_cli:
             out[key] = parsed_cli[key]
     return out
@@ -311,7 +332,8 @@ def extract_total_tokens(usage: Dict[str, Any]) -> Optional[int]:
         return None
     total = 0
     found = False
-    for key in ("input_tokens", "output_tokens", "cache_creation_input_tokens", "cache_read_input_tokens"):
+    for key in ("input_tokens", "output_tokens",
+                "cache_creation_input_tokens", "cache_read_input_tokens"):
         value = usage.get(key)
         if isinstance(value, (int, float)):
             total += int(value)
@@ -330,13 +352,13 @@ def load_hook_events(path: Path) -> List[Dict[str, Any]]:
 def tool_kind(tool_name: str) -> str:
     mapping = {
         "WebSearch": "web_search",
-        "WebFetch": "web_fetch",
-        "Bash": "bash_command",
-        "Read": "file_read",
-        "Glob": "file_glob",
-        "Grep": "file_grep",
-        "Write": "file_write",
-        "Edit": "file_edit",
+        "WebFetch":  "web_fetch",
+        "Bash":      "bash_command",
+        "Read":      "file_read",
+        "Glob":      "file_glob",
+        "Grep":      "file_grep",
+        "Write":     "file_write",
+        "Edit":      "file_edit",
     }
     return mapping.get(tool_name, tool_name.lower() if tool_name else "unknown")
 
@@ -345,16 +367,11 @@ def short_detail(tool_name: str, tool_input: Any) -> Any:
     if not isinstance(tool_input, dict):
         return tool_input
     preferred_keys = ["command", "query", "url", "file_path", "pattern", "path", "paths"]
-    detail: Dict[str, Any] = {}
-    for key in preferred_keys:
-        if key in tool_input:
-            detail[key] = tool_input[key]
+    detail: Dict[str, Any] = {k: tool_input[k] for k in preferred_keys if k in tool_input}
     if detail:
         return detail
     text = json.dumps(tool_input, ensure_ascii=False)
-    if len(text) <= 400:
-        return tool_input
-    return text[:400] + "...<truncated>"
+    return tool_input if len(text) <= 400 else text[:400] + "...<truncated>"
 
 
 def payload_tool_name(payload: Dict[str, Any]) -> str:
@@ -366,7 +383,7 @@ def payload_tool_input(payload: Dict[str, Any]) -> Any:
 
 
 def pre_key(payload: Dict[str, Any]) -> str:
-    name = payload_tool_name(payload)
+    name      = payload_tool_name(payload)
     tool_input = payload_tool_input(payload)
     try:
         sig = json.dumps(tool_input, sort_keys=True, ensure_ascii=False)
@@ -375,9 +392,26 @@ def pre_key(payload: Dict[str, Any]) -> str:
     return f"{name}::{sig}"
 
 
+def truncate_tool_result(result: Any) -> Tuple[Any, bool]:
+    if result is None:
+        return result, False
+    if isinstance(result, str):
+        if len(result) <= TOOL_RESULT_MAX_CHARS:
+            return result, False
+        return result[:TOOL_RESULT_MAX_CHARS] + "...<truncated>", True
+    try:
+        text = json.dumps(result, ensure_ascii=False)
+    except TypeError:
+        text = repr(result)
+    if len(text) <= TOOL_RESULT_MAX_CHARS:
+        return result, False
+    return text[:TOOL_RESULT_MAX_CHARS] + "...<truncated>", True
+
+
 def pair_tool_events(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    pres_by_id:    Dict[str, Any]   = {}
     pres_by_exact: Dict[str, deque] = defaultdict(deque)
-    pres_by_name: Dict[str, deque] = defaultdict(deque)
+    pres_by_name:  Dict[str, deque] = defaultdict(deque)
     steps: List[Dict[str, Any]] = []
     step_idx = 0
 
@@ -388,8 +422,11 @@ def pair_tool_events(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             payload = {"_payload": payload}
 
         if hook_event == "PreToolUse":
-            key = pre_key(payload)
-            name = payload_tool_name(payload)
+            key    = pre_key(payload)
+            name   = payload_tool_name(payload)
+            use_id = payload.get("tool_use_id")
+            if use_id:
+                pres_by_id[use_id] = rec
             pres_by_exact[key].append(rec)
             pres_by_name[name].append(rec)
             continue
@@ -397,11 +434,21 @@ def pair_tool_events(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         if hook_event not in ("PostToolUse", "PostToolUseFailure"):
             continue
 
-        name = payload_tool_name(payload)
-        key = pre_key(payload)
+        name   = payload_tool_name(payload)
+        key    = pre_key(payload)
+        use_id = payload.get("tool_use_id")
 
         pre_rec = None
-        if pres_by_exact[key]:
+        if use_id and use_id in pres_by_id:
+            pre_rec     = pres_by_id.pop(use_id)
+            pre_payload = pre_rec.get("payload", {})
+            pre_key_val = pre_key(pre_payload)
+            pre_name    = payload_tool_name(pre_payload)
+            if pres_by_exact[pre_key_val]:
+                pres_by_exact[pre_key_val].popleft()
+            if pres_by_name[pre_name]:
+                pres_by_name[pre_name].popleft()
+        elif pres_by_exact[key]:
             pre_rec = pres_by_exact[key].popleft()
             if pres_by_name[name]:
                 pres_by_name[name].popleft()
@@ -409,30 +456,38 @@ def pair_tool_events(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             pre_rec = pres_by_name[name].popleft()
 
         step_idx += 1
-        start_ts = None
-        latency_ms = None
+        start_ts = latency_ms = None
         if pre_rec:
             start_str = pre_rec.get("logged_at")
-            end_str = rec.get("logged_at")
+            end_str   = rec.get("logged_at")
             if start_str and end_str:
                 try:
-                    start_dt = datetime.fromisoformat(start_str)
-                    end_dt = datetime.fromisoformat(end_str)
+                    start_dt   = datetime.fromisoformat(start_str)
+                    end_dt     = datetime.fromisoformat(end_str)
                     latency_ms = int((end_dt - start_dt).total_seconds() * 1000)
-                    start_ts = start_str
+                    start_ts   = start_str
                 except Exception:
-                    latency_ms = None
+                    pass
 
         tool_input = payload_tool_input(payload)
+        if hook_event == "PostToolUse":
+            raw_result = payload.get("tool_response")
+        else:
+            raw_result = payload.get("error") or payload.get("tool_response")
+        tool_result, was_truncated = truncate_tool_result(raw_result)
+
         steps.append({
-            "step": step_idx,
-            "type": tool_kind(name),
-            "tool": name,
-            "action_detail": short_detail(name, tool_input),
-            "status": "success" if hook_event == "PostToolUse" else "failure",
-            "started_at": start_ts,
-            "ended_at": rec.get("logged_at"),
-            "latency_ms": latency_ms,
+            "step":                  step_idx,
+            "type":                  tool_kind(name),
+            "tool":                  name,
+            "tool_use_id":           use_id,
+            "action_detail":         short_detail(name, tool_input),
+            "tool_result":           tool_result,
+            "tool_result_truncated": was_truncated,
+            "status":                "success" if hook_event == "PostToolUse" else "failure",
+            "started_at":            start_ts,
+            "ended_at":              rec.get("logged_at"),
+            "latency_ms":            latency_ms,
         })
 
     return steps
@@ -464,19 +519,16 @@ def search_session_jsonl(session_id: str, start_unix: float) -> Optional[Path]:
 
 
 def _normalize_basic_text(s: str) -> str:
-    s = unicodedata.normalize("NFKC", str(s))
-    s = s.casefold()
+    s = unicodedata.normalize("NFKC", str(s)).casefold()
     s = re.sub(r"\s+", " ", s).strip()
     s = s.strip(LEADING_STRIP_CHARS + TRAILING_STRIP_CHARS)
     s = re.sub(rf"[{re.escape(TRAILING_STRIP_CHARS)}]+$", "", s).strip()
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def _canonicalize_decimal_string(x: str) -> Optional[str]:
     s = unicodedata.normalize("NFKC", str(x)).strip()
-    s = s.strip(LEADING_STRIP_CHARS + TRAILING_STRIP_CHARS)
-    s = s.replace(" ", "")
+    s = s.strip(LEADING_STRIP_CHARS + TRAILING_STRIP_CHARS).replace(" ", "")
     while s and s[0] in CURRENCY_CHARS:
         s = s[1:]
     while s and s[-1] in CURRENCY_CHARS:
@@ -493,9 +545,7 @@ def _canonicalize_decimal_string(x: str) -> Optional[str]:
     out = format(d, "f")
     if "." in out:
         out = out.rstrip("0").rstrip(".")
-    if out == "-0":
-        out = "0"
-    return out
+    return "0" if out == "-0" else out
 
 
 def exact_match(pred: Optional[str], gold: Optional[str]) -> Optional[bool]:
@@ -536,74 +586,219 @@ def detect_limit_signal(
                 hit = find_pattern(str(err), "cli_error")
                 if hit:
                     return hit
-        meta_fields = [parsed_cli.get("terminal_reason"), parsed_cli.get("subtype"), parsed_cli.get("stop_reason")]
-        hit = find_pattern(" ".join("" if x is None else str(x) for x in meta_fields), "cli_meta")
+        meta = " ".join(
+            "" if x is None else str(x)
+            for x in [parsed_cli.get("terminal_reason"),
+                      parsed_cli.get("subtype"),
+                      parsed_cli.get("stop_reason")]
+        )
+        hit = find_pattern(meta, "cli_meta")
         if hit:
             return hit
-    hit = find_pattern(stdout_text, "stdout")
-    if hit:
-        return hit
     return find_pattern(stderr_text, "stderr")
 
 
-# -----------------------------
-# Plan-cache logic (new)
-# -----------------------------
-
-def lookup_plan_cache(
-    task_id: str,
-    plan_cache_dir: Path,
-    rank_by: str,
-    min_similarity: float,
-) -> Optional[Dict[str, Any]]:
-    """
-    Returns a plan-cache hit dict or None (cache miss).
-
-    Hit dict keys:
-        source_task_id     – KB task ID whose trace was selected
-        similarity         – cosine similarity between test query and KB query
-        tool_sequence      – ordered list of tool names (ToolSearch stripped)
-        rank_by            – metric used for selection
-        rank_by_value      – value of that metric for the selected KB task
-    """
-    nn_path = plan_cache_dir / "test" / task_id / "3nn_meta.json"
-    if not nn_path.exists():
+def transcribe_audio(file_path: str) -> Optional[str]:
+    try:
+        import whisper  # type: ignore
+    except ImportError:
+        print("[transcribe] openai-whisper not installed — skipping pre-transcription")
+        return None
+    try:
+        print("[transcribe] loading whisper base model …")
+        model = whisper.load_model("base")
+        print(f"[transcribe] transcribing {file_path} …")
+        result = model.transcribe(file_path)
+        text = result.get("text", "").strip()
+        print(f"[transcribe] done ({len(text)} chars)")
+        return text if text else None
+    except Exception as exc:
+        print(f"[transcribe] failed: {exc}")
         return None
 
-    nn_data = json.loads(nn_path.read_text(encoding="utf-8"))
-    neighbors: List[Dict[str, Any]] = nn_data.get("neighbors", [])
 
-    # Filter by similarity threshold
-    eligible = [nb for nb in neighbors if (nb.get("similarity") or 0.0) >= min_similarity]
+# ---------------------------------------------------------------------------
+# Knowledge-base index
+# ---------------------------------------------------------------------------
+
+class KBIndex:
+    """In-memory index of KB task embeddings and traces."""
+    def __init__(
+        self,
+        task_ids:   List[str],
+        embeddings: "np.ndarray",   # (N, D), L2-normalized float32
+        traces:     List[Dict[str, Any]],
+    ) -> None:
+        self.task_ids   = task_ids
+        self.embeddings = embeddings
+        self.traces     = traces
+
+    def __len__(self) -> int:
+        return len(self.task_ids)
+
+
+def build_kb_index(
+    kb_jsonl:        Path,
+    kb_trace_run:    str,
+    kb_embedding_run: str,
+    ekb_root:        Path,
+) -> KBIndex:
+    """
+    Load KB task IDs from the JSONL, then load their embeddings and traces.
+    Tasks missing either an embedding or a trace are skipped with a warning.
+    """
+    kb_tasks  = load_jsonl(kb_jsonl)
+    emb_root  = ekb_root / "embeddings" / "claude_native" / kb_embedding_run
+    trace_root = ekb_root / "traces"    / "claude_native" / kb_trace_run
+
+    task_ids:   List[str]           = []
+    embeddings: List["np.ndarray"]  = []
+    traces:     List[Dict[str, Any]] = []
+
+    skipped = 0
+    for row in kb_tasks:
+        tid = str(row["task_id"])
+
+        emb_path   = emb_root   / tid / "query_embedding.npy"
+        trace_path = trace_root / tid / "normalized_trace.json"
+
+        if not emb_path.exists():
+            print(f"  [KB] WARNING: missing embedding for {tid}, skipping")
+            skipped += 1
+            continue
+        if not trace_path.exists():
+            print(f"  [KB] WARNING: missing trace for {tid}, skipping")
+            skipped += 1
+            continue
+
+        emb   = np.load(emb_path).astype(np.float32)
+        trace = json.loads(trace_path.read_text(encoding="utf-8"))
+
+        # Only index traces that completed successfully and have steps.
+        if not trace.get("steps"):
+            skipped += 1
+            continue
+
+        task_ids.append(tid)
+        embeddings.append(emb)
+        traces.append(trace)
+
+    if not task_ids:
+        raise RuntimeError(
+            f"KB index is empty after loading from {kb_jsonl}. "
+            "Check that --kb-trace-run and --kb-embedding-run are correct."
+        )
+
+    emb_matrix = np.stack(embeddings, axis=0)  # (N, D)
+    print(f"[KB] Loaded {len(task_ids)} KB tasks ({skipped} skipped). "
+          f"Embedding matrix: {emb_matrix.shape}")
+    return KBIndex(task_ids=task_ids, embeddings=emb_matrix, traces=traces)
+
+
+# Lazy-loaded embedding model for runtime fallback.
+_EMBED_MODEL: Optional[Any] = None
+
+
+def _get_embed_model(model_name: str) -> Any:
+    global _EMBED_MODEL
+    if _EMBED_MODEL is None:
+        from sentence_transformers import SentenceTransformer  # type: ignore
+        print(f"[KB] Loading embedding model: {model_name}")
+        _EMBED_MODEL = SentenceTransformer(model_name)
+    return _EMBED_MODEL
+
+
+def get_query_embedding(
+    task_id:         str,
+    query_text:      str,
+    ekb_root:        Path,
+    kb_embedding_run: str,
+    embed_model_name: str,
+) -> "np.ndarray":
+    """
+    Load the pre-computed embedding from the canonical KB embedding directory
+    (embeddings/claude_native/<kb_embedding_run>/<task_id>/query_embedding.npy).
+
+    For GAIA, kb_embedding_run is e.g. gaia_lv1_x4-all-mpnet-base-v2, which is
+    shared across all plan-reuse runs regardless of ranking strategy.  This
+    avoids re-encoding or duplicating embeddings per ranking run.
+
+    If the embedding is not found (rare: task not in the KB trace run), it is
+    encoded at runtime and saved back to the canonical path so subsequent runs
+    with different ranking strategies can reuse it without re-encoding.
+    """
+    emb_path = (ekb_root / "embeddings" / "claude_native"
+                / kb_embedding_run / task_id / "query_embedding.npy")
+    if emb_path.exists():
+        return np.load(emb_path).astype(np.float32)
+
+    print(f"  [KB] No pre-computed embedding for {task_id} — encoding at runtime.")
+    model = _get_embed_model(embed_model_name)
+    emb = np.asarray(model.encode([query_text], normalize_embeddings=True)[0], dtype=np.float32)
+    emb_path.parent.mkdir(parents=True, exist_ok=True)
+    np.save(emb_path, emb)
+    print(f"  [KB] Saved embedding → {emb_path}")
+    return emb
+
+
+PLAN_RANK_CHOICES = ["total_tool_calls", "total_tokens", "total_latency_ms"]
+
+
+def lookup_plan_cache(
+    query_embedding: "np.ndarray",
+    kb_index:        KBIndex,
+    top_k:           int,
+    min_similarity:  float,
+    rank_by:         str = "total_tool_calls",
+) -> Optional[Dict[str, Any]]:
+    """
+    1. Cosine similarity = dot product (embeddings are L2-normalised).
+    2. Retrieve top-k.
+    3. Filter by similarity >= min_similarity.
+    4. Among survivors, rank ascending by `rank_by` (lower = better; None pushed last).
+    5. Return best hit dict, or None on cache miss.
+
+    rank_by must be one of: total_tool_calls, total_tokens, total_latency_ms.
+    """
+    sims: "np.ndarray" = kb_index.embeddings @ query_embedding  # (N,)
+
+    k = min(top_k, len(kb_index))
+    top_k_idx = np.argpartition(sims, -k)[-k:]
+    top_k_idx = top_k_idx[np.argsort(sims[top_k_idx])[::-1]]  # descending sim
+
+    eligible = [
+        (int(i), float(sims[i]))
+        for i in top_k_idx
+        if sims[i] >= min_similarity
+    ]
     if not eligible:
         return None
 
-    # Sort ascending by rank_by metric (lower is better); push None values last
-    eligible.sort(key=lambda nb: nb.get(rank_by) if nb.get(rank_by) is not None else float("inf"))
-    best = eligible[0]
-
-    # Load the KB trace to extract the ordered tool sequence
-    kb_trace_path = plan_cache_dir / "knowledge-base" / best["task_id"] / "normalized_trace.json"
-    if not kb_trace_path.exists():
-        return None
-
-    kb_trace = json.loads(kb_trace_path.read_text(encoding="utf-8"))
-    steps: List[Dict[str, Any]] = kb_trace.get("steps", [])
+    # Rank ascending by the chosen metric; push missing values last.
+    eligible.sort(
+        key=lambda x: (
+            kb_index.traces[x[0]].get(rank_by) is None,
+            kb_index.traces[x[0]].get(rank_by) or 0,
+        )
+    )
+    best_i, best_sim = eligible[0]
+    best_trace = kb_index.traces[best_i]
 
     tool_sequence = [
         step["tool"]
-        for step in steps
+        for step in best_trace.get("steps", [])
         if step.get("tool") and step["tool"] not in _INFRA_TOOLS
     ]
     if not tool_sequence:
         return None
 
     return {
-        "source_task_id": best["task_id"],
-        "similarity":     best.get("similarity"),
-        "tool_sequence":  tool_sequence,
-        "rank_by":        rank_by,
-        "rank_by_value":  best.get(rank_by),
+        "source_task_id":             kb_index.task_ids[best_i],
+        "similarity":                 best_sim,
+        "tool_sequence":              tool_sequence,
+        "rank_by":                    rank_by,
+        "rank_by_value":              best_trace.get(rank_by),
+        "candidates_above_threshold": len(eligible),
     }
 
 
@@ -620,11 +815,15 @@ def format_plan_context(tool_sequence: List[str]) -> str:
     """).strip()
 
 
-# -----------------------------
-# Prompt builder (extended)
-# -----------------------------
+# ---------------------------------------------------------------------------
+# Prompt builder  (identical to run_claude_task.py + plan-context injection)
+# ---------------------------------------------------------------------------
 
-def build_prompt(task: Dict[str, Any], plan_context: Optional[str] = None) -> str:
+def build_prompt(
+    task:             Dict[str, Any],
+    audio_transcript: Optional[str] = None,
+    plan_context:     Optional[str] = None,
+) -> str:
     question = str(task["question"]).strip()
     parts = [
         "Solve the following benchmark task.",
@@ -635,27 +834,29 @@ def build_prompt(task: Dict[str, Any], plan_context: Optional[str] = None) -> st
     file_path = task.get("file_path")
     file_name = task.get("file_name")
     if file_path:
-        parts.append(f"A supporting file is available at this path:\n{file_path}")
+        if audio_transcript is not None:
+            parts.append(
+                f"A supporting audio file was pre-transcribed for you. "
+                f"Transcript of {Path(file_path).name}:\n{audio_transcript}"
+            )
+        else:
+            parts.append(f"A supporting file is available at this path:\n{file_path}")
     elif file_name:
         parts.append(
             f"The dataset record mentions a supporting file named '{file_name}', "
             "but no local absolute file_path is available in this JSONL."
         )
 
-    parts.append(
-        textwrap.dedent(
-            """
-            Guidance:
-            - Use tools only when needed.
-            - Prefer one good WebSearch before trying many searches.
-            - Prefer WebFetch / Read only for the most relevant source(s).
-            - Use Bash only for lightweight read-only inspection or simple calculations.
-            - Avoid redundant tool calls.
-            - Do not modify files.
-            - When confident, provide the final answer through the structured output.
-            """
-        ).strip()
-    )
+    parts.append(textwrap.dedent("""
+        Guidance:
+        - Use tools only when needed.
+        - Prefer one good WebSearch before trying many searches.
+        - Prefer WebFetch / Read only for the most relevant source(s).
+        - Use Bash only for lightweight read-only inspection or simple calculations.
+        - Avoid redundant tool calls.
+        - Do not modify files.
+        - When confident, provide the final answer through the structured output.
+    """).strip())
 
     if plan_context:
         parts.append(plan_context)
@@ -663,46 +864,58 @@ def build_prompt(task: Dict[str, Any], plan_context: Optional[str] = None) -> st
     return "\n\n".join(parts)
 
 
-# -----------------------------
-# Task runner (extended)
-# -----------------------------
+# ---------------------------------------------------------------------------
+# Per-task runner
+# ---------------------------------------------------------------------------
 
 def run_one_task(
-    task: Dict[str, Any],
-    args: argparse.Namespace,
-    ekb_root: Path,
+    task:          Dict[str, Any],
+    args:          argparse.Namespace,
+    ekb_root:      Path,
     settings_path: Path,
-    run_name: str,
-    plan_cache_dir: Path,
+    run_name:      str,
+    kb_index:      KBIndex,
 ) -> Dict[str, Any]:
     trace_root = Path(os.environ["TRACE_ROOT"])
-    result_root = Path(os.environ["RESULT_ROOT"])
 
-    safe_id = safe_task_id(task["task_id"])
-    task_trace_dir  = trace_root  / "claude_native" / run_name / safe_id
-    task_result_dir = result_root / "claude_native" / run_name / safe_id
-    reset_task_dirs(task_trace_dir, task_result_dir)
+    safe_id        = safe_task_id(task["task_id"])
+    task_trace_dir = trace_root / "claude_native" / run_name / safe_id
+    reset_task_dir(task_trace_dir)
 
-    # ------------------------------------------------------------------
-    # Plan-cache lookup
-    # ------------------------------------------------------------------
+    # ---- audio pre-transcription (matches run_claude_task.py) ----
+    audio_transcript: Optional[str] = None
+    file_path = task.get("file_path") or ""
+    if Path(file_path).suffix.lower() in AUDIO_EXTENSIONS:
+        audio_transcript = transcribe_audio(file_path)
+
+    # ---- KB lookup ----
+    query_emb = get_query_embedding(
+        task_id          = task["task_id"],
+        query_text       = task["question"],
+        ekb_root         = ekb_root,
+        kb_embedding_run = args.kb_embedding_run,
+        embed_model_name = args.embedding_model,
+    )
+
     plan_hit = lookup_plan_cache(
-        task_id       = task["task_id"],
-        plan_cache_dir= plan_cache_dir,
-        rank_by       = args.plan_rank_by,
-        min_similarity= args.min_similarity,
+        query_embedding = query_emb,
+        kb_index        = kb_index,
+        top_k           = args.top_k,
+        min_similarity  = args.min_similarity,
+        rank_by         = args.plan_rank_by,
     )
 
     if plan_hit:
         plan_context = format_plan_context(plan_hit["tool_sequence"])
         print(f"  -> cache HIT  src={plan_hit['source_task_id']}  "
               f"sim={plan_hit['similarity']:.3f}  "
-              f"{args.plan_rank_by}={plan_hit['rank_by_value']}")
+              f"{plan_hit['rank_by']}={plan_hit['rank_by_value']}  "
+              f"candidates≥{args.min_similarity}={plan_hit['candidates_above_threshold']}")
     else:
         plan_context = None
         print("  -> cache MISS (no eligible neighbor)")
 
-    prompt = build_prompt(task, plan_context=plan_context)
+    prompt = build_prompt(task, audio_transcript=audio_transcript, plan_context=plan_context)
     write_text(task_trace_dir / "task_prompt.txt", prompt)
     write_json(task_trace_dir / "task_record.json", task)
     if plan_hit:
@@ -713,13 +926,16 @@ def run_one_task(
     started_iso  = utcnow()
 
     env = os.environ.copy()
-    env["EKB_TRACE_DIR"] = str(task_trace_dir)
-    env["EKB_TASK_ID"]   = str(task["task_id"])
+    for key in ("EKB_ROOT", "TRACE_ROOT", "RESULT_ROOT", "GAIA_RAW_PATH"):
+        val = os.environ.get(key)
+        if val:
+            env[key] = val
+    env["EKB_TRACE_DIR"]  = str(task_trace_dir)
+    env["EKB_TASK_ID"]    = str(task["task_id"])
     env["EKB_SESSION_ID"] = session_id
 
     cmd = [
-        "claude",
-        "-p", prompt,
+        "claude", "-p", prompt,
         "--output-format", "json",
         "--json-schema", json.dumps(FINAL_OUTPUT_SCHEMA, separators=(",", ":")),
         "--settings", str(settings_path),
@@ -767,9 +983,8 @@ def run_one_task(
         stderr_text=proc.stderr,
         result_text=result_text,
     )
-
     if limit_signal is not None:
-        write_json(task_result_dir / "limit_stop.json", {
+        write_json(task_trace_dir / "limit_stop.json", {
             "query_id":     task["task_id"],
             "limit_signal": limit_signal,
             "result_text":  result_text,
@@ -786,8 +1001,7 @@ def run_one_task(
             "result_text":  result_text,
         }
 
-    structured_output = parsed_cli.get("structured_output", {}) if isinstance(parsed_cli, dict) else {}
-
+    structured_output   = parsed_cli.get("structured_output", {}) if isinstance(parsed_cli, dict) else {}
     returned_session_id = parsed_cli.get("session_id") if isinstance(parsed_cli, dict) else None
     if isinstance(returned_session_id, str) and returned_session_id:
         session_id = returned_session_id
@@ -806,9 +1020,7 @@ def run_one_task(
             except OSError:
                 archived_session_jsonl = str(session_jsonl_src)
 
-    final_answer_pred = None
-    confidence        = None
-    brief_explanation = None
+    final_answer_pred = confidence = brief_explanation = None
     if isinstance(structured_output, dict):
         final_answer_pred = structured_output.get("final_answer")
         confidence        = structured_output.get("confidence")
@@ -817,48 +1029,52 @@ def run_one_task(
     success = proc.returncode == 0 and bool(final_answer_pred)
 
     normalized = {
-        "query_id":        task["task_id"],
-        "query_text":      task["question"],
-        "benchmark":       task.get("benchmark", "gaia"),
-        "split":           task.get("split"),
-        "level":           task.get("level"),
-        "agent":           "claude-code",
-        "model_requested": args.model,
-        "effort":          args.effort,
-        "session_id":      session_id,
-        "started_at":      started_iso,
-        "ended_at":        ended_iso,
-        "steps":           steps,
-        "total_steps":     len(steps),
-        "total_llm_calls": None,
-        "total_tool_calls": len(steps),
-        "total_latency_ms": duration_ms,
-        "usage":           usage,
-        "total_tokens":    total_tokens,
-        "success":         success,
-        "tools_used":      sorted({step["tool"] for step in steps if step.get("tool")}),
+        "query_id":           task["task_id"],
+        "query_text":         task["question"],
+        "benchmark":          task.get("benchmark", "gaia"),
+        "split":              task.get("split"),
+        "level":              task.get("level"),
+        "agent":              "claude-code",
+        "model_requested":    args.model,
+        "effort":             args.effort,
+        "session_id":         session_id,
+        "started_at":         started_iso,
+        "ended_at":           ended_iso,
+        "steps":              steps,
+        "total_steps":        len(steps),
+        "total_llm_calls":    None,
+        "total_tool_calls":   len(steps),
+        "total_latency_ms":   duration_ms,
+        "usage":              usage,
+        "total_tokens":       total_tokens,
+        "success":            success,
+        "tools_used":         sorted({s["tool"] for s in steps if s.get("tool")}),
         "final_answer_pred":  final_answer_pred,
         "confidence":         confidence,
         "brief_explanation":  brief_explanation,
         "result_text":        result_text,
         "ground_truth_answer": task.get("final_answer"),
         "exact_match":        exact_match(final_answer_pred, task.get("final_answer")),
-        # ------------------------------------------------------------------
-        # Plan-cache metadata (new fields)
-        # ------------------------------------------------------------------
-        "cache_hit":                 plan_hit is not None,
-        "cache_source_task_id":      plan_hit["source_task_id"]  if plan_hit else None,
-        "cache_source_similarity":   plan_hit["similarity"]      if plan_hit else None,
-        "cached_tool_sequence":      plan_hit["tool_sequence"]   if plan_hit else None,
-        "plan_rank_by":              args.plan_rank_by,
-        "min_similarity_threshold":  args.min_similarity,
-        # ------------------------------------------------------------------
+        # Plan-cache metadata
+        "cache_hit":                    plan_hit is not None,
+        "cache_source_task_id":         plan_hit["source_task_id"]              if plan_hit else None,
+        "cache_source_similarity":      plan_hit["similarity"]                  if plan_hit else None,
+        "cached_tool_sequence":             plan_hit["tool_sequence"]               if plan_hit else None,
+        "cache_rank_by":                    plan_hit["rank_by"]                     if plan_hit else None,
+        "cache_rank_by_value":              plan_hit["rank_by_value"]               if plan_hit else None,
+        "cache_candidates_above_threshold": plan_hit["candidates_above_threshold"]  if plan_hit else None,
+        "top_k":                        args.top_k,
+        "plan_rank_by":                 args.plan_rank_by,
+        "min_similarity_threshold":     args.min_similarity,
+        "kb_jsonl":                     str(args.kb_jsonl),
+        "kb_trace_run":                 args.kb_trace_run,
+        "kb_embedding_run":             args.kb_embedding_run,
         "raw_paths": {
-            "task_prompt":         str(task_trace_dir / "task_prompt.txt"),
-            "hook_events":         str(task_trace_dir / "hook_events.jsonl"),
-            "claude_stdout":       str(task_trace_dir / "claude_stdout.txt"),
-            "claude_stderr":       str(task_trace_dir / "claude_stderr.txt"),
-            "claude_output_json":  str(task_trace_dir / "claude_output.json") if parsed_cli else None,
+            "task_prompt":          str(task_trace_dir / "task_prompt.txt"),
+            "hook_events":          str(task_trace_dir / "hook_events.jsonl"),
+            "claude_stdout":        str(task_trace_dir / "claude_stdout.txt"),
+            "claude_stderr":        str(task_trace_dir / "claude_stderr.txt"),
+            "claude_output_json":   str(task_trace_dir / "claude_output.json") if parsed_cli else None,
             "claude_session_jsonl": archived_session_jsonl,
         },
         "failure": None if success else {
@@ -867,57 +1083,81 @@ def run_one_task(
         },
     }
 
-    write_json(task_result_dir / "normalized_trace.json", normalized)
-    write_json(task_result_dir / "structured_output.json", structured_output if structured_output else {})
+    write_json(task_trace_dir / "normalized_trace.json", normalized)
+    write_json(task_trace_dir / "structured_output.json", structured_output or {})
     return normalized
 
 
-# -----------------------------
-# Main
-# -----------------------------
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Run GAIA test tasks with execution-plan reuse from the knowledge base."
+        description="Run GAIA test tasks with execution-plan reuse from a paraphrase KB."
     )
-    parser.add_argument("--input",       type=str, default=None,   help="Path to benchmark JSONL (e.g. data/gaia/gaia_lv1.jsonl).")
-    parser.add_argument("--run-name",    type=str, default=None,   help="Run name for output directories. Defaults to input stem.")
-    parser.add_argument("--limit",       type=int, default=None,   help="Process at most N tasks.")
-    parser.add_argument("--task-id",     type=str, default=None,   help="Run only one specific task_id.")
-    parser.add_argument("--model",       type=str, default="sonnet")
-    parser.add_argument("--effort",      type=str, default="medium", help="low|medium|high|xhigh|max")
-    parser.add_argument("--max-turns",   type=int, default=12)
-    parser.add_argument("--timeout-sec", type=int, default=300)
+    # Input / output
+    parser.add_argument("--input",        type=str, default=None,
+                        help="Path to test benchmark JSONL (e.g. data/gaia/gaia_lv1.jsonl).")
+    parser.add_argument("--run-name",     type=str, default=None,
+                        help="Run name for output dirs. Defaults to input stem.")
+    parser.add_argument("--limit",        type=int, default=None)
+    parser.add_argument("--task-id",      type=str, default=None)
+    # Claude settings
+    parser.add_argument("--model",        type=str, default="sonnet")
+    parser.add_argument("--effort",       type=str, default="medium")
+    parser.add_argument("--max-turns",    type=int, default=64)
+    parser.add_argument("--timeout-sec",  type=int, default=900)
     parser.add_argument("--allowed-tools", type=str, default=DEFAULT_ALLOWED_TOOLS)
-    parser.add_argument("--overwrite",   action="store_true",      help="Re-run tasks even if trace already exists.")
-    parser.add_argument("--install-only", action="store_true",     help="Only write hook assets and exit.")
-    parser.add_argument("--sleep-sec",   type=float, default=1.0)
+    # Runner behaviour
+    parser.add_argument("--overwrite",    action="store_true")
+    parser.add_argument("--install-only", action="store_true")
+    parser.add_argument("--sleep-sec",    type=float, default=1.0)
     parser.add_argument("--max-cumulative-tokens", type=int, default=None)
     parser.add_argument("--disable-session-archive", action="store_true")
-    # Plan-cache arguments
+    # KB / retrieval
     parser.add_argument(
-        "--plan-cache-dir",
-        type=str,
-        default=None,
-        help="Path to plan-caching-study directory. Defaults to <EKB_ROOT>/traces/plan-caching-study.",
+        "--kb-jsonl", type=str, required=False, default=None,
+        help="Path to KB task-ID JSONL (e.g. data/gaia_paraphrased/gaia_lv1_x4_kb.jsonl).",
     )
     parser.add_argument(
-        "--plan-rank-by",
-        type=str,
-        default="total_tokens",
-        choices=["total_tokens", "total_latency_ms", "total_tool_calls"],
-        help="Metric used to select the best KB neighbor (lower is better). Default: total_tokens.",
+        "--kb-trace-run", type=str, default=None,
+        help="Run name under traces/claude_native/ where KB traces live (e.g. gaia_lv1_x4).",
     )
     parser.add_argument(
-        "--min-similarity",
-        type=float,
-        default=0.8,
-        help="Minimum cosine similarity for a KB neighbor to be eligible. Default: 0.8.",
+        "--kb-embedding-run", type=str, default=None,
+        help=(
+            "Run name under embeddings/claude_native/ where KB embeddings live. "
+            "Defaults to <kb-trace-run>-<embedding-model-short-name> "
+            "(e.g. gaia_lv1_x4-all-mpnet-base-v2)."
+        ),
+    )
+    parser.add_argument(
+        "--top-k", type=int, default=5,
+        help="Number of nearest neighbours to retrieve from the KB (default: 5).",
+    )
+    parser.add_argument(
+        "--min-similarity", type=float, default=0.8,
+        help="Minimum cosine similarity for a KB neighbour to be eligible (default: 0.8).",
+    )
+    parser.add_argument(
+        "--embedding-model", type=str,
+        default="sentence-transformers/all-mpnet-base-v2",
+        help=(
+            "SentenceTransformer model used for runtime query encoding when a "
+            "pre-computed embedding is not found (default: all-mpnet-base-v2)."
+        ),
+    )
+    parser.add_argument(
+        "--plan-rank-by", type=str,
+        default="total_tool_calls",
+        choices=PLAN_RANK_CHOICES,
+        help=(
+            "Metric used to rank eligible KB neighbours (lower = better). "
+            f"Choices: {PLAN_RANK_CHOICES}. Default: total_tool_calls."
+        ),
     )
     args = parser.parse_args()
-
-    if load_dotenv is not None:
-        load_dotenv()
 
     required_env = ["EKB_ROOT", "TRACE_ROOT", "RESULT_ROOT"]
     missing = [k for k in required_env if not os.environ.get(k)]
@@ -926,8 +1166,8 @@ def main() -> None:
 
     ekb_root = Path(os.environ["EKB_ROOT"]).resolve()
     hook_path, settings_path = install_hook_assets(ekb_root)
-    print(f"[setup] wrote hook: {hook_path}")
-    print(f"[setup] wrote settings: {settings_path}")
+    print(f"[setup] hook:     {hook_path}")
+    print(f"[setup] settings: {settings_path}")
 
     if args.install_only:
         print("[setup] install-only complete")
@@ -935,14 +1175,27 @@ def main() -> None:
 
     if not args.input:
         raise ValueError("--input is required unless --install-only is used.")
+    if not args.kb_jsonl:
+        raise ValueError("--kb-jsonl is required.")
+    if not args.kb_trace_run:
+        raise ValueError("--kb-trace-run is required.")
 
-    plan_cache_dir = (
-        Path(args.plan_cache_dir).expanduser().resolve()
-        if args.plan_cache_dir
-        else ekb_root / "traces" / "plan-caching-study"
+    # Derive default embedding run name from trace run + model short name.
+    if args.kb_embedding_run is None:
+        model_short = args.embedding_model.split("/")[-1]
+        args.kb_embedding_run = f"{args.kb_trace_run}-{model_short}"
+    print(f"[setup] kb-jsonl:         {args.kb_jsonl}")
+    print(f"[setup] kb-trace-run:     {args.kb_trace_run}")
+    print(f"[setup] kb-embedding-run: {args.kb_embedding_run}")
+    print(f"[setup] top-k:            {args.top_k}  min-similarity: {args.min_similarity}  plan-rank-by: {args.plan_rank_by}")
+
+    # Build KB index once before task loop.
+    kb_index = build_kb_index(
+        kb_jsonl         = Path(args.kb_jsonl).expanduser().resolve(),
+        kb_trace_run     = args.kb_trace_run,
+        kb_embedding_run = args.kb_embedding_run,
+        ekb_root         = ekb_root,
     )
-    print(f"[setup] plan-cache dir: {plan_cache_dir}")
-    print(f"[setup] plan-rank-by:   {args.plan_rank_by}  min-similarity: {args.min_similarity}")
 
     input_path = Path(args.input).expanduser().resolve()
     tasks      = load_jsonl(input_path)
@@ -950,53 +1203,52 @@ def main() -> None:
 
     if args.task_id:
         tasks = [t for t in tasks if str(t.get("task_id")) == args.task_id]
-
     if args.limit is not None:
         tasks = tasks[: args.limit]
-
     if not tasks:
         print("No tasks selected.")
         return
 
-    result_root         = Path(os.environ["RESULT_ROOT"])
-    shard_results_jsonl = result_root / "claude_native" / run_name / "results.jsonl"
-    shard_summary_json  = result_root / "claude_native" / run_name / "summary.json"
+    trace_root_main   = Path(os.environ["TRACE_ROOT"])
+    result_root       = Path(os.environ["RESULT_ROOT"])
+    run_results_jsonl = result_root / "claude_native" / run_name / "results.jsonl"
+    run_summary_json  = result_root / "claude_native" / run_name / "summary.json"
 
-    completed              = 0
-    skipped                = 0
-    failed                 = 0
-    cache_hits             = 0
-    cache_misses           = 0
-    stopped_on_limit       = False
-    stop_reason            = None
-    cumulative_total_tokens = 0
-    started_at             = utcnow()
+    completed = skipped = failed = 0
+    cache_hits = cache_misses = 0
+    stopped_on_limit = False
+    stop_reason      = None
+    cumulative_tokens = 0
+    started_at        = utcnow()
 
     for idx, task in enumerate(tasks, start=1):
-        safe_id = safe_task_id(task["task_id"])
-        normalized_trace_path = result_root / "claude_native" / run_name / safe_id / "normalized_trace.json"
+        safe_id          = safe_task_id(task["task_id"])
+        normalized_trace = (trace_root_main / "claude_native"
+                            / run_name / safe_id / "normalized_trace.json")
 
-        if normalized_trace_path.exists() and not args.overwrite:
+        if normalized_trace.exists() and not args.overwrite:
             print(f"[{idx}/{len(tasks)}] skip {task['task_id']} (already exists)")
             skipped += 1
             continue
 
         print(f"[{idx}/{len(tasks)}] run {task['task_id']}")
         try:
-            result = run_one_task(task, args, ekb_root, settings_path, run_name, plan_cache_dir)
+            result = run_one_task(
+                task, args, ekb_root, settings_path, run_name, kb_index
+            )
 
             if result.get("limit_stop"):
                 stopped_on_limit = True
                 stop_reason = f"suspected usage/rate limit: {result.get('limit_signal')}"
                 if result.get("total_tokens") is not None:
-                    cumulative_total_tokens += int(result["total_tokens"])
+                    cumulative_tokens += int(result["total_tokens"])
                 print(f"  -> stop: {stop_reason}")
                 break
 
-            append_jsonl(shard_results_jsonl, result)
+            append_jsonl(run_results_jsonl, result)
 
             if result.get("total_tokens") is not None:
-                cumulative_total_tokens += int(result["total_tokens"])
+                cumulative_tokens += int(result["total_tokens"])
 
             if result.get("cache_hit"):
                 cache_hits += 1
@@ -1010,7 +1262,8 @@ def main() -> None:
                 failed += 1
                 print("  -> failed")
 
-            if args.max_cumulative_tokens is not None and cumulative_total_tokens >= args.max_cumulative_tokens:
+            if (args.max_cumulative_tokens is not None
+                    and cumulative_tokens >= args.max_cumulative_tokens):
                 stopped_on_limit = True
                 stop_reason = f"manual token cap reached: {args.max_cumulative_tokens}"
                 print(f"  -> stop: {stop_reason}")
@@ -1018,7 +1271,7 @@ def main() -> None:
 
         except subprocess.TimeoutExpired as exc:
             failed += 1
-            append_jsonl(shard_results_jsonl, {
+            append_jsonl(run_results_jsonl, {
                 "query_id": task["task_id"],
                 "success":  False,
                 "failure":  {"type": "timeout", "timeout_sec": args.timeout_sec, "detail": str(exc)},
@@ -1026,7 +1279,7 @@ def main() -> None:
             print("  -> timeout")
         except Exception as exc:
             failed += 1
-            append_jsonl(shard_results_jsonl, {
+            append_jsonl(run_results_jsonl, {
                 "query_id": task["task_id"],
                 "success":  False,
                 "failure":  {"type": "exception", "detail": repr(exc)},
@@ -1037,25 +1290,31 @@ def main() -> None:
             time.sleep(args.sleep_sec)
 
     summary = {
-        "input":               str(input_path),
-        "run_name":            run_name,
-        "started_at":          started_at,
-        "ended_at":            utcnow(),
-        "selected_tasks":      len(tasks),
-        "completed":           completed,
-        "failed":              failed,
-        "skipped":             skipped,
-        "cache_hits":          cache_hits,
-        "cache_misses":        cache_misses,
-        "stopped_on_limit":    stopped_on_limit,
-        "stop_reason":         stop_reason,
-        "cumulative_total_tokens_this_run": cumulative_total_tokens,
-        "plan_rank_by":        args.plan_rank_by,
-        "min_similarity":      args.min_similarity,
-        "settings_path":       str(settings_path),
-        "hook_path":           str(hook_path),
+        "input":                              str(input_path),
+        "run_name":                           run_name,
+        "started_at":                         started_at,
+        "ended_at":                           utcnow(),
+        "selected_tasks":                     len(tasks),
+        "completed":                          completed,
+        "failed":                             failed,
+        "skipped":                            skipped,
+        "cache_hits":                         cache_hits,
+        "cache_misses":                       cache_misses,
+        "stopped_on_limit":                   stopped_on_limit,
+        "stop_reason":                        stop_reason,
+        "cumulative_total_tokens_this_run":   cumulative_tokens,
+        "kb_jsonl":                           str(args.kb_jsonl),
+        "kb_trace_run":                       args.kb_trace_run,
+        "kb_embedding_run":                   args.kb_embedding_run,
+        "kb_size":                            len(kb_index),
+        "top_k":                              args.top_k,
+        "plan_rank_by":                       args.plan_rank_by,
+        "min_similarity":                     args.min_similarity,
+        "embedding_model":                    args.embedding_model,
+        "settings_path":                      str(settings_path),
+        "hook_path":                          str(hook_path),
     }
-    write_json(shard_summary_json, summary)
+    write_json(run_summary_json, summary)
     print(json.dumps(summary, indent=2))
 
 
