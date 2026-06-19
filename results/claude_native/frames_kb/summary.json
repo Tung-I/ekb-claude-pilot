@@ -1,0 +1,15 @@
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/frames/frames_kb.jsonl",
+  "run_name": "frames_kb",
+  "started_at": "2026-06-18T19:51:53.123443+00:00",
+  "ended_at": "2026-06-18T20:59:41.332173+00:00",
+  "selected_tasks": 627,
+  "completed": 12,
+  "failed": 3,
+  "skipped": 612,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 9294212,
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}

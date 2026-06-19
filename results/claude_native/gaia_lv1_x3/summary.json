@@ -1,0 +1,15 @@
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia_paraphrased/gaia_lv1_x3.jsonl",
+  "run_name": "gaia_lv1_x3",
+  "started_at": "2026-06-19T03:35:12.912899+00:00",
+  "ended_at": "2026-06-19T07:26:22.840131+00:00",
+  "selected_tasks": 153,
+  "completed": 92,
+  "failed": 3,
+  "skipped": 58,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 23775486,
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}

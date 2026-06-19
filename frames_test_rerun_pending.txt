@@ -1,0 +1,15 @@
+# FRAMES residual stragglers after the 2026-06-18 remove+re-collect cleanup.
+# The 34 earlier pending frames_test tasks were re-collected successfully EXCEPT these,
+# which are genuine hard-task failures (NOT pollution / network). Re-collecting them
+# would require raising --max-turns / --timeout-sec, which would diverge from the
+# aligned budget (max-turns 48, timeout 900s) and reintroduce latency outliers.
+# Left uncollected on purpose. Revisit only with a separate higher-budget run if needed.
+#
+# frames_test (have trace, no answer — hit max-turns 48):
+frames_test_00370
+frames_test_00377
+#
+# frames_kb (genuine hard tail):
+frames_test_00141    # no answer, 72 steps
+frames_test_00694    # no answer, 61 steps
+frames_test_00728    # 900s timeout x2, no trace

@@ -181,22 +181,24 @@ APPEND_SYSTEM_PROMPT = textwrap.dedent(
 ).strip()
 
 # Patterns that indicate Claude hit a usage/rate/quota limit.
+# NOTE: these are matched against the agent's final answer text (result_text) too,
+# so bare nouns that appear in legitimate factual answers must NOT be listed here.
+# "capacity" and "quota" were removed after they false-triggered on FRAMES answers
+# (e.g. "...the capacity of Makomanai Open Stadium..."). Real limit messages always
+# carry a specific phrase below (e.g. "usage limit", "rate limit", "hit your limit").
 LIMIT_PATTERNS = [
     "you've hit your limit",
     "you have hit your limit",
     "hit your limit",
-    "resets ",
     "rate limit",
     "usage limit",
     "limit reached",
-    "quota",
     "too many requests",
     "try again later",
     "credit balance",
     "exceeded your",
     "daily limit",
     "message limit",
-    "capacity",
 ]
 
 LEADING_STRIP_CHARS  = "'\"\u2018\u2019\u201c\u201d`([{<"

@@ -1,0 +1,162 @@
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[1/252] skip 023e9d44-96ae-4eed-b912-244ee8c3b994 (already exists)
+[2/252] skip 023e9d44-96ae-4eed-b912-244ee8c3b994__para1 (already exists)
+[3/252] skip 023e9d44-96ae-4eed-b912-244ee8c3b994__para2 (already exists)
+[4/252] skip 04a04a9b-226c-43fd-b319-d5e89743676f (already exists)
+[5/252] skip 04a04a9b-226c-43fd-b319-d5e89743676f__para1 (already exists)
+[6/252] skip 04a04a9b-226c-43fd-b319-d5e89743676f__para2 (already exists)
+[7/252] skip 05407167-39ec-4d3a-a234-73a9120c325d (already exists)
+[8/252] skip 05407167-39ec-4d3a-a234-73a9120c325d__para1 (already exists)
+[9/252] skip 05407167-39ec-4d3a-a234-73a9120c325d__para2 (already exists)
+[10/252] skip 076c8171-9b3b-49b9-a477-244d2a532826 (already exists)
+[11/252] skip 076c8171-9b3b-49b9-a477-244d2a532826__para1 (already exists)
+[12/252] skip 076c8171-9b3b-49b9-a477-244d2a532826__para2 (already exists)
+[13/252] skip 08c0b6e9-1b43-4c2e-ae55-4e3fce2c2715 (already exists)
+[14/252] skip 08c0b6e9-1b43-4c2e-ae55-4e3fce2c2715__para1 (already exists)
+[15/252] skip 08c0b6e9-1b43-4c2e-ae55-4e3fce2c2715__para2 (already exists)
+[16/252] skip 08cae58d-4084-4616-b6dd-dd6534e4825b (already exists)
+[17/252] skip 08cae58d-4084-4616-b6dd-dd6534e4825b__para1 (already exists)
+[18/252] skip 08cae58d-4084-4616-b6dd-dd6534e4825b__para2 (already exists)
+[19/252] skip 08f3a05f-5947-4089-a4c4-d4bcfaa6b7a0 (already exists)
+[20/252] skip 08f3a05f-5947-4089-a4c4-d4bcfaa6b7a0__para1 (already exists)
+[21/252] skip 08f3a05f-5947-4089-a4c4-d4bcfaa6b7a0__para2 (already exists)
+[22/252] skip 0a3cd321-3e76-4622-911b-0fda2e5d6b1a (already exists)
+[23/252] skip 0a3cd321-3e76-4622-911b-0fda2e5d6b1a__para1 (already exists)
+[24/252] skip 0a3cd321-3e76-4622-911b-0fda2e5d6b1a__para2 (already exists)
+[25/252] skip 0a65cb96-cb6e-4a6a-8aae-c1084f613456 (already exists)
+[26/252] skip 0a65cb96-cb6e-4a6a-8aae-c1084f613456__para1 (already exists)
+[27/252] skip 0a65cb96-cb6e-4a6a-8aae-c1084f613456__para2 (already exists)
+[28/252] skip 0b260a57-3f3a-4405-9f29-6d7a1012dbfb (already exists)
+[29/252] skip 0b260a57-3f3a-4405-9f29-6d7a1012dbfb__para1 (already exists)
+[30/252] skip 0b260a57-3f3a-4405-9f29-6d7a1012dbfb__para2 (already exists)
+[31/252] skip 0bb3b44a-ede5-4db5-a520-4e844b0079c5 (already exists)
+[32/252] skip 0bb3b44a-ede5-4db5-a520-4e844b0079c5__para1 (already exists)
+[33/252] skip 0bb3b44a-ede5-4db5-a520-4e844b0079c5__para2 (already exists)
+[34/252] run 0e9e85b8-52b9-4de4-b402-5f635ab9631f
+  -> timeout
+[35/252] skip 0e9e85b8-52b9-4de4-b402-5f635ab9631f__para1 (already exists)
+[36/252] skip 0e9e85b8-52b9-4de4-b402-5f635ab9631f__para2 (already exists)
+[37/252] skip 0ff53813-3367-4f43-bcbd-3fd725c1bf4b (already exists)
+[38/252] skip 0ff53813-3367-4f43-bcbd-3fd725c1bf4b__para1 (already exists)
+[39/252] skip 0ff53813-3367-4f43-bcbd-3fd725c1bf4b__para2 (already exists)
+[40/252] run 114d5fd0-e2ae-4b6d-a65a-870da2d19c08
+  -> failed
+[41/252] run 114d5fd0-e2ae-4b6d-a65a-870da2d19c08__para1
+  -> success | pred='4'
+[42/252] run 114d5fd0-e2ae-4b6d-a65a-870da2d19c08__para2
+  -> success | pred='4'
+[43/252] run 14569e28-c88c-43e4-8c32-097d35b9a67d
+  -> success | pred='backtick'
+[44/252] run 14569e28-c88c-43e4-8c32-097d35b9a67d__para1
+  -> success | pred='backtick'
+[45/252] run 14569e28-c88c-43e4-8c32-097d35b9a67d__para2
+  -> success | pred='backtick'
+[46/252] run 16d825ff-1623-4176-a5b5-42e0f5c2b0ac
+  -> success | pred='6:41 PM'
+[47/252] run 16d825ff-1623-4176-a5b5-42e0f5c2b0ac__para1
+  -> success | pred='6:41 PM'
+[48/252] run 16d825ff-1623-4176-a5b5-42e0f5c2b0ac__para2
+  -> success | pred='6:41 PM'
+[49/252] run 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc
+  -> success | pred='34689'
+[50/252] run 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc__para1
+  -> success | pred='34689'
+[51/252] run 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc__para2
+  -> success | pred='34689'
+[52/252] run 1dcc160f-c187-48c2-b68e-319bd4354f3d
+  -> success | pred='3'
+[53/252] run 1dcc160f-c187-48c2-b68e-319bd4354f3d__para1
+  -> success | pred='3'
+[54/252] run 1dcc160f-c187-48c2-b68e-319bd4354f3d__para2
+  -> failed
+[55/252] run 20194330-9976-4043-8632-f8485c6c71b2
+  -> timeout
+[56/252] run 20194330-9976-4043-8632-f8485c6c71b2__para1
+  -> timeout
+[57/252] run 20194330-9976-4043-8632-f8485c6c71b2__para2
+  -> success | pred='3'
+[58/252] run 2b3ef98c-cc05-450b-a719-711aee40ac65
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/2b3ef98c-cc05-450b-a719-711aee40ac65.mp3 …
+[transcribe] done (442 chars)
+  -> success | pred='To be or not to be that is the question whether tis nobler in the mind to suffer the slings and arrows of outrageous fortune'
+[59/252] run 2b3ef98c-cc05-450b-a719-711aee40ac65__para1
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/2b3ef98c-cc05-450b-a719-711aee40ac65.mp3 …
+[transcribe] done (442 chars)
+  -> success | pred='To be or not to be that is the question'
+[60/252] run 2b3ef98c-cc05-450b-a719-711aee40ac65__para2
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/2b3ef98c-cc05-450b-a719-711aee40ac65.mp3 …
+[transcribe] done (442 chars)
+  -> success | pred='To be or not to be that is the question whether tis nobler in the mind to suffer the slings and arrows of outrageous fortune'
+[61/252] run 2dfc4c37-fec1-4518-84a7-10095d30ad75
+  -> success | pred='3'
+[62/252] run 2dfc4c37-fec1-4518-84a7-10095d30ad75__para1
+  -> success | pred='3'
+[63/252] run 2dfc4c37-fec1-4518-84a7-10095d30ad75__para2
+  -> success | pred='3'
+[64/252] run 32102e3e-d12a-4209-9163-7b3a104efe5d
+  -> success | pred='Time-Parking 2: Parallel Universe'
+[65/252] run 32102e3e-d12a-4209-9163-7b3a104efe5d__para1
+  -> success | pred='Time-Parking 2: Parallel Universe'
+[66/252] run 32102e3e-d12a-4209-9163-7b3a104efe5d__para2
+  -> success | pred='Time-Parking 2: Parallel Universe'
+[67/252] run 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57
+  -> success | pred='2'
+[68/252] run 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57__para1
+  -> success | pred='2'
+[69/252] run 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57__para2
+  -> success | pred='2'
+[70/252] run 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf
+  -> success | pred='142'
+[71/252] run 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf__para1
+  -> success | pred='142'
+[72/252] run 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf__para2
+  -> success | pred='142'
+[73/252] run 366e2f2b-8632-4ef2-81eb-bc3877489217
+  -> success | pred="Shelley's Place"
+[74/252] run 366e2f2b-8632-4ef2-81eb-bc3877489217__para1
+  -> success | pred="Shelley's Place"
+[75/252] run 366e2f2b-8632-4ef2-81eb-bc3877489217__para2
+  -> success | pred="Shelley's Place"
+[76/252] run 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee
+  -> success | pred='56,000'
+[77/252] run 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee__para1
+  -> success | pred='56,000'
+[78/252] run 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee__para2
+  -> success | pred='56,000'
+[79/252] run 42d4198c-5895-4f0a-b0c0-424a66465d83
+  -> success | pred='2177'
+[80/252] run 42d4198c-5895-4f0a-b0c0-424a66465d83__para1
+  -> success | pred='2122'
+[81/252] run 42d4198c-5895-4f0a-b0c0-424a66465d83__para2
+  -> success | pred='477'
+[82/252] run 48eb8242-1099-4c26-95d4-ef22b002457a
+  -> success | pred='7'
+[83/252] run 48eb8242-1099-4c26-95d4-ef22b002457a__para1
+  -> success | pred='7'
+[84/252] run 48eb8242-1099-4c26-95d4-ef22b002457a__para2
+  -> success | pred='7'
+[85/252] run 4d0aa727-86b1-406b-9b33-f870dd14a4a5
+  -> success | pred='1 in 3'
+[86/252] run 4d0aa727-86b1-406b-9b33-f870dd14a4a5__para1
+  -> success | pred='1 in 3'
+[87/252] run 4d0aa727-86b1-406b-9b33-f870dd14a4a5__para2
+  -> success | pred='1 in 3'
+[88/252] run 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2
+  -> success | pred='8'
+[89/252] run 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2__para1
+  -> success | pred='8'
+[90/252] run 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2__para2
+  -> success | pred='8'
+[91/252] run 544b7f0c-173a-4377-8d56-57b36eb26ddf
+  -> success | pred='A Nightmare on Elm Street'
+[92/252] run 544b7f0c-173a-4377-8d56-57b36eb26ddf__para1
