@@ -1,9 +1,3 @@
-/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
-  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
-/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
-  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
-/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
-  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
 [setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
 [setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
 [1/252] skip 023e9d44-96ae-4eed-b912-244ee8c3b994 (already exists)
@@ -40,123 +34,333 @@
 [32/252] skip 0bb3b44a-ede5-4db5-a520-4e844b0079c5__para1 (already exists)
 [33/252] skip 0bb3b44a-ede5-4db5-a520-4e844b0079c5__para2 (already exists)
 [34/252] run 0e9e85b8-52b9-4de4-b402-5f635ab9631f
-  -> timeout
+  -> success | pred='1927'
 [35/252] skip 0e9e85b8-52b9-4de4-b402-5f635ab9631f__para1 (already exists)
 [36/252] skip 0e9e85b8-52b9-4de4-b402-5f635ab9631f__para2 (already exists)
 [37/252] skip 0ff53813-3367-4f43-bcbd-3fd725c1bf4b (already exists)
 [38/252] skip 0ff53813-3367-4f43-bcbd-3fd725c1bf4b__para1 (already exists)
 [39/252] skip 0ff53813-3367-4f43-bcbd-3fd725c1bf4b__para2 (already exists)
-[40/252] run 114d5fd0-e2ae-4b6d-a65a-870da2d19c08
-  -> failed
-[41/252] run 114d5fd0-e2ae-4b6d-a65a-870da2d19c08__para1
-  -> success | pred='4'
-[42/252] run 114d5fd0-e2ae-4b6d-a65a-870da2d19c08__para2
-  -> success | pred='4'
-[43/252] run 14569e28-c88c-43e4-8c32-097d35b9a67d
-  -> success | pred='backtick'
-[44/252] run 14569e28-c88c-43e4-8c32-097d35b9a67d__para1
-  -> success | pred='backtick'
-[45/252] run 14569e28-c88c-43e4-8c32-097d35b9a67d__para2
-  -> success | pred='backtick'
-[46/252] run 16d825ff-1623-4176-a5b5-42e0f5c2b0ac
-  -> success | pred='6:41 PM'
-[47/252] run 16d825ff-1623-4176-a5b5-42e0f5c2b0ac__para1
-  -> success | pred='6:41 PM'
-[48/252] run 16d825ff-1623-4176-a5b5-42e0f5c2b0ac__para2
-  -> success | pred='6:41 PM'
-[49/252] run 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc
-  -> success | pred='34689'
-[50/252] run 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc__para1
-  -> success | pred='34689'
-[51/252] run 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc__para2
-  -> success | pred='34689'
-[52/252] run 1dcc160f-c187-48c2-b68e-319bd4354f3d
-  -> success | pred='3'
-[53/252] run 1dcc160f-c187-48c2-b68e-319bd4354f3d__para1
-  -> success | pred='3'
-[54/252] run 1dcc160f-c187-48c2-b68e-319bd4354f3d__para2
-  -> failed
+[40/252] skip 114d5fd0-e2ae-4b6d-a65a-870da2d19c08 (already exists)
+[41/252] skip 114d5fd0-e2ae-4b6d-a65a-870da2d19c08__para1 (already exists)
+[42/252] skip 114d5fd0-e2ae-4b6d-a65a-870da2d19c08__para2 (already exists)
+[43/252] skip 14569e28-c88c-43e4-8c32-097d35b9a67d (already exists)
+[44/252] skip 14569e28-c88c-43e4-8c32-097d35b9a67d__para1 (already exists)
+[45/252] skip 14569e28-c88c-43e4-8c32-097d35b9a67d__para2 (already exists)
+[46/252] skip 16d825ff-1623-4176-a5b5-42e0f5c2b0ac (already exists)
+[47/252] skip 16d825ff-1623-4176-a5b5-42e0f5c2b0ac__para1 (already exists)
+[48/252] skip 16d825ff-1623-4176-a5b5-42e0f5c2b0ac__para2 (already exists)
+[49/252] skip 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc (already exists)
+[50/252] skip 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc__para1 (already exists)
+[51/252] skip 17b5a6a3-bc87-42e8-b0fb-6ab0781ef2cc__para2 (already exists)
+[52/252] skip 1dcc160f-c187-48c2-b68e-319bd4354f3d (already exists)
+[53/252] skip 1dcc160f-c187-48c2-b68e-319bd4354f3d__para1 (already exists)
+[54/252] skip 1dcc160f-c187-48c2-b68e-319bd4354f3d__para2 (already exists)
 [55/252] run 20194330-9976-4043-8632-f8485c6c71b2
   -> timeout
 [56/252] run 20194330-9976-4043-8632-f8485c6c71b2__para1
+  -> success | pred='4'
+[57/252] skip 20194330-9976-4043-8632-f8485c6c71b2__para2 (already exists)
+[58/252] skip 2b3ef98c-cc05-450b-a719-711aee40ac65 (already exists)
+[59/252] skip 2b3ef98c-cc05-450b-a719-711aee40ac65__para1 (already exists)
+[60/252] skip 2b3ef98c-cc05-450b-a719-711aee40ac65__para2 (already exists)
+[61/252] skip 2dfc4c37-fec1-4518-84a7-10095d30ad75 (already exists)
+[62/252] skip 2dfc4c37-fec1-4518-84a7-10095d30ad75__para1 (already exists)
+[63/252] skip 2dfc4c37-fec1-4518-84a7-10095d30ad75__para2 (already exists)
+[64/252] skip 32102e3e-d12a-4209-9163-7b3a104efe5d (already exists)
+[65/252] skip 32102e3e-d12a-4209-9163-7b3a104efe5d__para1 (already exists)
+[66/252] skip 32102e3e-d12a-4209-9163-7b3a104efe5d__para2 (already exists)
+[67/252] skip 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57 (already exists)
+[68/252] skip 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57__para1 (already exists)
+[69/252] skip 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57__para2 (already exists)
+[70/252] skip 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf (already exists)
+[71/252] skip 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf__para1 (already exists)
+[72/252] skip 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf__para2 (already exists)
+[73/252] skip 366e2f2b-8632-4ef2-81eb-bc3877489217 (already exists)
+[74/252] skip 366e2f2b-8632-4ef2-81eb-bc3877489217__para1 (already exists)
+[75/252] skip 366e2f2b-8632-4ef2-81eb-bc3877489217__para2 (already exists)
+[76/252] skip 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee (already exists)
+[77/252] skip 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee__para1 (already exists)
+[78/252] skip 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee__para2 (already exists)
+[79/252] skip 42d4198c-5895-4f0a-b0c0-424a66465d83 (already exists)
+[80/252] skip 42d4198c-5895-4f0a-b0c0-424a66465d83__para1 (already exists)
+[81/252] skip 42d4198c-5895-4f0a-b0c0-424a66465d83__para2 (already exists)
+[82/252] skip 48eb8242-1099-4c26-95d4-ef22b002457a (already exists)
+[83/252] skip 48eb8242-1099-4c26-95d4-ef22b002457a__para1 (already exists)
+[84/252] skip 48eb8242-1099-4c26-95d4-ef22b002457a__para2 (already exists)
+[85/252] skip 4d0aa727-86b1-406b-9b33-f870dd14a4a5 (already exists)
+[86/252] skip 4d0aa727-86b1-406b-9b33-f870dd14a4a5__para1 (already exists)
+[87/252] skip 4d0aa727-86b1-406b-9b33-f870dd14a4a5__para2 (already exists)
+[88/252] skip 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2 (already exists)
+[89/252] skip 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2__para1 (already exists)
+[90/252] skip 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2__para2 (already exists)
+[91/252] skip 544b7f0c-173a-4377-8d56-57b36eb26ddf (already exists)
+[92/252] skip 544b7f0c-173a-4377-8d56-57b36eb26ddf__para1 (already exists)
+[93/252] skip 544b7f0c-173a-4377-8d56-57b36eb26ddf__para2 (already exists)
+[94/252] skip 54612da3-fd56-4941-80f4-5eb82330de25 (already exists)
+[95/252] skip 54612da3-fd56-4941-80f4-5eb82330de25__para1 (already exists)
+[96/252] skip 54612da3-fd56-4941-80f4-5eb82330de25__para2 (already exists)
+[97/252] skip 56137764-b4e0-45b8-9c52-1866420c3df5 (already exists)
+[98/252] skip 56137764-b4e0-45b8-9c52-1866420c3df5__para1 (already exists)
+[99/252] skip 56137764-b4e0-45b8-9c52-1866420c3df5__para2 (already exists)
+[100/252] skip 624cbf11-6a41-4692-af9c-36b3e5ca3130 (already exists)
+[101/252] skip 624cbf11-6a41-4692-af9c-36b3e5ca3130__para1 (already exists)
+[102/252] skip 624cbf11-6a41-4692-af9c-36b3e5ca3130__para2 (already exists)
+[103/252] run 6359a0b1-8f7b-499b-9336-840f9ab90688
   -> timeout
-[57/252] run 20194330-9976-4043-8632-f8485c6c71b2__para2
+[104/252] run 6359a0b1-8f7b-499b-9336-840f9ab90688__para1
+  -> success | pred='112'
+[105/252] run 6359a0b1-8f7b-499b-9336-840f9ab90688__para2
+  -> timeout
+[106/252] skip 65638e28-7f37-4fa7-b7b9-8c19bb609879 (already exists)
+[107/252] skip 65638e28-7f37-4fa7-b7b9-8c19bb609879__para1 (already exists)
+[108/252] skip 65638e28-7f37-4fa7-b7b9-8c19bb609879__para2 (already exists)
+[109/252] skip 65da0822-a48a-4a68-bbad-8ed1b835a834 (already exists)
+[110/252] skip 65da0822-a48a-4a68-bbad-8ed1b835a834__para1 (already exists)
+[111/252] skip 65da0822-a48a-4a68-bbad-8ed1b835a834__para2 (already exists)
+[112/252] skip 67e8878b-5cef-4375-804e-e6291fdbe78a (already exists)
+[113/252] skip 67e8878b-5cef-4375-804e-e6291fdbe78a__para1 (already exists)
+[114/252] skip 67e8878b-5cef-4375-804e-e6291fdbe78a__para2 (already exists)
+[115/252] skip 6b078778-0b90-464d-83f6-59511c811b01 (already exists)
+[116/252] skip 6b078778-0b90-464d-83f6-59511c811b01__para1 (already exists)
+[117/252] skip 6b078778-0b90-464d-83f6-59511c811b01__para2 (already exists)
+[118/252] skip 708b99c5-e4a7-49cb-a5cf-933c8d46470d (already exists)
+[119/252] skip 708b99c5-e4a7-49cb-a5cf-933c8d46470d__para1 (already exists)
+[120/252] skip 708b99c5-e4a7-49cb-a5cf-933c8d46470d__para2 (already exists)
+[121/252] skip 71345b0a-9c7d-4b50-b2bf-937ec5879845 (already exists)
+[122/252] skip 71345b0a-9c7d-4b50-b2bf-937ec5879845__para1 (already exists)
+[123/252] skip 71345b0a-9c7d-4b50-b2bf-937ec5879845__para2 (already exists)
+[124/252] skip 73c1b9fe-ee1d-4cf4-96ca-35c08f97b054 (already exists)
+[125/252] skip 73c1b9fe-ee1d-4cf4-96ca-35c08f97b054__para1 (already exists)
+[126/252] skip 73c1b9fe-ee1d-4cf4-96ca-35c08f97b054__para2 (already exists)
+[127/252] skip 7619a514-5fa8-43ef-9143-83b66a43d7a4 (already exists)
+[128/252] skip 7619a514-5fa8-43ef-9143-83b66a43d7a4__para1 (already exists)
+[129/252] skip 7619a514-5fa8-43ef-9143-83b66a43d7a4__para2 (already exists)
+[130/252] skip 7a4a336d-dcfa-45a0-b014-824c7619e8de (already exists)
+[131/252] skip 7a4a336d-dcfa-45a0-b014-824c7619e8de__para1 (already exists)
+[132/252] skip 7a4a336d-dcfa-45a0-b014-824c7619e8de__para2 (already exists)
+[133/252] skip 7b5377b0-3f38-4103-8ad2-90fe89864c04 (already exists)
+[134/252] skip 7b5377b0-3f38-4103-8ad2-90fe89864c04__para1 (already exists)
+[135/252] skip 7b5377b0-3f38-4103-8ad2-90fe89864c04__para2 (already exists)
+[136/252] skip 7cc4acfa-63fd-4acc-a1a1-e8e529e0a97f (already exists)
+[137/252] skip 7cc4acfa-63fd-4acc-a1a1-e8e529e0a97f__para1 (already exists)
+[138/252] skip 7cc4acfa-63fd-4acc-a1a1-e8e529e0a97f__para2 (already exists)
+[139/252] skip 7dd30055-0198-452e-8c25-f73dbe27dcb8 (already exists)
+[140/252] skip 7dd30055-0198-452e-8c25-f73dbe27dcb8__para1 (already exists)
+[141/252] skip 7dd30055-0198-452e-8c25-f73dbe27dcb8__para2 (already exists)
+[142/252] skip 853c8244-429e-46ca-89f2-addf40dfb2bd (already exists)
+[143/252] skip 853c8244-429e-46ca-89f2-addf40dfb2bd__para1 (already exists)
+[144/252] skip 853c8244-429e-46ca-89f2-addf40dfb2bd__para2 (already exists)
+[145/252] skip 87c610df-bef7-4932-b950-1d83ef4e282b (already exists)
+[146/252] skip 87c610df-bef7-4932-b950-1d83ef4e282b__para1 (already exists)
+[147/252] skip 87c610df-bef7-4932-b950-1d83ef4e282b__para2 (already exists)
+[148/252] run 8b3379c0-0981-4f5b-8407-6444610cb212
+  -> failed
+[149/252] run 8b3379c0-0981-4f5b-8407-6444610cb212__para1
+  -> failed
+[150/252] skip 8b3379c0-0981-4f5b-8407-6444610cb212__para2 (already exists)
+[151/252] skip 8f80e01c-1296-4371-9486-bb3d68651a60 (already exists)
+[152/252] run 8f80e01c-1296-4371-9486-bb3d68651a60__para1
+  -> timeout
+[153/252] skip 8f80e01c-1296-4371-9486-bb3d68651a60__para2 (already exists)
+[154/252] skip 9f41b083-683e-4dcf-9185-ccfeaa88fa45 (already exists)
+[155/252] skip 9f41b083-683e-4dcf-9185-ccfeaa88fa45__para1 (already exists)
+[156/252] skip 9f41b083-683e-4dcf-9185-ccfeaa88fa45__para2 (already exists)
+[157/252] skip a26649c6-1cb2-470a-871e-6910c64c3e53 (already exists)
+[158/252] skip a26649c6-1cb2-470a-871e-6910c64c3e53__para1 (already exists)
+[159/252] skip a26649c6-1cb2-470a-871e-6910c64c3e53__para2 (already exists)
+[160/252] skip a56f1527-3abf-41d6-91f8-7296d6336c3f (already exists)
+[161/252] skip a56f1527-3abf-41d6-91f8-7296d6336c3f__para1 (already exists)
+[162/252] skip a56f1527-3abf-41d6-91f8-7296d6336c3f__para2 (already exists)
+[163/252] skip a7feb290-76bb-4cb7-8800-7edaf7954f2f (already exists)
+[164/252] skip a7feb290-76bb-4cb7-8800-7edaf7954f2f__para1 (already exists)
+[165/252] run a7feb290-76bb-4cb7-8800-7edaf7954f2f__para2
+  -> success | pred='13'
+[166/252] run ad37a656-079a-49f9-a493-7b739c9167d1
+  -> success | pred='Bravo'
+[167/252] run ad37a656-079a-49f9-a493-7b739c9167d1__para1
+  -> success | pred='Bravo'
+[168/252] run ad37a656-079a-49f9-a493-7b739c9167d1__para2
+  -> success | pred='Bravo'
+[169/252] run b2c257e0-3ad7-4f05-b8e3-d9da973be36e
+  -> success | pred='+4.6'
+[170/252] run b2c257e0-3ad7-4f05-b8e3-d9da973be36e__para1
+  -> success | pred='+45.8'
+[171/252] run b2c257e0-3ad7-4f05-b8e3-d9da973be36e__para2
+  -> success | pred='+4.6'
+[172/252] run b4cc024b-3f5e-480e-b96a-6656493255b5
+  -> success | pred='Russian-German Legion'
+[173/252] run b4cc024b-3f5e-480e-b96a-6656493255b5__para1
+  -> success | pred='Russian-German Legion'
+[174/252] run b4cc024b-3f5e-480e-b96a-6656493255b5__para2
+  -> success | pred='Russo-German Legion'
+[175/252] run b7f857e4-d8aa-4387-af2a-0e844df5b9d8
+  -> success | pred='47'
+[176/252] run b7f857e4-d8aa-4387-af2a-0e844df5b9d8__para1
+  -> success | pred='47'
+[177/252] run b7f857e4-d8aa-4387-af2a-0e844df5b9d8__para2
+  -> success | pred='47'
+[178/252] run b9763138-c053-4832-9f55-86200cb1f99c
   -> success | pred='3'
-[58/252] run 2b3ef98c-cc05-450b-a719-711aee40ac65
-[transcribe] loading whisper base model …
-[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/2b3ef98c-cc05-450b-a719-711aee40ac65.mp3 …
-[transcribe] done (442 chars)
-  -> success | pred='To be or not to be that is the question whether tis nobler in the mind to suffer the slings and arrows of outrageous fortune'
-[59/252] run 2b3ef98c-cc05-450b-a719-711aee40ac65__para1
-[transcribe] loading whisper base model …
-[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/2b3ef98c-cc05-450b-a719-711aee40ac65.mp3 …
-[transcribe] done (442 chars)
-  -> success | pred='To be or not to be that is the question'
-[60/252] run 2b3ef98c-cc05-450b-a719-711aee40ac65__para2
-[transcribe] loading whisper base model …
-[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/2b3ef98c-cc05-450b-a719-711aee40ac65.mp3 …
-[transcribe] done (442 chars)
-  -> success | pred='To be or not to be that is the question whether tis nobler in the mind to suffer the slings and arrows of outrageous fortune'
-[61/252] run 2dfc4c37-fec1-4518-84a7-10095d30ad75
+[179/252] run b9763138-c053-4832-9f55-86200cb1f99c__para1
   -> success | pred='3'
-[62/252] run 2dfc4c37-fec1-4518-84a7-10095d30ad75__para1
+[180/252] run b9763138-c053-4832-9f55-86200cb1f99c__para2
   -> success | pred='3'
-[63/252] run 2dfc4c37-fec1-4518-84a7-10095d30ad75__para2
-  -> success | pred='3'
-[64/252] run 32102e3e-d12a-4209-9163-7b3a104efe5d
-  -> success | pred='Time-Parking 2: Parallel Universe'
-[65/252] run 32102e3e-d12a-4209-9163-7b3a104efe5d__para1
-  -> success | pred='Time-Parking 2: Parallel Universe'
-[66/252] run 32102e3e-d12a-4209-9163-7b3a104efe5d__para2
-  -> success | pred='Time-Parking 2: Parallel Universe'
-[67/252] run 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57
-  -> success | pred='2'
-[68/252] run 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57__para1
-  -> success | pred='2'
-[69/252] run 33d8ea3b-6c6b-4ff1-803d-7e270dea8a57__para2
-  -> success | pred='2'
-[70/252] run 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf
-  -> success | pred='142'
-[71/252] run 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf__para1
-  -> success | pred='142'
-[72/252] run 3627a8be-a77f-41bb-b807-7e1bd4c0ebdf__para2
-  -> success | pred='142'
-[73/252] run 366e2f2b-8632-4ef2-81eb-bc3877489217
-  -> success | pred="Shelley's Place"
-[74/252] run 366e2f2b-8632-4ef2-81eb-bc3877489217__para1
-  -> success | pred="Shelley's Place"
-[75/252] run 366e2f2b-8632-4ef2-81eb-bc3877489217__para2
-  -> success | pred="Shelley's Place"
-[76/252] run 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee
-  -> success | pred='56,000'
-[77/252] run 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee__para1
-  -> success | pred='56,000'
-[78/252] run 3ff6b7a9-a5bd-4412-ad92-0cd0d45c0fee__para2
-  -> success | pred='56,000'
-[79/252] run 42d4198c-5895-4f0a-b0c0-424a66465d83
-  -> success | pred='2177'
-[80/252] run 42d4198c-5895-4f0a-b0c0-424a66465d83__para1
-  -> success | pred='2122'
-[81/252] run 42d4198c-5895-4f0a-b0c0-424a66465d83__para2
-  -> success | pred='477'
-[82/252] run 48eb8242-1099-4c26-95d4-ef22b002457a
-  -> success | pred='7'
-[83/252] run 48eb8242-1099-4c26-95d4-ef22b002457a__para1
-  -> success | pred='7'
-[84/252] run 48eb8242-1099-4c26-95d4-ef22b002457a__para2
-  -> success | pred='7'
-[85/252] run 4d0aa727-86b1-406b-9b33-f870dd14a4a5
-  -> success | pred='1 in 3'
-[86/252] run 4d0aa727-86b1-406b-9b33-f870dd14a4a5__para1
-  -> success | pred='1 in 3'
-[87/252] run 4d0aa727-86b1-406b-9b33-f870dd14a4a5__para2
-  -> success | pred='1 in 3'
-[88/252] run 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2
+[181/252] run bfcd99e1-0690-4b53-a85c-0174a8629083
+  -> success | pred='17'
+[182/252] run bfcd99e1-0690-4b53-a85c-0174a8629083__para1
+  -> success | pred='17'
+[183/252] run bfcd99e1-0690-4b53-a85c-0174a8629083__para2
+  -> success | pred='17'
+[184/252] run c61d22de-5f6c-4958-a7f6-5e9707bd3466
+  -> success | pred='Egalitarian'
+[185/252] run c61d22de-5f6c-4958-a7f6-5e9707bd3466__para1
+  -> success | pred='Egalitarian'
+[186/252] run c61d22de-5f6c-4958-a7f6-5e9707bd3466__para2
+  -> success | pred='egalitarian'
+[187/252] run c8b7e059-c60d-472e-ad64-3b04ae1166dc
+  -> failed
+[188/252] run c8b7e059-c60d-472e-ad64-3b04ae1166dc__para1
+  -> failed
+[189/252] run c8b7e059-c60d-472e-ad64-3b04ae1166dc__para2
   -> success | pred='8'
-[89/252] run 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2__para1
-  -> success | pred='8'
-[90/252] run 4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2__para2
-  -> success | pred='8'
-[91/252] run 544b7f0c-173a-4377-8d56-57b36eb26ddf
-  -> success | pred='A Nightmare on Elm Street'
-[92/252] run 544b7f0c-173a-4377-8d56-57b36eb26ddf__para1
+[190/252] run cca70ce6-1952-45d2-acd4-80c903b0bc49
+  -> success | pred='85'
+[191/252] run cca70ce6-1952-45d2-acd4-80c903b0bc49__para1
+  -> success | pred='85'
+[192/252] run cca70ce6-1952-45d2-acd4-80c903b0bc49__para2
+  -> success | pred='100'
+[193/252] run d1af70ea-a9a4-421a-b9cc-94b5e02f1788
+  -> success | pred='736455'
+[194/252] run d1af70ea-a9a4-421a-b9cc-94b5e02f1788__para1
+  -> success | pred='736455'
+[195/252] run d1af70ea-a9a4-421a-b9cc-94b5e02f1788__para2
+  -> success | pred='736455'
+[196/252] run d5141ca5-e7a0-469f-bf3e-e773507c86e2
+  -> success | pred='19/02/2009'
+[197/252] run d5141ca5-e7a0-469f-bf3e-e773507c86e2__para1
+  -> success | pred='19/02/2009'
+[198/252] run d5141ca5-e7a0-469f-bf3e-e773507c86e2__para2
+  -> success | pred='19/02/2009'
+[199/252] run d700d50d-c707-4dca-90dc-4528cddd0c80
+  -> success | pred='Roger Miller'
+[200/252] run d700d50d-c707-4dca-90dc-4528cddd0c80__para1
+  -> success | pred='Roger Miller'
+[201/252] run d700d50d-c707-4dca-90dc-4528cddd0c80__para2
+  -> success | pred='Roger Miller'
+[202/252] run d8152ad6-e4d5-4c12-8bb7-8d57dc10c6de
+  -> success | pred='0.03'
+[203/252] run d8152ad6-e4d5-4c12-8bb7-8d57dc10c6de__para1
+  -> success | pred='0.03'
+[204/252] run d8152ad6-e4d5-4c12-8bb7-8d57dc10c6de__para2
+  -> success | pred='0.03'
+[205/252] run db4fd70a-2d37-40ea-873f-9433dc5e301f
+  -> success | pred='11'
+[206/252] run db4fd70a-2d37-40ea-873f-9433dc5e301f__para1
+  -> success | pred='11'
+[207/252] run db4fd70a-2d37-40ea-873f-9433dc5e301f__para2
+  -> success | pred='10'
+[208/252] run dd3c7503-f62a-4bd0-9f67-1b63b94194cc
+  -> success | pred='6'
+[209/252] run dd3c7503-f62a-4bd0-9f67-1b63b94194cc__para1
+  -> success | pred='6'
+[210/252] run dd3c7503-f62a-4bd0-9f67-1b63b94194cc__para2
+  -> success | pred='6'
+[211/252] run ded28325-3447-4c56-860f-e497d6fb3577
+  -> success | pred='Picnic is in Polybius Plaza.'
+[212/252] run ded28325-3447-4c56-860f-e497d6fb3577__para1
+  -> success | pred='Picnic is in Polybius Plaza.'
+[213/252] run ded28325-3447-4c56-860f-e497d6fb3577__para2
+  -> success | pred='Picnic is in Polybius Plaza.'
+[214/252] run df6561b2-7ee5-4540-baab-5095f742716a
+  -> success | pred='16.488'
+[215/252] run df6561b2-7ee5-4540-baab-5095f742716a__para1
+  -> success | pred='16.556'
+[216/252] run df6561b2-7ee5-4540-baab-5095f742716a__para2
+  -> success | pred='14.959'
+[217/252] run e0c10771-d627-4fd7-9694-05348e54ee36
+  -> success | pred='234.9'
+[218/252] run e0c10771-d627-4fd7-9694-05348e54ee36__para1
+  -> success | pred='234.9'
+[219/252] run e0c10771-d627-4fd7-9694-05348e54ee36__para2
+  -> success | pred='235'
+[220/252] run e29834fd-413a-455c-a33e-c3915b07401c
+  -> success | pred='21'
+[221/252] run e29834fd-413a-455c-a33e-c3915b07401c__para1
+  -> success | pred='21'
+[222/252] run e29834fd-413a-455c-a33e-c3915b07401c__para2
+  -> success | pred='21'
+[223/252] run e2d69698-bc99-4e85-9880-67eaccd66e6c
+  -> success | pred='Michele Fitzgerald'
+[224/252] run e2d69698-bc99-4e85-9880-67eaccd66e6c__para1
+  -> success | pred='Michele Fitzgerald'
+[225/252] run e2d69698-bc99-4e85-9880-67eaccd66e6c__para2
+  -> success | pred='Michele Fitzgerald'
+[226/252] run e4e91f1c-1dcd-439e-9fdd-cb976f5293fd
+  -> failed
+[227/252] run e4e91f1c-1dcd-439e-9fdd-cb976f5293fd__para1
+  -> success | pred='cloak'
+[228/252] run e4e91f1c-1dcd-439e-9fdd-cb976f5293fd__para2
+  -> success | pred='cloak'
+[229/252] run e8cb5b03-41e0-4086-99e5-f6806cd97211
+  -> success | pred='Shrimp'
+[230/252] run e8cb5b03-41e0-4086-99e5-f6806cd97211__para1
+  -> success | pred='Shrimp'
+[231/252] run e8cb5b03-41e0-4086-99e5-f6806cd97211__para2
+  -> success | pred='Shrimp'
+[232/252] run e9a2c537-8232-4c3f-85b0-b52de6bcba99
+  -> success | pred='7'
+[233/252] run e9a2c537-8232-4c3f-85b0-b52de6bcba99__para1
+  -> success | pred='7'
+[234/252] run e9a2c537-8232-4c3f-85b0-b52de6bcba99__para2
+  -> success | pred='7'
+[235/252] run ecbc4f94-95a3-4cc7-b255-6741a458a625
+  -> success | pred='13'
+[236/252] run ecbc4f94-95a3-4cc7-b255-6741a458a625__para1
+  -> success | pred='13'
+[237/252] run ecbc4f94-95a3-4cc7-b255-6741a458a625__para2
+  -> success | pred='21'
+[238/252] run edd4d4f2-1a58-45c4-b038-67337af4e029
+  -> success | pred='Berkshire'
+[239/252] run edd4d4f2-1a58-45c4-b038-67337af4e029__para1
+  -> success | pred='Berkshire'
+[240/252] run edd4d4f2-1a58-45c4-b038-67337af4e029__para2
+  -> success | pred='Berkshire'
+[241/252] run f0f46385-fc03-4599-b5d3-f56496c3e69f
+  -> success | pred='Myanmar, Timor-Leste'
+[242/252] run f0f46385-fc03-4599-b5d3-f56496c3e69f__para1
+  -> success | pred='Myanmar, Timor-Leste'
+[243/252] run f0f46385-fc03-4599-b5d3-f56496c3e69f__para2
+  -> success | pred='Myanmar, Timor-Leste'
+[244/252] run f2feb6a4-363c-4c09-a804-0db564eafd68
+  -> success | pred='$900000'
+[245/252] run f2feb6a4-363c-4c09-a804-0db564eafd68__para1
+  -> success | pred='900000'
+[246/252] run f2feb6a4-363c-4c09-a804-0db564eafd68__para2
+  -> success | pred='2017 Komo Mai Drive sold for the greater amount at $900000.'
+[247/252] run f3917a3d-1d17-4ee2-90c5-683b072218fe
+  -> success | pred='2,732'
+[248/252] run f3917a3d-1d17-4ee2-90c5-683b072218fe__para1
+  -> success | pred='2671'
+[249/252] run f3917a3d-1d17-4ee2-90c5-683b072218fe__para2
+  -> success | pred='2724'
+[250/252] run f46b4380-207e-4434-820b-f32ce04ae2a4
+  -> success | pred='Harbinger, Tidal'
+[251/252] run f46b4380-207e-4434-820b-f32ce04ae2a4__para1
+  -> success | pred='Harbinger, Tidal'
+[252/252] run f46b4380-207e-4434-820b-f32ce04ae2a4__para2
+  -> success | pred='Harbinger, Tidal'
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia_paraphrased/gaia_lv2_x3.jsonl",
+  "run_name": "gaia_lv2_x3",
+  "started_at": "2026-06-20T05:44:58.825414+00:00",
+  "ended_at": "2026-06-20T15:45:12.226497+00:00",
+  "selected_tasks": 252,
+  "completed": 88,
+  "failed": 9,
+  "skipped": 155,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 54271621,
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}
