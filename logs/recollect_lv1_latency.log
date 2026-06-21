@@ -1,0 +1,95 @@
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[setup] kb-jsonl:         data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl
+[setup] kb-trace-run:     gaia_lv1_x3
+[setup] kb-embedding-run: gaia_lv1_x3
+[setup] top-k:            5  min-similarity: 0.8  plan-rank-by: total_latency_ms
+  [KB] WARNING: missing embedding for 65afbc8a-89ca-4ad5-8d62-355bb401f61d__para2, skipping
+  [KB] WARNING: missing embedding for cca530fc-4052-43b2-b130-b30968d8aa44__para1, skipping
+[KB] Loaded 100 KB tasks (2 skipped). Embedding matrix: (100, 768)
+[1/51] skip 0383a3ee-47a7-41a4-b493-519bdefe0488 (already exists)
+[2/51] skip 11af4e1a-5f45-467d-9aeb-46f4bb0bf034 (already exists)
+[3/51] skip 1f975693-876d-457b-a649-393859e79bf3 (already exists)
+[4/51] skip 23dd907f-1261-4488-b21c-e9185af91d5e (already exists)
+[5/51] skip 27d5d136-8563-469e-92bf-fd103c28b57c (already exists)
+[6/51] skip 305ac316-eef6-4446-960a-92d80d542f82 (already exists)
+[7/51] skip 389793a7-ca17-4e82-81cb-2b3a2391b4b9 (already exists)
+[8/51] skip 3cef3a44-215e-4aed-8e3b-b1e3f08063b7 (already exists)
+[9/51] skip 3f57289b-8c60-48be-bd80-01f8099ca449 (already exists)
+[10/51] skip 42576abe-0deb-4869-8c63-225c2d75a95a (already exists)
+[11/51] skip 46719c30-f4c3-4cad-be07-d5cb21eee6bb (already exists)
+[12/51] skip 4b650a35-8529-4695-89ed-8dc7a500a498 (already exists)
+[13/51] skip 4fc2f1ae-8625-45b5-ab34-ad4433bc21f8 (already exists)
+[14/51] skip 50ad0280-0819-4bd9-b275-5de32d3b5bcb (already exists)
+[15/51] skip 50ec8903-b81f-4257-9450-1085afd2c319 (already exists)
+[16/51] skip 5188369a-3bbe-43d8-8b94-11558f909a08 (already exists)
+[17/51] skip 5a0c1adf-205e-4841-a666-7c3ef95def9d (already exists)
+[18/51] skip 5cfb274c-0207-4aa7-9575-6ac0bd95d9b2 (already exists)
+[19/51] skip 5d0080cb-90d7-4712-bc33-848150e917d3 (already exists)
+[20/51] skip 65afbc8a-89ca-4ad5-8d62-355bb401f61d (already exists)
+[21/51] skip 6f37996b-2ac7-44b0-8e68-6d28256631b4 (already exists)
+[22/51] skip 72e110e7-464c-453c-a309-90a95aed6538 (already exists)
+[23/51] skip 7673d772-ef80-4f0f-a602-1bf4485c9b43 (already exists)
+[24/51] skip 7bd855d8-463d-4ed5-93ca-5fe35145f733 (already exists)
+[25/51] run 7d4a7d1d-cac6-44a8-96e8-ea9584a70825
+  -> cache HIT  src=7d4a7d1d-cac6-44a8-96e8-ea9584a70825__para1  sim=0.961  total_latency_ms=72127  candidates≥0.8=2
+  -> success | pred='27'
+[26/51] skip 840bfca7-4f7b-481a-8794-c560c340185d (already exists)
+[27/51] skip 8e867cd7-cff9-4e6c-867a-ff5ddc2550be (already exists)
+[28/51] run 9318445f-fe6a-4e1b-acbf-c68228c9906a
+  -> cache HIT  src=9318445f-fe6a-4e1b-acbf-c68228c9906a__para2  sim=0.825  total_latency_ms=84491  candidates≥0.8=2
+  -> success | pred='3/4,1/4,3/4,3/4,2/4,1/2,5/35,7/21,30/5,2/4,1/2,3/4,1/15,1/3,4/9,1/8,32/23,103/170'
+[29/51] skip 935e2cff-ae78-4218-b3f5-115589b19dae (already exists)
+[30/51] skip 99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3 (already exists)
+[31/51] run 9d191bce-651d-4746-be2d-7ef8ecadb9c2
+  -> cache HIT  src=9d191bce-651d-4746-be2d-7ef8ecadb9c2__para2  sim=0.962  total_latency_ms=18532  candidates≥0.8=2
+  -> success | pred='Extremely.'
+[32/51] run a0068077-79f4-461a-adfe-75c1a4148545
+  -> cache HIT  src=a0068077-79f4-461a-adfe-75c1a4148545__para1  sim=0.957  total_latency_ms=71643  candidates≥0.8=2
+  -> success | pred='90'
+[33/51] skip a0c07678-e491-4bbc-8f0b-07405144218f (already exists)
+[34/51] skip a1e91b78-d3d8-4675-bb8d-62741b4b68a6 (already exists)
+[35/51] skip a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c (already exists)
+[36/51] skip b415aba4-4b68-4fc6-9b89-2c812e55a3e1 (already exists)
+[37/51] skip b816bfce-3d80-4913-a07d-69b752ce6377 (already exists)
+[38/51] skip bda648d7-d618-4883-88f4-3466eabd860e (already exists)
+[39/51] skip c365c1c7-a3db-4d5e-a9a1-66f56eae7865 (already exists)
+[40/51] skip c714ab3a-da30-4603-bacd-d008800188b9 (already exists)
+[41/51] skip cabe07ed-9eca-40ea-8ead-410ef5e83f91 (already exists)
+[42/51] run cca530fc-4052-43b2-b130-b30968d8aa44
+  [KB] No pre-computed embedding for cca530fc-4052-43b2-b130-b30968d8aa44 — encoding at runtime.
+  -> exception: ModuleNotFoundError("No module named 'sentence_transformers'")
+[43/51] skip cf106601-ab4f-4af9-b045-5295fe67b37d (already exists)
+[44/51] skip cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb (already exists)
+[45/51] skip d0633230-7067-47a9-9dbf-ee11e0a2cdd6 (already exists)
+[46/51] skip dc22a632-937f-4e6a-b72f-ba0ff3f5ff97 (already exists)
+[47/51] skip dc28cf18-6431-458b-83ef-64b3ce566c10 (already exists)
+[48/51] skip e142056d-56ab-4352-b091-b56054bd1359 (already exists)
+[49/51] skip e1fc63a2-da7a-432f-be78-7c4a95598703 (already exists)
+[50/51] skip ec09fa32-d03f-4bf8-84b0-1f16922c3ae4 (already exists)
+[51/51] skip f918266a-b3e0-4914-865d-4faa564f1aef (already exists)
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia_paraphrased/gaia_lv1_x3_test.jsonl",
+  "run_name": "gaia_lv1_plan_reuse_rank_by_latency",
+  "started_at": "2026-06-21T17:39:43.083638+00:00",
+  "ended_at": "2026-06-21T17:43:05.686777+00:00",
+  "selected_tasks": 51,
+  "completed": 4,
+  "failed": 1,
+  "skipped": 46,
+  "cache_hits": 4,
+  "cache_misses": 0,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 596648,
+  "kb_jsonl": "data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl",
+  "kb_trace_run": "gaia_lv1_x3",
+  "kb_embedding_run": "gaia_lv1_x3",
+  "kb_size": 100,
+  "top_k": 5,
+  "plan_rank_by": "total_latency_ms",
+  "min_similarity": 0.8,
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}

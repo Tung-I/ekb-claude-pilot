@@ -1,0 +1,595 @@
+===== START rank_by_step (total_tool_calls) Sat Jun 20 14:49:32 PDT 2026 =====
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[setup] kb-jsonl:         data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl
+[setup] kb-trace-run:     gaia_lv1_x3
+[setup] kb-embedding-run: gaia_lv1_x3
+[setup] top-k:            5  min-similarity: 0.8  plan-rank-by: total_tool_calls
+  [KB] WARNING: missing embedding for 65afbc8a-89ca-4ad5-8d62-355bb401f61d__para2, skipping
+  [KB] WARNING: missing embedding for cca530fc-4052-43b2-b130-b30968d8aa44__para1, skipping
+[KB] Loaded 100 KB tasks (2 skipped). Embedding matrix: (100, 768)
+[1/51] run 0383a3ee-47a7-41a4-b493-519bdefe0488
+  -> cache HIT  src=0383a3ee-47a7-41a4-b493-519bdefe0488__para1  sim=0.981  total_tool_calls=3  candidates≥0.8=2
+  -> success | pred='Penguin'
+[2/51] run 11af4e1a-5f45-467d-9aeb-46f4bb0bf034
+  -> cache HIT  src=11af4e1a-5f45-467d-9aeb-46f4bb0bf034__para1  sim=0.943  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='6'
+[3/51] run 1f975693-876d-457b-a649-393859e79bf3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/1f975693-876d-457b-a649-393859e79bf3.mp3 …
+[transcribe] done (552 chars)
+  -> cache HIT  src=1f975693-876d-457b-a649-393859e79bf3__para2  sim=0.946  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='132, 133, 134, 197, 245'
+[4/51] run 23dd907f-1261-4488-b21c-e9185af91d5e
+  -> cache HIT  src=23dd907f-1261-4488-b21c-e9185af91d5e__para1  sim=0.936  total_tool_calls=7  candidates≥0.8=2
+  -> success | pred='2'
+[5/51] run 27d5d136-8563-469e-92bf-fd103c28b57c
+  -> cache HIT  src=27d5d136-8563-469e-92bf-fd103c28b57c__para1  sim=0.904  total_tool_calls=1  candidates≥0.8=1
+  -> success | pred='(¬A → B) ↔ (A ∨ ¬B)'
+[6/51] run 305ac316-eef6-4446-960a-92d80d542f82
+  -> cache HIT  src=305ac316-eef6-4446-960a-92d80d542f82__para2  sim=0.924  total_tool_calls=5  candidates≥0.8=2
+  -> success | pred='Wojciech'
+[7/51] run 389793a7-ca17-4e82-81cb-2b3a2391b4b9
+  -> cache HIT  src=389793a7-ca17-4e82-81cb-2b3a2391b4b9__para2  sim=0.924  total_tool_calls=5  candidates≥0.8=2
+  -> success | pred='3'
+[8/51] run 3cef3a44-215e-4aed-8e3b-b1e3f08063b7
+  -> cache HIT  src=3cef3a44-215e-4aed-8e3b-b1e3f08063b7__para1  sim=0.896  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='broccoli, celery, fresh basil, lettuce, sweet potatoes'
+[9/51] run 3f57289b-8c60-48be-bd80-01f8099ca449
+  -> cache HIT  src=3f57289b-8c60-48be-bd80-01f8099ca449__para1  sim=0.870  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='519'
+[10/51] run 42576abe-0deb-4869-8c63-225c2d75a95a
+  -> cache HIT  src=42576abe-0deb-4869-8c63-225c2d75a95a__para2  sim=0.918  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='Maktay Mato Apple'
+[11/51] run 46719c30-f4c3-4cad-be07-d5cb21eee6bb
+  -> cache HIT  src=46719c30-f4c3-4cad-be07-d5cb21eee6bb__para1  sim=0.913  total_tool_calls=10  candidates≥0.8=2
+  -> success | pred='Effectiveness of Mapping Human-Oriented Information to Software Agents for Online Teaching Environments'
+[12/51] run 4b650a35-8529-4695-89ed-8dc7a500a498
+  -> cache HIT  src=4b650a35-8529-4695-89ed-8dc7a500a498__para1  sim=0.966  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='Pineapple'
+[13/51] run 4fc2f1ae-8625-45b5-ab34-ad4433bc21f8
+  -> cache HIT  src=4fc2f1ae-8625-45b5-ab34-ad4433bc21f8__para1  sim=0.934  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='FunkMonk'
+[14/51] run 50ad0280-0819-4bd9-b275-5de32d3b5bcb
+  -> cache MISS (no eligible neighbor)
+  -> success | pred='The seagull glided peacefully to my chair.'
+[15/51] run 50ec8903-b81f-4257-9450-1085afd2c319
+  -> cache HIT  src=50ec8903-b81f-4257-9450-1085afd2c319__para1  sim=0.907  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='green, white'
+[16/51] run 5188369a-3bbe-43d8-8b94-11558f909a08
+  -> cache HIT  src=5188369a-3bbe-43d8-8b94-11558f909a08__para2  sim=0.935  total_tool_calls=7  candidates≥0.8=2
+  -> success | pred='Annie Levin'
+[17/51] run 5a0c1adf-205e-4841-a666-7c3ef95def9d
+  -> cache HIT  src=5a0c1adf-205e-4841-a666-7c3ef95def9d__para2  sim=0.904  total_tool_calls=5  candidates≥0.8=2
+  -> success | pred='Claus'
+[18/51] run 5cfb274c-0207-4aa7-9575-6ac0bd95d9b2
+  -> cache HIT  src=5cfb274c-0207-4aa7-9575-6ac0bd95d9b2__para2  sim=0.857  total_tool_calls=2  candidates≥0.8=2
+  -> success | pred='No'
+[19/51] run 5d0080cb-90d7-4712-bc33-848150e917d3
+  -> cache HIT  src=5d0080cb-90d7-4712-bc33-848150e917d3__para2  sim=0.955  total_tool_calls=7  candidates≥0.8=2
+  -> success | pred='0.1777 m^3'
+[20/51] run 65afbc8a-89ca-4ad5-8d62-355bb401f61d
+  -> cache HIT  src=65afbc8a-89ca-4ad5-8d62-355bb401f61d__para1  sim=0.845  total_tool_calls=22  candidates≥0.8=1
+  -> timeout
+[21/51] run 6f37996b-2ac7-44b0-8e68-6d28256631b4
+  -> cache HIT  src=6f37996b-2ac7-44b0-8e68-6d28256631b4__para2  sim=0.930  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='b, e'
+[22/51] run 72e110e7-464c-453c-a309-90a95aed6538
+  -> cache HIT  src=72e110e7-464c-453c-a309-90a95aed6538__para2  sim=0.935  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='Guatemala'
+[23/51] run 7673d772-ef80-4f0f-a602-1bf4485c9b43
+  -> cache HIT  src=7673d772-ef80-4f0f-a602-1bf4485c9b43__para1  sim=0.959  total_tool_calls=20  candidates≥0.8=2
+  -> success | pred='except'
+[24/51] run 7bd855d8-463d-4ed5-93ca-5fe35145f733
+  -> cache HIT  src=7bd855d8-463d-4ed5-93ca-5fe35145f733__para2  sim=0.956  total_tool_calls=3  candidates≥0.8=2
+  -> success | pred='$89706.00'
+[25/51] run 7d4a7d1d-cac6-44a8-96e8-ea9584a70825
+  -> cache HIT  src=7d4a7d1d-cac6-44a8-96e8-ea9584a70825__para1  sim=0.961  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='22'
+[26/51] run 840bfca7-4f7b-481a-8794-c560c340185d
+  -> cache HIT  src=840bfca7-4f7b-481a-8794-c560c340185d__para2  sim=0.931  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='80GSFC21M0002'
+[27/51] run 8e867cd7-cff9-4e6c-867a-ff5ddc2550be
+  -> cache HIT  src=8e867cd7-cff9-4e6c-867a-ff5ddc2550be__para2  sim=0.939  total_tool_calls=5  candidates≥0.8=2
+  -> success | pred='3'
+[28/51] run 9318445f-fe6a-4e1b-acbf-c68228c9906a
+  -> cache HIT  src=9318445f-fe6a-4e1b-acbf-c68228c9906a__para1  sim=0.950  total_tool_calls=2  candidates≥0.8=2
+  -> success | pred='3/4,1/4,2/4,1/2,5/35,7/21,30/5,3/4,1/15,1/3,4/9,1/8,32/23,103/170'
+[29/51] run 935e2cff-ae78-4218-b3f5-115589b19dae
+  -> cache HIT  src=935e2cff-ae78-4218-b3f5-115589b19dae__para2  sim=0.937  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='Research'
+[30/51] run 99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3.mp3 …
+[transcribe] done (374 chars)
+  -> cache HIT  src=99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3__para1  sim=0.922  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='cornstarch, freshly squeezed lemon juice, granulated sugar, pure vanilla extract, ripe strawberries'
+[31/51] run 9d191bce-651d-4746-be2d-7ef8ecadb9c2
+  -> cache HIT  src=9d191bce-651d-4746-be2d-7ef8ecadb9c2__para2  sim=0.962  total_tool_calls=3  candidates≥0.8=2
+  -> success | pred='Extremely.'
+[32/51] run a0068077-79f4-461a-adfe-75c1a4148545
+  -> cache HIT  src=a0068077-79f4-461a-adfe-75c1a4148545__para1  sim=0.957  total_tool_calls=10  candidates≥0.8=2
+  -> success | pred='90'
+[33/51] run a0c07678-e491-4bbc-8f0b-07405144218f
+  -> cache HIT  src=a0c07678-e491-4bbc-8f0b-07405144218f__para1  sim=0.915  total_tool_calls=9  candidates≥0.8=2
+  -> success | pred='Yoshida, Uehara'
+[34/51] run a1e91b78-d3d8-4675-bb8d-62741b4b68a6
+  -> cache HIT  src=a1e91b78-d3d8-4675-bb8d-62741b4b68a6__para2  sim=0.916  total_tool_calls=3  candidates≥0.8=2
+  -> success | pred='3'
+[35/51] run a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c
+  -> cache HIT  src=a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c__para1  sim=0.927  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='3'
+[36/51] run b415aba4-4b68-4fc6-9b89-2c812e55a3e1
+  -> cache HIT  src=b415aba4-4b68-4fc6-9b89-2c812e55a3e1__para1  sim=0.927  total_tool_calls=39  candidates≥0.8=1
+  -> success | pred='diamond'
+[37/51] run b816bfce-3d80-4913-a07d-69b752ce6377
+  -> cache HIT  src=b816bfce-3d80-4913-a07d-69b752ce6377__para1  sim=0.940  total_tool_calls=7  candidates≥0.8=2
+  -> success | pred='fluffy'
+[38/51] run bda648d7-d618-4883-88f4-3466eabd860e
+  -> cache HIT  src=bda648d7-d618-4883-88f4-3466eabd860e__para2  sim=0.935  total_tool_calls=3  candidates≥0.8=1
+  -> success | pred='Saint Petersburg'
+[39/51] run c365c1c7-a3db-4d5e-a9a1-66f56eae7865
+  -> cache HIT  src=c365c1c7-a3db-4d5e-a9a1-66f56eae7865__para2  sim=0.931  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='Honolulu, Quincy'
+[40/51] run c714ab3a-da30-4603-bacd-d008800188b9
+  -> cache HIT  src=c714ab3a-da30-4603-bacd-d008800188b9__para1  sim=0.948  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='100'
+[41/51] run cabe07ed-9eca-40ea-8ead-410ef5e83f91
+  -> cache HIT  src=cabe07ed-9eca-40ea-8ead-410ef5e83f91__para2  sim=0.966  total_tool_calls=6  candidates≥0.8=2
+  -> success | pred='Louvrier'
+[42/51] run cca530fc-4052-43b2-b130-b30968d8aa44
+  [KB] No pre-computed embedding for cca530fc-4052-43b2-b130-b30968d8aa44 — encoding at runtime.
+  -> exception: ModuleNotFoundError("No module named 'sentence_transformers'")
+[43/51] run cf106601-ab4f-4af9-b045-5295fe67b37d
+  -> cache HIT  src=cf106601-ab4f-4af9-b045-5295fe67b37d__para1  sim=0.959  total_tool_calls=5  candidates≥0.8=2
+  -> success | pred='CUB'
+[44/51] run cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb
+  -> cache HIT  src=cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb__para2  sim=0.966  total_tool_calls=3  candidates≥0.8=2
+  -> success | pred='Fred'
+[45/51] run d0633230-7067-47a9-9dbf-ee11e0a2cdd6
+  -> cache HIT  src=d0633230-7067-47a9-9dbf-ee11e0a2cdd6__para2  sim=0.904  total_tool_calls=16  candidates≥0.8=2
+  -> success | pred='NearestCentroid'
+[46/51] run dc22a632-937f-4e6a-b72f-ba0ff3f5ff97
+  -> cache HIT  src=dc22a632-937f-4e6a-b72f-ba0ff3f5ff97__para1  sim=0.944  total_tool_calls=8  candidates≥0.8=2
+  -> success | pred="Five Hundred Things to Eat Before It's Too Late: and the Very Best Places to Eat Them"
+[47/51] run dc28cf18-6431-458b-83ef-64b3ce566c10
+  -> cache HIT  src=dc28cf18-6431-458b-83ef-64b3ce566c10__para1  sim=0.984  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='2'
+[48/51] run e142056d-56ab-4352-b091-b56054bd1359
+  -> cache HIT  src=e142056d-56ab-4352-b091-b56054bd1359__para2  sim=0.924  total_tool_calls=1  candidates≥0.8=2
+  -> success | pred='$12,000'
+[49/51] run e1fc63a2-da7a-432f-be78-7c4a95598703
+  -> cache HIT  src=e1fc63a2-da7a-432f-be78-7c4a95598703__para1  sim=0.969  total_tool_calls=4  candidates≥0.8=2
+  -> success | pred='17'
+[50/51] run ec09fa32-d03f-4bf8-84b0-1f16922c3ae4
+  -> cache HIT  src=ec09fa32-d03f-4bf8-84b0-1f16922c3ae4__para2  sim=0.877  total_tool_calls=2  candidates≥0.8=2
+  -> success | pred='3'
+[51/51] run f918266a-b3e0-4914-865d-4faa564f1aef
+  -> cache HIT  src=f918266a-b3e0-4914-865d-4faa564f1aef__para1  sim=0.893  total_tool_calls=2  candidates≥0.8=1
+  -> success | pred='0'
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia_paraphrased/gaia_lv1_x3_test.jsonl",
+  "run_name": "gaia_lv1_plan_reuse_rank_by_step",
+  "started_at": "2026-06-20T21:49:32.739526+00:00",
+  "ended_at": "2026-06-20T22:57:51.706857+00:00",
+  "selected_tasks": 51,
+  "completed": 49,
+  "failed": 2,
+  "skipped": 0,
+  "cache_hits": 48,
+  "cache_misses": 1,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 10159866,
+  "kb_jsonl": "data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl",
+  "kb_trace_run": "gaia_lv1_x3",
+  "kb_embedding_run": "gaia_lv1_x3",
+  "kb_size": 100,
+  "top_k": 5,
+  "plan_rank_by": "total_tool_calls",
+  "min_similarity": 0.8,
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}
+===== START rank_by_token (total_tokens) Sat Jun 20 15:57:51 PDT 2026 =====
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[setup] kb-jsonl:         data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl
+[setup] kb-trace-run:     gaia_lv1_x3
+[setup] kb-embedding-run: gaia_lv1_x3
+[setup] top-k:            5  min-similarity: 0.8  plan-rank-by: total_tokens
+  [KB] WARNING: missing embedding for 65afbc8a-89ca-4ad5-8d62-355bb401f61d__para2, skipping
+  [KB] WARNING: missing embedding for cca530fc-4052-43b2-b130-b30968d8aa44__para1, skipping
+[KB] Loaded 100 KB tasks (2 skipped). Embedding matrix: (100, 768)
+[1/51] run 0383a3ee-47a7-41a4-b493-519bdefe0488
+  -> cache HIT  src=0383a3ee-47a7-41a4-b493-519bdefe0488__para1  sim=0.981  total_tokens=106291  candidates≥0.8=2
+  -> success | pred='Kakapo'
+[2/51] run 11af4e1a-5f45-467d-9aeb-46f4bb0bf034
+  -> cache HIT  src=11af4e1a-5f45-467d-9aeb-46f4bb0bf034__para1  sim=0.943  total_tokens=51512  candidates≥0.8=2
+  -> success | pred='6'
+[3/51] run 1f975693-876d-457b-a649-393859e79bf3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/1f975693-876d-457b-a649-393859e79bf3.mp3 …
+[transcribe] done (552 chars)
+  -> cache HIT  src=1f975693-876d-457b-a649-393859e79bf3__para2  sim=0.946  total_tokens=52001  candidates≥0.8=2
+  -> success | pred='132, 133, 134, 197, 245'
+[4/51] run 23dd907f-1261-4488-b21c-e9185af91d5e
+  -> cache HIT  src=23dd907f-1261-4488-b21c-e9185af91d5e__para1  sim=0.936  total_tokens=220840  candidates≥0.8=2
+  -> success | pred='2'
+[5/51] run 27d5d136-8563-469e-92bf-fd103c28b57c
+  -> cache HIT  src=27d5d136-8563-469e-92bf-fd103c28b57c__para1  sim=0.904  total_tokens=53516  candidates≥0.8=1
+  -> success | pred='(¬A → B) ↔ (A ∨ ¬B)'
+[6/51] run 305ac316-eef6-4446-960a-92d80d542f82
+  -> cache HIT  src=305ac316-eef6-4446-960a-92d80d542f82__para2  sim=0.924  total_tokens=164098  candidates≥0.8=2
+  -> success | pred='Piotrek'
+[7/51] run 389793a7-ca17-4e82-81cb-2b3a2391b4b9
+  -> cache HIT  src=389793a7-ca17-4e82-81cb-2b3a2391b4b9__para1  sim=0.914  total_tokens=194010  candidates≥0.8=2
+  -> success | pred='3'
+[8/51] run 3cef3a44-215e-4aed-8e3b-b1e3f08063b7
+  -> cache HIT  src=3cef3a44-215e-4aed-8e3b-b1e3f08063b7__para1  sim=0.896  total_tokens=53717  candidates≥0.8=2
+  -> success | pred='broccoli, celery, fresh basil, lettuce, sweet potatoes'
+[9/51] run 3f57289b-8c60-48be-bd80-01f8099ca449
+  -> cache HIT  src=3f57289b-8c60-48be-bd80-01f8099ca449__para1  sim=0.870  total_tokens=190802  candidates≥0.8=2
+  -> success | pred='519'
+[10/51] run 42576abe-0deb-4869-8c63-225c2d75a95a
+  -> cache HIT  src=42576abe-0deb-4869-8c63-225c2d75a95a__para1  sim=0.891  total_tokens=52563  candidates≥0.8=2
+  -> success | pred='Maktay Mato Apple'
+[11/51] run 46719c30-f4c3-4cad-be07-d5cb21eee6bb
+  -> cache HIT  src=46719c30-f4c3-4cad-be07-d5cb21eee6bb__para1  sim=0.913  total_tokens=312603  candidates≥0.8=2
+  -> failed
+[12/51] run 4b650a35-8529-4695-89ed-8dc7a500a498
+  -> cache HIT  src=4b650a35-8529-4695-89ed-8dc7a500a498__para2  sim=0.832  total_tokens=51484  candidates≥0.8=2
+  -> success | pred='Guava'
+[13/51] run 4fc2f1ae-8625-45b5-ab34-ad4433bc21f8
+  -> cache HIT  src=4fc2f1ae-8625-45b5-ab34-ad4433bc21f8__para1  sim=0.934  total_tokens=190880  candidates≥0.8=2
+  -> success | pred='FunkMonk'
+[14/51] run 50ad0280-0819-4bd9-b275-5de32d3b5bcb
+  -> cache MISS (no eligible neighbor)
+  -> success | pred='THE SEAGULL GLIDED PEACEFULLY TO MY CHAIR'
+[15/51] run 50ec8903-b81f-4257-9450-1085afd2c319
+  -> cache HIT  src=50ec8903-b81f-4257-9450-1085afd2c319__para2  sim=0.862  total_tokens=56794  candidates≥0.8=2
+  -> success | pred='green, white'
+[16/51] run 5188369a-3bbe-43d8-8b94-11558f909a08
+  -> cache HIT  src=5188369a-3bbe-43d8-8b94-11558f909a08__para1  sim=0.922  total_tokens=221677  candidates≥0.8=2
+  -> failed
+[17/51] run 5a0c1adf-205e-4841-a666-7c3ef95def9d
+  -> cache HIT  src=5a0c1adf-205e-4841-a666-7c3ef95def9d__para2  sim=0.904  total_tokens=165284  candidates≥0.8=2
+  -> success | pred='Claus'
+[18/51] run 5cfb274c-0207-4aa7-9575-6ac0bd95d9b2
+  -> cache HIT  src=5cfb274c-0207-4aa7-9575-6ac0bd95d9b2__para1  sim=0.878  total_tokens=140798  candidates≥0.8=2
+  -> success | pred='No'
+[19/51] run 5d0080cb-90d7-4712-bc33-848150e917d3
+  -> cache HIT  src=5d0080cb-90d7-4712-bc33-848150e917d3__para2  sim=0.955  total_tokens=252184  candidates≥0.8=2
+  -> failed
+[20/51] run 65afbc8a-89ca-4ad5-8d62-355bb401f61d
+  -> cache HIT  src=65afbc8a-89ca-4ad5-8d62-355bb401f61d__para1  sim=0.845  total_tokens=393979  candidates≥0.8=1
+  -> success | pred='FFFF00'
+[21/51] run 6f37996b-2ac7-44b0-8e68-6d28256631b4
+  -> cache HIT  src=6f37996b-2ac7-44b0-8e68-6d28256631b4__para2  sim=0.930  total_tokens=53065  candidates≥0.8=2
+  -> success | pred='b, e'
+[22/51] run 72e110e7-464c-453c-a309-90a95aed6538
+  -> cache HIT  src=72e110e7-464c-453c-a309-90a95aed6538__para2  sim=0.935  total_tokens=191598  candidates≥0.8=2
+  -> success | pred='Indonesia'
+[23/51] run 7673d772-ef80-4f0f-a602-1bf4485c9b43
+  -> cache HIT  src=7673d772-ef80-4f0f-a602-1bf4485c9b43__para1  sim=0.959  total_tokens=756626  candidates≥0.8=2
+  -> success | pred='except'
+[24/51] run 7bd855d8-463d-4ed5-93ca-5fe35145f733
+  -> cache HIT  src=7bd855d8-463d-4ed5-93ca-5fe35145f733__para2  sim=0.956  total_tokens=106586  candidates≥0.8=2
+  -> success | pred='$89706.00'
+[25/51] run 7d4a7d1d-cac6-44a8-96e8-ea9584a70825
+  -> cache HIT  src=7d4a7d1d-cac6-44a8-96e8-ea9584a70825__para1  sim=0.961  total_tokens=199636  candidates≥0.8=2
+  -> success | pred='17'
+[26/51] run 840bfca7-4f7b-481a-8794-c560c340185d
+  -> cache HIT  src=840bfca7-4f7b-481a-8794-c560c340185d__para2  sim=0.931  total_tokens=192658  candidates≥0.8=2
+  -> success | pred='80GSFC21M0002'
+[27/51] run 8e867cd7-cff9-4e6c-867a-ff5ddc2550be
+  -> cache HIT  src=8e867cd7-cff9-4e6c-867a-ff5ddc2550be__para2  sim=0.939  total_tokens=161210  candidates≥0.8=2
+  -> success | pred='3'
+[28/51] run 9318445f-fe6a-4e1b-acbf-c68228c9906a
+  -> cache HIT  src=9318445f-fe6a-4e1b-acbf-c68228c9906a__para2  sim=0.825  total_tokens=93150  candidates≥0.8=2
+  -> success | pred='3/4,1/4,3/4,2/4,1/2,5/35,7/21,30/5,2/4,1/2,3/4,1/15,1/3,4/9,1/8,32/23,103/170'
+[29/51] run 935e2cff-ae78-4218-b3f5-115589b19dae
+  -> cache HIT  src=935e2cff-ae78-4218-b3f5-115589b19dae__para1  sim=0.907  total_tokens=164698  candidates≥0.8=2
+  -> success | pred='Reliability'
+[30/51] run 99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3.mp3 …
+[transcribe] done (374 chars)
+  -> cache HIT  src=99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3__para2  sim=0.845  total_tokens=52137  candidates≥0.8=2
+  -> success | pred='cornstarch, freshly squeezed lemon juice, granulated sugar, pure vanilla extract, ripe strawberries'
+[31/51] run 9d191bce-651d-4746-be2d-7ef8ecadb9c2
+  -> cache HIT  src=9d191bce-651d-4746-be2d-7ef8ecadb9c2__para2  sim=0.962  total_tokens=106313  candidates≥0.8=2
+  -> success | pred='Extremely.'
+[32/51] run a0068077-79f4-461a-adfe-75c1a4148545
+  -> cache HIT  src=a0068077-79f4-461a-adfe-75c1a4148545__para1  sim=0.957  total_tokens=309373  candidates≥0.8=2
+  -> success | pred='90'
+[33/51] run a0c07678-e491-4bbc-8f0b-07405144218f
+  -> cache HIT  src=a0c07678-e491-4bbc-8f0b-07405144218f__para1  sim=0.915  total_tokens=283567  candidates≥0.8=2
+  -> success | pred='Yoshida, Uehara'
+[34/51] run a1e91b78-d3d8-4675-bb8d-62741b4b68a6
+  -> cache HIT  src=a1e91b78-d3d8-4675-bb8d-62741b4b68a6__para2  sim=0.916  total_tokens=106666  candidates≥0.8=2
+  -> success | pred='3'
+[35/51] run a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c
+  -> cache HIT  src=a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c__para2  sim=0.946  total_tokens=279119  candidates≥0.8=2
+  -> success | pred='4'
+[36/51] run b415aba4-4b68-4fc6-9b89-2c812e55a3e1
+  -> cache HIT  src=b415aba4-4b68-4fc6-9b89-2c812e55a3e1__para1  sim=0.927  total_tokens=1179448  candidates≥0.8=1
+  -> success | pred='diamond'
+[37/51] run b816bfce-3d80-4913-a07d-69b752ce6377
+  -> cache HIT  src=b816bfce-3d80-4913-a07d-69b752ce6377__para1  sim=0.940  total_tokens=223981  candidates≥0.8=2
+  -> success | pred='fluffy'
+[38/51] run bda648d7-d618-4883-88f4-3466eabd860e
+  -> cache HIT  src=bda648d7-d618-4883-88f4-3466eabd860e__para2  sim=0.935  total_tokens=106848  candidates≥0.8=1
+  -> success | pred='Saint Petersburg'
+[39/51] run c365c1c7-a3db-4d5e-a9a1-66f56eae7865
+  -> cache HIT  src=c365c1c7-a3db-4d5e-a9a1-66f56eae7865__para2  sim=0.931  total_tokens=56094  candidates≥0.8=2
+  -> success | pred='Braintree, Honolulu'
+[40/51] run c714ab3a-da30-4603-bacd-d008800188b9
+  -> cache HIT  src=c714ab3a-da30-4603-bacd-d008800188b9__para2  sim=0.947  total_tokens=53367  candidates≥0.8=2
+  -> success | pred='100'
+[41/51] run cabe07ed-9eca-40ea-8ead-410ef5e83f91
+  -> cache HIT  src=cabe07ed-9eca-40ea-8ead-410ef5e83f91__para2  sim=0.966  total_tokens=191402  candidates≥0.8=2
+  -> success | pred='Louvrier'
+[42/51] run cca530fc-4052-43b2-b130-b30968d8aa44
+  [KB] No pre-computed embedding for cca530fc-4052-43b2-b130-b30968d8aa44 — encoding at runtime.
+  -> exception: ModuleNotFoundError("No module named 'sentence_transformers'")
+[43/51] run cf106601-ab4f-4af9-b045-5295fe67b37d
+  -> cache HIT  src=cf106601-ab4f-4af9-b045-5295fe67b37d__para1  sim=0.959  total_tokens=163053  candidates≥0.8=2
+  -> success | pred='CUB'
+[44/51] run cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb
+  -> cache HIT  src=cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb__para2  sim=0.966  total_tokens=134814  candidates≥0.8=2
+  -> success | pred='Fred'
+[45/51] run d0633230-7067-47a9-9dbf-ee11e0a2cdd6
+  -> cache HIT  src=d0633230-7067-47a9-9dbf-ee11e0a2cdd6__para2  sim=0.904  total_tokens=555967  candidates≥0.8=2
+  -> success | pred='BaseLabelPropagation'
+[46/51] run dc22a632-937f-4e6a-b72f-ba0ff3f5ff97
+  -> cache HIT  src=dc22a632-937f-4e6a-b72f-ba0ff3f5ff97__para1  sim=0.944  total_tokens=263936  candidates≥0.8=2
+  -> success | pred="Five Hundred Things to Eat Before It's Too Late: and the Very Best Places to Eat Them"
+[47/51] run dc28cf18-6431-458b-83ef-64b3ce566c10
+  -> cache HIT  src=dc28cf18-6431-458b-83ef-64b3ce566c10__para2  sim=0.954  total_tokens=55849  candidates≥0.8=2
+  -> success | pred='2'
+[48/51] run e142056d-56ab-4352-b091-b56054bd1359
+  -> cache HIT  src=e142056d-56ab-4352-b091-b56054bd1359__para2  sim=0.924  total_tokens=171433  candidates≥0.8=2
+  -> success | pred='$14,000'
+[49/51] run e1fc63a2-da7a-432f-be78-7c4a95598703
+  -> cache HIT  src=e1fc63a2-da7a-432f-be78-7c4a95598703__para2  sim=0.966  total_tokens=141926  candidates≥0.8=2
+  -> success | pred='17000'
+[50/51] run ec09fa32-d03f-4bf8-84b0-1f16922c3ae4
+  -> cache HIT  src=ec09fa32-d03f-4bf8-84b0-1f16922c3ae4__para2  sim=0.877  total_tokens=108821  candidates≥0.8=2
+  -> success | pred='3'
+[51/51] run f918266a-b3e0-4914-865d-4faa564f1aef
+  -> cache HIT  src=f918266a-b3e0-4914-865d-4faa564f1aef__para1  sim=0.893  total_tokens=78385  candidates≥0.8=1
+  -> success | pred='0'
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia_paraphrased/gaia_lv1_x3_test.jsonl",
+  "run_name": "gaia_lv1_plan_reuse_rank_by_token",
+  "started_at": "2026-06-20T22:57:52.173583+00:00",
+  "ended_at": "2026-06-21T00:49:23.861706+00:00",
+  "selected_tasks": 51,
+  "completed": 47,
+  "failed": 4,
+  "skipped": 0,
+  "cache_hits": 49,
+  "cache_misses": 1,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 16240325,
+  "kb_jsonl": "data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl",
+  "kb_trace_run": "gaia_lv1_x3",
+  "kb_embedding_run": "gaia_lv1_x3",
+  "kb_size": 100,
+  "top_k": 5,
+  "plan_rank_by": "total_tokens",
+  "min_similarity": 0.8,
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}
+===== START rank_by_latency (total_latency_ms) Sat Jun 20 17:49:24 PDT 2026 =====
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[setup] kb-jsonl:         data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl
+[setup] kb-trace-run:     gaia_lv1_x3
+[setup] kb-embedding-run: gaia_lv1_x3
+[setup] top-k:            5  min-similarity: 0.8  plan-rank-by: total_latency_ms
+  [KB] WARNING: missing embedding for 65afbc8a-89ca-4ad5-8d62-355bb401f61d__para2, skipping
+  [KB] WARNING: missing embedding for cca530fc-4052-43b2-b130-b30968d8aa44__para1, skipping
+[KB] Loaded 100 KB tasks (2 skipped). Embedding matrix: (100, 768)
+[1/51] run 0383a3ee-47a7-41a4-b493-519bdefe0488
+  -> cache HIT  src=0383a3ee-47a7-41a4-b493-519bdefe0488__para1  sim=0.981  total_latency_ms=16825  candidates≥0.8=2
+  -> success | pred='Penguin'
+[2/51] run 11af4e1a-5f45-467d-9aeb-46f4bb0bf034
+  -> cache HIT  src=11af4e1a-5f45-467d-9aeb-46f4bb0bf034__para2  sim=0.938  total_latency_ms=7718  candidates≥0.8=2
+  -> success | pred='6'
+[3/51] run 1f975693-876d-457b-a649-393859e79bf3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/1f975693-876d-457b-a649-393859e79bf3.mp3 …
+[transcribe] done (552 chars)
+  -> cache HIT  src=1f975693-876d-457b-a649-393859e79bf3__para2  sim=0.946  total_latency_ms=6455  candidates≥0.8=2
+  -> success | pred='132, 133, 134, 197, 245'
+[4/51] run 23dd907f-1261-4488-b21c-e9185af91d5e
+  -> cache HIT  src=23dd907f-1261-4488-b21c-e9185af91d5e__para1  sim=0.936  total_latency_ms=51918  candidates≥0.8=2
+  -> success | pred='2'
+[5/51] run 27d5d136-8563-469e-92bf-fd103c28b57c
+  -> cache HIT  src=27d5d136-8563-469e-92bf-fd103c28b57c__para1  sim=0.904  total_latency_ms=17428  candidates≥0.8=1
+  -> success | pred='(¬A → B) ↔ (A ∨ ¬B)'
+[6/51] run 305ac316-eef6-4446-960a-92d80d542f82
+  -> cache HIT  src=305ac316-eef6-4446-960a-92d80d542f82__para2  sim=0.924  total_latency_ms=30804  candidates≥0.8=2
+  -> success | pred='Wojciech'
+[7/51] run 389793a7-ca17-4e82-81cb-2b3a2391b4b9
+  -> cache HIT  src=389793a7-ca17-4e82-81cb-2b3a2391b4b9__para1  sim=0.914  total_latency_ms=47995  candidates≥0.8=2
+  -> success | pred='3'
+[8/51] run 3cef3a44-215e-4aed-8e3b-b1e3f08063b7
+  -> cache HIT  src=3cef3a44-215e-4aed-8e3b-b1e3f08063b7__para1  sim=0.896  total_latency_ms=18638  candidates≥0.8=2
+  -> success | pred='broccoli, celery, fresh basil, lettuce, sweet potatoes'
+[9/51] run 3f57289b-8c60-48be-bd80-01f8099ca449
+  -> cache HIT  src=3f57289b-8c60-48be-bd80-01f8099ca449__para1  sim=0.870  total_latency_ms=28897  candidates≥0.8=2
+  -> success | pred='519'
+[10/51] run 42576abe-0deb-4869-8c63-225c2d75a95a
+  -> cache HIT  src=42576abe-0deb-4869-8c63-225c2d75a95a__para2  sim=0.918  total_latency_ms=12096  candidates≥0.8=2
+  -> success | pred='Maktay Mato Apple'
+[11/51] run 46719c30-f4c3-4cad-be07-d5cb21eee6bb
+  -> cache HIT  src=46719c30-f4c3-4cad-be07-d5cb21eee6bb__para1  sim=0.913  total_latency_ms=64730  candidates≥0.8=2
+  -> success | pred='Effectiveness of Mapping Human-Oriented Information to Software Agents for Online Teaching Environments'
+[12/51] run 4b650a35-8529-4695-89ed-8dc7a500a498
+  -> cache HIT  src=4b650a35-8529-4695-89ed-8dc7a500a498__para1  sim=0.966  total_latency_ms=9967  candidates≥0.8=2
+  -> success | pred='Pineapple'
+[13/51] run 4fc2f1ae-8625-45b5-ab34-ad4433bc21f8
+  -> cache HIT  src=4fc2f1ae-8625-45b5-ab34-ad4433bc21f8__para1  sim=0.934  total_latency_ms=28353  candidates≥0.8=2
+  -> success | pred='FunkMonk'
+[14/51] run 50ad0280-0819-4bd9-b275-5de32d3b5bcb
+  -> cache MISS (no eligible neighbor)
+  -> success | pred='The seagull glided peacefully to my chair.'
+[15/51] run 50ec8903-b81f-4257-9450-1085afd2c319
+  -> cache HIT  src=50ec8903-b81f-4257-9450-1085afd2c319__para2  sim=0.862  total_latency_ms=34107  candidates≥0.8=2
+  -> success | pred='green, white'
+[16/51] run 5188369a-3bbe-43d8-8b94-11558f909a08
+  -> cache HIT  src=5188369a-3bbe-43d8-8b94-11558f909a08__para2  sim=0.935  total_latency_ms=36444  candidates≥0.8=2
+  -> success | pred='Annie Levin'
+[17/51] run 5a0c1adf-205e-4841-a666-7c3ef95def9d
+  -> cache HIT  src=5a0c1adf-205e-4841-a666-7c3ef95def9d__para1  sim=0.913  total_latency_ms=49295  candidates≥0.8=2
+  -> success | pred='Claus'
+[18/51] run 5cfb274c-0207-4aa7-9575-6ac0bd95d9b2
+  -> cache HIT  src=5cfb274c-0207-4aa7-9575-6ac0bd95d9b2__para1  sim=0.878  total_latency_ms=33547  candidates≥0.8=2
+  -> success | pred='No'
+[19/51] run 5d0080cb-90d7-4712-bc33-848150e917d3
+  -> cache HIT  src=5d0080cb-90d7-4712-bc33-848150e917d3__para2  sim=0.955  total_latency_ms=34404  candidates≥0.8=2
+  -> success | pred='0.1777'
+[20/51] run 65afbc8a-89ca-4ad5-8d62-355bb401f61d
+  -> cache HIT  src=65afbc8a-89ca-4ad5-8d62-355bb401f61d__para1  sim=0.845  total_latency_ms=842931  candidates≥0.8=1
+  -> success | pred='F478A7'
+[21/51] run 6f37996b-2ac7-44b0-8e68-6d28256631b4
+  -> cache HIT  src=6f37996b-2ac7-44b0-8e68-6d28256631b4__para2  sim=0.930  total_latency_ms=13153  candidates≥0.8=2
+  -> success | pred='b, e'
+[22/51] run 72e110e7-464c-453c-a309-90a95aed6538
+  -> cache HIT  src=72e110e7-464c-453c-a309-90a95aed6538__para2  sim=0.935  total_latency_ms=33216  candidates≥0.8=2
+  -> success | pred='Guatemala'
+[23/51] run 7673d772-ef80-4f0f-a602-1bf4485c9b43
+  -> cache HIT  src=7673d772-ef80-4f0f-a602-1bf4485c9b43__para1  sim=0.959  total_latency_ms=337099  candidates≥0.8=2
+  -> success | pred='inference'
+[24/51] run 7bd855d8-463d-4ed5-93ca-5fe35145f733
+  -> cache HIT  src=7bd855d8-463d-4ed5-93ca-5fe35145f733__para2  sim=0.956  total_latency_ms=20226  candidates≥0.8=2
+  -> success | pred='$89706.00'
+[25/51] run 7d4a7d1d-cac6-44a8-96e8-ea9584a70825
+  -> cache HIT  src=7d4a7d1d-cac6-44a8-96e8-ea9584a70825__para1  sim=0.961  total_latency_ms=72127  candidates≥0.8=2
+  -> success | pred='27'
+[26/51] run 840bfca7-4f7b-481a-8794-c560c340185d
+  -> cache HIT  src=840bfca7-4f7b-481a-8794-c560c340185d__para2  sim=0.931  total_latency_ms=48274  candidates≥0.8=2
+  -> success | pred='80GSFC21M0002'
+[27/51] run 8e867cd7-cff9-4e6c-867a-ff5ddc2550be
+  -> cache HIT  src=8e867cd7-cff9-4e6c-867a-ff5ddc2550be__para2  sim=0.939  total_latency_ms=33946  candidates≥0.8=2
+  -> success | pred='3'
+[28/51] run 9318445f-fe6a-4e1b-acbf-c68228c9906a
+  -> cache HIT  src=9318445f-fe6a-4e1b-acbf-c68228c9906a__para2  sim=0.825  total_latency_ms=84491  candidates≥0.8=2
+  -> success | pred='3/4,1/4,3/4,3/4,2/4,1/2,5/35,7/21,30/5,3/4,1/15,1/3,4/9,1/8,32/23,103/170'
+[29/51] run 935e2cff-ae78-4218-b3f5-115589b19dae
+  -> cache HIT  src=935e2cff-ae78-4218-b3f5-115589b19dae__para1  sim=0.907  total_latency_ms=52725  candidates≥0.8=2
+  -> success | pred='Research'
+[30/51] run 99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /Users/tungi/ekb-claude-pilot/data/gaia/raw/99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3.mp3 …
+[transcribe] done (374 chars)
+  -> cache HIT  src=99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3__para2  sim=0.845  total_latency_ms=7885  candidates≥0.8=2
+  -> success | pred='cornstarch, freshly squeezed lemon juice, granulated sugar, pure vanilla extract, ripe strawberries'
+[31/51] run 9d191bce-651d-4746-be2d-7ef8ecadb9c2
+  -> cache HIT  src=9d191bce-651d-4746-be2d-7ef8ecadb9c2__para2  sim=0.962  total_latency_ms=18532  candidates≥0.8=2
+  -> success | pred='Extremely.'
+[32/51] run a0068077-79f4-461a-adfe-75c1a4148545
+  -> cache HIT  src=a0068077-79f4-461a-adfe-75c1a4148545__para1  sim=0.957  total_latency_ms=71643  candidates≥0.8=2
+  -> success | pred='90'
+[33/51] run a0c07678-e491-4bbc-8f0b-07405144218f
+  -> cache HIT  src=a0c07678-e491-4bbc-8f0b-07405144218f__para2  sim=0.913  total_latency_ms=56365  candidates≥0.8=2
+  -> success | pred='Yoshida, Uehara'
+[34/51] run a1e91b78-d3d8-4675-bb8d-62741b4b68a6
+  -> cache HIT  src=a1e91b78-d3d8-4675-bb8d-62741b4b68a6__para2  sim=0.916  total_latency_ms=24508  candidates≥0.8=2
+  -> success | pred='3'
+[35/51] run a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c
+  -> cache HIT  src=a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c__para1  sim=0.927  total_latency_ms=40729  candidates≥0.8=2
+  -> success | pred='3'
+[36/51] run b415aba4-4b68-4fc6-9b89-2c812e55a3e1
+  -> cache HIT  src=b415aba4-4b68-4fc6-9b89-2c812e55a3e1__para1  sim=0.927  total_latency_ms=370844  candidates≥0.8=1
+  -> success | pred='diamond'
+[37/51] run b816bfce-3d80-4913-a07d-69b752ce6377
+  -> cache HIT  src=b816bfce-3d80-4913-a07d-69b752ce6377__para2  sim=0.957  total_latency_ms=56919  candidates≥0.8=2
+  -> success | pred='fluffy'
+[38/51] run bda648d7-d618-4883-88f4-3466eabd860e
+  -> cache HIT  src=bda648d7-d618-4883-88f4-3466eabd860e__para2  sim=0.935  total_latency_ms=28046  candidates≥0.8=1
+  -> success | pred='Saint Petersburg'
+[39/51] run c365c1c7-a3db-4d5e-a9a1-66f56eae7865
+  -> cache HIT  src=c365c1c7-a3db-4d5e-a9a1-66f56eae7865__para2  sim=0.931  total_latency_ms=34596  candidates≥0.8=2
+  -> success | pred='Honolulu, Quincy'
+[40/51] run c714ab3a-da30-4603-bacd-d008800188b9
+  -> cache HIT  src=c714ab3a-da30-4603-bacd-d008800188b9__para2  sim=0.947  total_latency_ms=15948  candidates≥0.8=2
+  -> success | pred='100'
+[41/51] run cabe07ed-9eca-40ea-8ead-410ef5e83f91
+  -> cache HIT  src=cabe07ed-9eca-40ea-8ead-410ef5e83f91__para2  sim=0.966  total_latency_ms=39655  candidates≥0.8=2
+  -> success | pred='Louvrier'
+[42/51] run cca530fc-4052-43b2-b130-b30968d8aa44
+  [KB] No pre-computed embedding for cca530fc-4052-43b2-b130-b30968d8aa44 — encoding at runtime.
+  -> exception: ModuleNotFoundError("No module named 'sentence_transformers'")
+[43/51] run cf106601-ab4f-4af9-b045-5295fe67b37d
+  -> cache HIT  src=cf106601-ab4f-4af9-b045-5295fe67b37d__para1  sim=0.959  total_latency_ms=26596  candidates≥0.8=2
+  -> success | pred='CUB'
+[44/51] run cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb
+  -> cache HIT  src=cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb__para2  sim=0.966  total_latency_ms=33777  candidates≥0.8=2
+  -> success | pred='Fred'
+[45/51] run d0633230-7067-47a9-9dbf-ee11e0a2cdd6
+  -> cache HIT  src=d0633230-7067-47a9-9dbf-ee11e0a2cdd6__para2  sim=0.904  total_latency_ms=276834  candidates≥0.8=2
+  -> success | pred='predict_proba'
+[46/51] run dc22a632-937f-4e6a-b72f-ba0ff3f5ff97
+  -> cache HIT  src=dc22a632-937f-4e6a-b72f-ba0ff3f5ff97__para1  sim=0.944  total_latency_ms=80419  candidates≥0.8=2
+  -> success | pred="Five Hundred Things to Eat Before It's Too Late: and the Very Best Places to Eat Them"
+[47/51] run dc28cf18-6431-458b-83ef-64b3ce566c10
+  -> cache HIT  src=dc28cf18-6431-458b-83ef-64b3ce566c10__para1  sim=0.984  total_latency_ms=35612  candidates≥0.8=2
+  -> success | pred='2'
+[48/51] run e142056d-56ab-4352-b091-b56054bd1359
+  -> cache HIT  src=e142056d-56ab-4352-b091-b56054bd1359__para1  sim=0.947  total_latency_ms=280606  candidates≥0.8=2
+  -> success | pred='$12,000'
+[49/51] run e1fc63a2-da7a-432f-be78-7c4a95598703
+  -> cache HIT  src=e1fc63a2-da7a-432f-be78-7c4a95598703__para2  sim=0.966  total_latency_ms=43135  candidates≥0.8=2
+  -> success | pred='17000'
+[50/51] run ec09fa32-d03f-4bf8-84b0-1f16922c3ae4
+  -> cache HIT  src=ec09fa32-d03f-4bf8-84b0-1f16922c3ae4__para1  sim=0.873  total_latency_ms=129679  candidates≥0.8=2
+  -> success | pred='2'
+[51/51] run f918266a-b3e0-4914-865d-4faa564f1aef
+  -> cache HIT  src=f918266a-b3e0-4914-865d-4faa564f1aef__para1  sim=0.893  total_latency_ms=12864  candidates≥0.8=1
+  -> success | pred='0'
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia_paraphrased/gaia_lv1_x3_test.jsonl",
+  "run_name": "gaia_lv1_plan_reuse_rank_by_latency",
+  "started_at": "2026-06-21T00:49:24.266705+00:00",
+  "ended_at": "2026-06-21T04:40:30.187410+00:00",
+  "selected_tasks": 51,
+  "completed": 50,
+  "failed": 1,
+  "skipped": 0,
+  "cache_hits": 49,
+  "cache_misses": 1,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 12944720,
+  "kb_jsonl": "data/gaia_paraphrased/gaia_lv1_x3_kb.jsonl",
+  "kb_trace_run": "gaia_lv1_x3",
+  "kb_embedding_run": "gaia_lv1_x3",
+  "kb_size": 100,
+  "top_k": 5,
+  "plan_rank_by": "total_latency_ms",
+  "min_similarity": 0.8,
+  "embedding_model": "sentence-transformers/all-mpnet-base-v2",
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}
+===== ALL DONE Sat Jun 20 21:40:30 PDT 2026 =====
