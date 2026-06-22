@@ -1,17 +1,17 @@
 {
-  "input": "/work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/data/popqa/popqa_filtered_test.jsonl",
+  "input": "/Users/tungi/ekb-claude-pilot/data/popqa/popqa_filtered_test.jsonl",
   "run_name": "popqa_test",
-  "started_at": "2026-06-14T18:01:37.413722+00:00",
-  "ended_at": "2026-06-14T18:47:49.158865+00:00",
-  "selected_tasks": 2431,
-  "completed": 192,
+  "started_at": "2026-06-22T01:49:57.835525+00:00",
+  "ended_at": "2026-06-22T01:50:55.551091+00:00",
+  "selected_tasks": 1,
+  "completed": 1,
   "failed": 0,
-  "skipped": 2239,
-  "any_match_count": 154,
-  "any_match_rate": 0.8020833333333334,
+  "skipped": 0,
+  "any_match_count": 1,
+  "any_match_rate": 1.0,
   "stopped_on_limit": false,
   "stop_reason": null,
-  "cumulative_total_tokens_this_run": 12617852,
-  "settings_path": "/work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
-  "hook_path": "/work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+  "cumulative_total_tokens_this_run": 52496,
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
 }

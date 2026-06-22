@@ -1,0 +1,4132 @@
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[1/9756] run popqa_1000225
+  -> success | pred='Luke Davies' | any_match=False
+[2/9756] run popqa_1000288
+  -> success | pred='Quebec Roth' | any_match=False
+[3/9756] run popqa_1000614
+  -> success | pred='David Baldacci' | any_match=True
+[4/9756] run popqa_1000655
+  -> success | pred='John Irving' | any_match=False
+[5/9756] run popqa_1000824
+  -> success | pred='Mike Oldfield' | any_match=False
+[6/9756] run popqa_1000828
+  -> success | pred='Ira Levin' | any_match=False
+[7/9756] run popqa_1000986
+  -> success | pred='Mel Tillis' | any_match=False
+[8/9756] run popqa_1001002
+  -> success | pred='Tom Perrotta' | any_match=True
+[9/9756] run popqa_1001025
+  -> success | pred='Mark Osborne' | any_match=True
+[10/9756] run popqa_1001085
+  -> success | pred='Susan Minot' | any_match=False
+[11/9756] run popqa_1001097
+  -> success | pred='Tyler Perry' | any_match=True
+[12/9756] run popqa_1001104
+  -> success | pred='H. Rider Haggard' | any_match=True
+[13/9756] run popqa_1001108
+  -> success | pred='Banjo Paterson' | any_match=True
+[14/9756] run popqa_1001325
+  -> success | pred='Peter Straub' | any_match=True
+[15/9756] run popqa_1001346
+  -> success | pred='L. P. Elwell-Sutton' | any_match=False
+[16/9756] run popqa_1001351
+  -> success | pred='Jeanne Ryan' | any_match=False
+[17/9756] run popqa_1001405
+  -> success | pred='Football (soccer)' | any_match=False
+[18/9756] run popqa_1001687
+  -> success | pred='Action comedy' | any_match=False
+[19/9756] run popqa_1003582
+  -> success | pred='Zeus' | any_match=True
+[20/9756] run popqa_1003583
+  -> success | pred='Leda' | any_match=True
+[21/9756] run popqa_1003806
+  -> success | pred='Lutheranism' | any_match=True
+[22/9756] run popqa_1004840
+  -> success | pred='Spain' | any_match=True
+[23/9756] run popqa_1005632
+  -> success | pred='Abraham' | any_match=False
+[24/9756] run popqa_1009429
+  -> success | pred='Football (soccer)' | any_match=False
+[25/9756] run popqa_1009462
+  -> success | pred='Alice Rohrwacher' | any_match=True
+[26/9756] run popqa_1010058
+  -> success | pred='Comedy' | any_match=False
+[27/9756] run popqa_1010059
+  -> success | pred='John M. Stahl' | any_match=False
+[28/9756] run popqa_1010824
+  -> success | pred='James Signorelli' | any_match=False
+[29/9756] run popqa_1012322
+  -> success | pred='Charles Cornwallis, 5th Baron Cornwallis' | any_match=True
+[30/9756] run popqa_1012938
+  -> success | pred='Islam' | any_match=True
+[31/9756] run popqa_101298
+  -> success | pred='Badminton' | any_match=False
+[32/9756] run popqa_1014081
+  -> success | pred='Brazil' | any_match=True
+[33/9756] run popqa_1014403
+  -> success | pred='Éléonore de Bergh' | any_match=False
+[34/9756] run popqa_1014963
+  -> success | pred='Nechanice' | any_match=True
+[35/9756] run popqa_101560
+  -> success | pred='Ralph Nelson' | any_match=True
+[36/9756] run popqa_1016663
+  -> success | pred='Styx' | any_match=True
+[37/9756] run popqa_1018069
+  -> success | pred='Colleen McCullough' | any_match=True
+[38/9756] run popqa_1018303
+  -> success | pred='Skip Woods' | any_match=True
+[39/9756] run popqa_1018668
+  -> success | pred='Christianity' | any_match=False
+[40/9756] run popqa_1019132
+  -> success | pred='Tōru Takemitsu' | any_match=False
+[41/9756] run popqa_1020236
+  -> success | pred='Football (soccer)' | any_match=False
+[42/9756] run popqa_1020335
+  -> success | pred='Kerman' | any_match=True
+[43/9756] run popqa_1022353
+  -> success | pred='Montpelier' | any_match=True
+[44/9756] run popqa_1022587
+  -> success | pred='Tom DeLonge and Mark Hoppus' | any_match=False
+[45/9756] run popqa_1022847
+  -> success | pred='Apollo' | any_match=True
+[46/9756] run popqa_1022989
+  -> success | pred='Harris County, Texas' | any_match=True
+[47/9756] run popqa_1023390
+  -> success | pred='Dallas County' | any_match=True
+[48/9756] run popqa_1023414
+  -> success | pred='Tarusa' | any_match=True
+[49/9756] run popqa_1023669
+  -> success | pred='Texas' | any_match=True
+[50/9756] run popqa_1023741
+  -> success | pred='Kevin Ayers' | any_match=True
+[51/9756] run popqa_1024199
+  -> success | pred='Animated musical fantasy film' | any_match=False
+[52/9756] run popqa_1024644
+  -> success | pred='Drama' | any_match=False
+[53/9756] run popqa_1025289
+  -> success | pred='Traci Balthazor-Flynn' | any_match=False
+[54/9756] run popqa_102644
+  -> success | pred='Howard Estabrook and Harry Behn' | any_match=False
+[55/9756] run popqa_1026740
+  -> success | pred='Eminem' | any_match=True
+[56/9756] run popqa_1027847
+  -> success | pred='Rugby union' | any_match=False
+[57/9756] run popqa_1028004
+  -> success | pred='Arnaud Sélignac' | any_match=False
+[58/9756] run popqa_1028422
+  -> success | pred='Maryland' | any_match=False
+[59/9756] run popqa_1029324
+  -> success | pred='Black metal' | any_match=False
+[60/9756] run popqa_1029327
+  -> success | pred='Enki Bilal' | any_match=True
+[61/9756] run popqa_1029484
+  -> success | pred='hip hop' | any_match=False
+[62/9756] run popqa_1030910
+  -> success | pred='Ice hockey' | any_match=False
+[63/9756] run popqa_1033017
+  -> success | pred='Sebastian Gutierrez' | any_match=True
+[64/9756] run popqa_1033074
+  -> success | pred='Stephen Baxter' | any_match=False
+[65/9756] run popqa_1033113
+  -> success | pred='Don Wilkie and Ian Ilavsky' | any_match=False
+[66/9756] run popqa_1033939
+  -> success | pred='Comedy' | any_match=False
+[67/9756] run popqa_1033941
+  -> success | pred='David Hamilton' | any_match=False
+[68/9756] run popqa_1034128
+  -> success | pred='Football (soccer)' | any_match=False
+[69/9756] run popqa_1035473
+  -> success | pred='Hip hop' | any_match=False
+[70/9756] run popqa_1036039
+  -> success | pred='Canada' | any_match=True
+[71/9756] run popqa_1036313
+  -> success | pred='Nick Love' | any_match=True
+[72/9756] run popqa_1037481
+  -> success | pred='John Sayles' | any_match=True
+[73/9756] run popqa_1038181
+  -> success | pred='Steve Buscemi' | any_match=True
+[74/9756] run popqa_1038213
+  -> success | pred='Oliver G. Hess' | any_match=False
+[75/9756] run popqa_1038215
+  -> success | pred='Steven Seagal' | any_match=True
+[76/9756] run popqa_1040220
+  -> success | pred='Santa Barbara' | any_match=True
+[77/9756] run popqa_1040610
+  -> success | pred='Canoas' | any_match=False
+[78/9756] run popqa_1041192
+  -> success | pred='Marseille' | any_match=True
+[79/9756] run popqa_104224
+  -> success | pred='Huaiyang' | any_match=False
+[80/9756] run popqa_1044970
+  -> success | pred='politician' | any_match=True
+[81/9756] run popqa_1045576
+  -> success | pred='Praveen Nischol' | any_match=False
+[82/9756] run popqa_1046069
+  -> success | pred='Kunle Afolayan' | any_match=True
+[83/9756] run popqa_1046070
+  -> success | pred='Kunle Afolayan' | any_match=True
+[84/9756] run popqa_10464
+  -> success | pred='Tricky Stewart' | any_match=False
+[85/9756] run popqa_1046764
+  -> success | pred='Actress' | any_match=False
+[86/9756] run popqa_1046826
+  -> success | pred='Rapper' | any_match=False
+[87/9756] run popqa_1050467
+  -> success | pred='Charles Edward Pogue and David Cronenberg' | any_match=False
+[88/9756] run popqa_1050989
+  -> success | pred='Will Zens' | any_match=False
+[89/9756] run popqa_1051164
+  -> success | pred='Rodney Lucas' | any_match=False
+[90/9756] run popqa_1051703
+  -> success | pred='Gary Scott Thompson' | any_match=False
+[91/9756] run popqa_1051707
+  -> success | pred='Curtis Chin' | any_match=False
+[92/9756] run popqa_1051784
+  -> success | pred='Silas James Rowland' | any_match=False
+[93/9756] run popqa_1052154
+  -> success | pred='Denmark' | any_match=True
+[94/9756] run popqa_105230
+  -> success | pred='James Gray' | any_match=False
+[95/9756] run popqa_1053271
+  -> success | pred='actress' | any_match=True
+[96/9756] run popqa_105346
+  -> success | pred='Pop' | any_match=False
+[97/9756] run popqa_1054171
+  -> success | pred='Lasse Summanen' | any_match=False
+[98/9756] run popqa_1054383
+  -> success | pred='Tennis' | any_match=False
+[99/9756] run popqa_1054401
+  -> success | pred='Drama' | any_match=False
+[100/9756] run popqa_1054561
+  -> success | pred='Adolfo Aristarain' | any_match=True
+[101/9756] run popqa_105495
+  -> success | pred='Grand strategy' | any_match=False
+[102/9756] run popqa_1055100
+  -> success | pred='Adrian' | any_match=True
+[103/9756] run popqa_1056000
+  -> success | pred='Oiartzun' | any_match=True
+[104/9756] run popqa_1056361
+  -> success | pred='Basketball' | any_match=False
+[105/9756] run popqa_1056532
+  -> success | pred='Rapper' | any_match=False
+[106/9756] run popqa_1056699
+  -> success | pred='Priam' | any_match=True
+[107/9756] run popqa_1056700
+  -> success | pred='Hecuba' | any_match=True
+[108/9756] run popqa_1056937
+  -> success | pred='Thomas Bernhard' | any_match=True
+[109/9756] run popqa_1057843
+  -> success | pred='Michael Crichton and David Koepp' | any_match=False
+[110/9756] run popqa_1057932
+  -> success | pred='politician' | any_match=False
+[111/9756] run popqa_105886
+  -> success | pred='Liam Howlett' | any_match=True
+[112/9756] run popqa_1059104
+  -> success | pred='S. Mukherjee' | any_match=False
+[113/9756] run popqa_105962
+  -> success | pred='West Sulawesi' | any_match=True
+[114/9756] run popqa_1059710
+  -> success | pred='Tim Story' | any_match=False
+[115/9756] run popqa_1060414
+  -> success | pred='Pramoedya Ananta Toer' | any_match=True
+[116/9756] run popqa_1060553
+  -> success | pred='Methodist' | any_match=False
+[117/9756] run popqa_1060877
+  -> success | pred='Russia' | any_match=False
+[118/9756] run popqa_1060901
+  -> success | pred='Pop' | any_match=True
+[119/9756] run popqa_1066872
+  -> success | pred='Drama' | any_match=False
+[120/9756] run popqa_1067525
+  -> success | pred='Bob Odenkirk' | any_match=False
+[121/9756] run popqa_1067884
+  -> success | pred='Exploitation film' | any_match=False
+[122/9756] run popqa_1068785
+  -> success | pred='Evan Rosen' | any_match=True
+[123/9756] run popqa_1069546
+  -> success | pred='Methodist' | any_match=False
+[124/9756] run popqa_1070526
+  -> success | pred='James Shirley' | any_match=False
+[125/9756] run popqa_1070780
+  -> success | pred='Peter Vronsky' | any_match=True
+[126/9756] run popqa_1071481
+  -> success | pred='Drama' | any_match=False
+[127/9756] run popqa_1071652
+  -> success | pred='C. S. Forester' | any_match=False
+[128/9756] run popqa_1072943
+  -> success | pred='Judaism' | any_match=True
+[129/9756] run popqa_1074278
+  -> success | pred='Mireille Soria' | any_match=False
+[130/9756] run popqa_1074355
+  -> success | pred='United States' | any_match=True
+[131/9756] run popqa_1074391
+  -> success | pred='politician' | any_match=True
+[132/9756] run popqa_1074692
+  -> success | pred='Drama' | any_match=False
+[133/9756] run popqa_1074965
+  -> success | pred='politician' | any_match=True
+[134/9756] run popqa_1076870
+  -> success | pred='Montauban' | any_match=True
+[135/9756] run popqa_107859
+  -> success | pred='Yoshiki' | any_match=True
+[136/9756] run popqa_1080841
+  -> success | pred='Landscape painting' | any_match=True
+[137/9756] run popqa_1081666
+  -> success | pred='Vita Sackville-West' | any_match=False
+[138/9756] run popqa_108185
+  -> success | pred='Carlos Reygadas' | any_match=True
+[139/9756] run popqa_1084482
+  -> success | pred='Lutheranism' | any_match=True
+[140/9756] run popqa_1085503
+  -> success | pred='Elizabeth Arnold Hopkins Poe' | any_match=False
+[141/9756] run popqa_1085659
+  -> success | pred='Karpal Singh' | any_match=True
+[142/9756] run popqa_1085889
+  -> success | pred='Zachary Donohue' | any_match=True
+[143/9756] run popqa_108698
+  -> success | pred='Comedy' | any_match=False
+[144/9756] run popqa_1087089
+  -> success | pred='soap opera' | any_match=True
+[145/9756] run popqa_108711
+  -> success | pred='Rob Reiner' | any_match=True
+[146/9756] run popqa_1088874
+  -> success | pred='Football (soccer)' | any_match=False
+[147/9756] run popqa_1089786
+  -> success | pred='Washington, D.C.' | any_match=True
+[148/9756] run popqa_1089797
+  -> success | pred='Saul Rubinek' | any_match=True
+[149/9756] run popqa_1092447
+  -> success | pred='Nicholson Baker' | any_match=True
+[150/9756] run popqa_1092672
+  -> success | pred='Hannah Weinstein' | any_match=True
+[151/9756] run popqa_1093104
+  -> success | pred='Canada' | any_match=False
+[152/9756] run popqa_1093167
+  -> success | pred='Judaism' | any_match=True
+[153/9756] run popqa_1093937
+  -> success | pred='John Price' | any_match=True
+[154/9756] run popqa_1094065
+  -> success | pred='novelist' | any_match=True
+[155/9756] run popqa_1098833
+  -> success | pred='Nigeria' | any_match=True
+[156/9756] run popqa_110533
+  -> success | pred='Pop' | any_match=True
+[157/9756] run popqa_1106127
+  -> success | pred='Patrick Grandperret and Frédérique Moreau' | any_match=False
+[158/9756] run popqa_1107042
+  -> success | pred='Fantasy' | any_match=False
+[159/9756] run popqa_1108536
+  -> success | pred='Nadia Tass' | any_match=True
+[160/9756] run popqa_1110899
+  -> success | pred='United States' | any_match=True
+[161/9756] run popqa_111229
+  -> success | pred='Diébougou' | any_match=False
+[162/9756] run popqa_1112330
+  -> success | pred='Matthew Warchus' | any_match=True
+[163/9756] run popqa_1112331
+  -> success | pred='Stephen Beresford' | any_match=True
+[164/9756] run popqa_1112731
+  -> success | pred='Bruce R. Cordell' | any_match=True
+[165/9756] run popqa_1113888
+  -> success | pred='Pop' | any_match=True
+[166/9756] run popqa_1114093
+  -> success | pred='Lori Forte' | any_match=False
+[167/9756] run popqa_1114507
+  -> success | pred='Dasari Narayana Rao' | any_match=True
+[168/9756] run popqa_1114521
+  -> success | pred='Russia' | any_match=True
+[169/9756] run popqa_1114616
+  -> success | pred='Leslie Charteris' | any_match=False
+[170/9756] run popqa_1114926
+  -> success | pred='Football' | any_match=True
+[171/9756] run popqa_1116333
+  -> success | pred='Hip hop music' | any_match=False
+[172/9756] run popqa_1116447
+  -> success | pred='Charles de Lauzirika' | any_match=True
+[173/9756] run popqa_1116701
+  -> success | pred='Rajendra Singh Babu' | any_match=True
+[174/9756] run popqa_1116821
+  -> success | pred='Matthew Hughes' | any_match=True
+[175/9756] run popqa_1116890
+  -> success | pred='Sirpy' | any_match=True
+[176/9756] run popqa_1116900
+  -> success | pred='Drama' | any_match=False
+[177/9756] run popqa_1117259
+  -> success | pred='Nick Hornby' | any_match=True
+[178/9756] run popqa_1118020
+  -> success | pred='Mark Penney' | any_match=True
+[179/9756] run popqa_111818
+  -> success | pred='Darezhan Omirbaev' | any_match=True
+[180/9756] run popqa_111819
+  -> success | pred='Darezhan Omirbaev' | any_match=True
+[181/9756] run popqa_1118624
+  -> success | pred='East Berlin' | any_match=True
+[182/9756] run popqa_111904
+  -> success | pred='Hip hop' | any_match=False
+[183/9756] run popqa_1119425
+  -> success | pred='Yuri manga' | any_match=False
+[184/9756] run popqa_1119436
+  -> success | pred='Boyd Rice' | any_match=False
+[185/9756] run popqa_1119552
+  -> success | pred='Jazz' | any_match=True
+[186/9756] run popqa_1120266
+  -> success | pred='Moss Hart' | any_match=False
+[187/9756] run popqa_1120770
+  -> success | pred='James Patterson and Howard Roughan' | any_match=False
+[188/9756] run popqa_1120961
+  -> success | pred='Romantic comedy' | any_match=False
+[189/9756] run popqa_1121512
+  -> success | pred='Tony Hatch' | any_match=False
+[190/9756] run popqa_1121628
+  -> success | pred='Charlie Parker' | any_match=True
+[191/9756] run popqa_1122234
+  -> success | pred='Stephen King' | any_match=True
+[192/9756] run popqa_112286
+  -> success | pred='Murong Jun' | any_match=True
+[193/9756] run popqa_1122965
+  -> success | pred='Asham Kamboj' | any_match=False
+[194/9756] run popqa_1123565
+  -> success | pred='Donald Harington' | any_match=True
+[195/9756] run popqa_1123632
+  -> success | pred='pornographic film' | any_match=True
+[196/9756] run popqa_1123705
+  -> success | pred='Khalil Sullins' | any_match=False
+[197/9756] run popqa_1123859
+  -> success | pred='Ann Cleeves' | any_match=True
+[198/9756] run popqa_1124028
+  -> success | pred='Ben Mezrich' | any_match=True
+[199/9756] run popqa_1124195
+  -> success | pred='Nepal' | any_match=True
+[200/9756] run popqa_1124451
+  -> success | pred='Peru' | any_match=False
+[201/9756] run popqa_1125213
+  -> success | pred='Cricket' | any_match=True
+[202/9756] run popqa_1125840
+  -> success | pred='Canada' | any_match=True
+[203/9756] run popqa_1125946
+  -> success | pred='Football' | any_match=True
+[204/9756] run popqa_1126973
+  -> success | pred='Werner Heisenberg' | any_match=True
+[205/9756] run popqa_1128238
+  -> success | pred='Horror' | any_match=False
+[206/9756] run popqa_1129256
+  -> success | pred='Harry Tierney' | any_match=True
+[207/9756] run popqa_112947
+  -> success | pred='Robert Kiyosaki' | any_match=False
+[208/9756] run popqa_1129739
+  -> success | pred='Hugh Martin' | any_match=True
+[209/9756] run popqa_112988
+  -> success | pred='Slice of life' | any_match=False
+[210/9756] run popqa_1130
+  -> success | pred='Elmer Bernstein' | any_match=True
+[211/9756] run popqa_1130219
+  -> success | pred='Canada' | any_match=False
+[212/9756] run popqa_1130291
+  -> success | pred='Rachel Crothers' | any_match=True
+[213/9756] run popqa_1130706
+  -> success | pred='Donald Taylor' | any_match=False
+[214/9756] run popqa_1131641
+  -> success | pred='J. P. Marquand' | any_match=False
+[215/9756] run popqa_1134562
+  -> success | pred='Val Gielgud' | any_match=True
+[216/9756] run popqa_1135201
+  -> success | pred='Comedy' | any_match=False
+[217/9756] run popqa_1136027
+  -> success | pred='politician' | any_match=True
+[218/9756] run popqa_1136850
+  -> success | pred='Russell Baker' | any_match=True
+[219/9756] run popqa_1136901
+  -> success | pred='Pop' | any_match=False
+[220/9756] run popqa_1137074
+  -> success | pred='Rock' | any_match=False
+[221/9756] run popqa_1137110
+  -> success | pred='David Bowie' | any_match=False
+[222/9756] run popqa_1137656
+  -> success | pred='David Cross' | any_match=True
+[223/9756] run popqa_1137769
+  -> success | pred='Hagood Hardy' | any_match=False
+[224/9756] run popqa_1138527
+  -> success | pred='Yorgos Lanthimos' | any_match=True
+[225/9756] run popqa_1138967
+  -> success | pred='Peter Bowker' | any_match=False
+[226/9756] run popqa_1140029
+  -> success | pred='Cameron McVey, Jony Rockstar, and Paul Simm' | any_match=False
+[227/9756] run popqa_1140143
+  -> success | pred='Erin Bowman' | any_match=False
+[228/9756] run popqa_1140403
+  -> success | pred='Tokyo' | any_match=True
+[229/9756] run popqa_1141199
+  -> success | pred='Maurice Ravel' | any_match=False
+[230/9756] run popqa_1141201
+  -> success | pred='Canoas' | any_match=True
+[231/9756] run popqa_1142240
+  -> success | pred='Han Tian' | any_match=False
+[232/9756] run popqa_1143620
+  -> success | pred='K-pop' | any_match=False
+[233/9756] run popqa_1143665
+  -> success | pred='Jazz' | any_match=True
+[234/9756] run popqa_1144861
+  -> success | pred='Neil Young' | any_match=False
+[235/9756] run popqa_1145874
+  -> success | pred='W. E. B. Du Bois' | any_match=False
+[236/9756] run popqa_1146036
+  -> success | pred='Disco' | any_match=True
+[237/9756] run popqa_1146607
+  -> success | pred='Basse-Terre' | any_match=True
+[238/9756] run popqa_1147160
+  -> success | pred='Krautrock' | any_match=True
+[239/9756] run popqa_1147271
+  -> success | pred='Owen Pallett' | any_match=True
+[240/9756] run popqa_1147579
+  -> success | pred='Germany' | any_match=True
+[241/9756] run popqa_1148060
+  -> success | pred='China' | any_match=True
+[242/9756] run popqa_1148995
+  -> success | pred='Zadie Smith' | any_match=True
+[243/9756] run popqa_1149078
+  -> success | pred='Horror' | any_match=False
+[244/9756] run popqa_1149542
+  -> success | pred='Game show' | any_match=False
+[245/9756] run popqa_1149680
+  -> success | pred='Karen Marie Moning' | any_match=True
+[246/9756] run popqa_115067
+  -> success | pred='linguist' | any_match=False
+[247/9756] run popqa_1152202
+  -> success | pred='Monte Brice' | any_match=False
+[248/9756] run popqa_1152237
+  -> success | pred='P. G. Wodehouse' | any_match=True
+[249/9756] run popqa_1152471
+  -> success | pred='Robert Presnell Sr.' | any_match=False
+[250/9756] run popqa_1152710
+  -> success | pred='Bill Guttentag' | any_match=False
+[251/9756] run popqa_1153179
+  -> success | pred='Ludwig van Beethoven' | any_match=True
+[252/9756] run popqa_1153290
+  -> success | pred='Kwon Su-kyung' | any_match=False
+[253/9756] run popqa_1153503
+  -> success | pred='Cheshire' | any_match=False
+[254/9756] run popqa_1153592
+  -> success | pred='Walter Woods' | any_match=False
+[255/9756] run popqa_1154276
+  -> success | pred='R. C. Sherriff' | any_match=False
+[256/9756] run popqa_1154701
+  -> success | pred='Gil Cates Jr.' | any_match=True
+[257/9756] run popqa_1154792
+  -> success | pred='Carlos Saldanha' | any_match=False
+[258/9756] run popqa_1154793
+  -> success | pred='Sapper (H.C. McNeile)' | any_match=False
+[259/9756] run popqa_1155163
+  -> success | pred='Roberto Bolaño' | any_match=False
+[260/9756] run popqa_1155998
+  -> success | pred='Barrett Watten' | any_match=True
+[261/9756] run popqa_1156505
+  -> success | pred='DJ Mustard' | any_match=True
+[262/9756] run popqa_1156615
+  -> success | pred='Emily Kimbrough' | any_match=False
+[263/9756] run popqa_1156977
+  -> success | pred='Allan Dwan' | any_match=True
+[264/9756] run popqa_1156997
+  -> success | pred='William Black' | any_match=False
+[265/9756] run popqa_1157416
+  -> success | pred='Brian Tyler' | any_match=True
+[266/9756] run popqa_1158077
+  -> success | pred='Bogotá' | any_match=False
+[267/9756] run popqa_1158175
+  -> success | pred='Havana' | any_match=False
+[268/9756] run popqa_1158868
+  -> success | pred='journalist' | any_match=True
+[269/9756] run popqa_1159122
+  -> success | pred='Rouen' | any_match=False
+[270/9756] run popqa_1159237
+  -> success | pred='David Lyme' | any_match=False
+[271/9756] run popqa_1159573
+  -> success | pred='Fiction' | any_match=False
+[272/9756] run popqa_1159773
+  -> success | pred='Lamont Johnson' | any_match=False
+[273/9756] run popqa_1159795
+  -> success | pred='David Kaplan' | any_match=False
+[274/9756] run popqa_1159857
+  -> success | pred='Joe Hahn' | any_match=True
+[275/9756] run popqa_1159859
+  -> success | pred='Sam Bisbee' | any_match=False
+[276/9756] run popqa_1160249
+  -> success | pred='Gilbert Cates' | any_match=False
+[277/9756] run popqa_1160606
+  -> success | pred='Zedd' | any_match=False
+[278/9756] run popqa_1160778
+  -> success | pred='Norman Felton' | any_match=False
+[279/9756] run popqa_1160798
+  -> success | pred='United States' | any_match=True
+[280/9756] run popqa_1162024
+  -> success | pred='The Jesus Film Project' | any_match=False
+[281/9756] run popqa_1162030
+  -> success | pred='Guy Nattiv' | any_match=False
+[282/9756] run popqa_1162363
+  -> success | pred='Dannii Minogue' | any_match=True
+[283/9756] run popqa_1162532
+  -> success | pred='United States' | any_match=False
+[284/9756] run popqa_1162659
+  -> success | pred='Suresh Nair' | any_match=False
+[285/9756] run popqa_1163580
+  -> success | pred='Vilfredo Pareto' | any_match=True
+[286/9756] run popqa_1163970
+  -> success | pred='Radclyffe Hall' | any_match=False
+[287/9756] run popqa_1164002
+  -> success | pred='Michael Marshall Smith' | any_match=True
+[288/9756] run popqa_1164606
+  -> success | pred='country music' | any_match=True
+[289/9756] run popqa_1164812
+  -> success | pred='Rajiv Menon' | any_match=False
+[290/9756] run popqa_1165531
+  -> success | pred='Jon Spaihts' | any_match=False
+[291/9756] run popqa_1165631
+  -> success | pred='Mamoudzou' | any_match=True
+[292/9756] run popqa_1167538
+  -> success | pred='Roman Catholicism' | any_match=False
+[293/9756] run popqa_1169772
+  -> success | pred='50 Cent' | any_match=False
+[294/9756] run popqa_1170993
+  -> success | pred='Reality television' | any_match=True
+[295/9756] run popqa_1172469
+  -> success | pred='Walter Scharf' | any_match=False
+[296/9756] run popqa_1173901
+  -> success | pred='Hannes Stöhr' | any_match=False
+[297/9756] run popqa_1175079
+  -> success | pred='journalist' | any_match=True
+[298/9756] run popqa_1175807
+  -> success | pred='Catholicism' | any_match=False
+[299/9756] run popqa_1176214
+  -> success | pred='Chetumal' | any_match=True
+[300/9756] run popqa_1176455
+  -> success | pred='Berthold Bartosch' | any_match=True
+[301/9756] run popqa_1176457
+  -> success | pred='Joseph Hart' | any_match=False
+[302/9756] run popqa_1176799
+  -> success | pred='Alan Menken' | any_match=True
+[303/9756] run popqa_1177081
+  -> success | pred='Christianity' | any_match=False
+[304/9756] run popqa_1178924
+  -> success | pred='Film operetta' | any_match=False
+[305/9756] run popqa_1179856
+  -> success | pred='Jeffrey Blitz' | any_match=False
+[306/9756] run popqa_1180105
+  -> success | pred='Ralph Guggenheim and Bonnie Arnold' | any_match=False
+[307/9756] run popqa_1180309
+  -> success | pred='Palencia' | any_match=True
+[308/9756] run popqa_1181122
+  -> success | pred='Christianity' | any_match=True
+[309/9756] run popqa_1181931
+  -> success | pred='reality television' | any_match=False
+[310/9756] run popqa_1182034
+  -> success | pred='Brent Butt' | any_match=True
+[311/9756] run popqa_1182127
+  -> success | pred='Jodi Picoult' | any_match=False
+[312/9756] run popqa_1182472
+  -> success | pred='Julian Barnes' | any_match=True
+[313/9756] run popqa_1182482
+  -> success | pred='Gail Caldwell' | any_match=True
+[314/9756] run popqa_1182836
+  -> success | pred='A.J. Quinnell' | any_match=True
+[315/9756] run popqa_1184585
+  -> success | pred='Thriller' | any_match=False
+[316/9756] run popqa_1184586
+  -> success | pred='Didier Van Cauwelaert' | any_match=False
+[317/9756] run popqa_118580
+  -> success | pred='Johann Sebastian Bach' | any_match=True
+[318/9756] run popqa_1185857
+  -> success | pred='Christianity' | any_match=False
+[319/9756] run popqa_1185931
+  -> success | pred='Pop' | any_match=False
+[320/9756] run popqa_1186467
+  -> success | pred='Mark Goulston' | any_match=False
+[321/9756] run popqa_1187163
+  -> success | pred='Hip hop' | any_match=False
+[322/9756] run popqa_118729
+  -> success | pred='Robert Charles Wilson' | any_match=True
+[323/9756] run popqa_1187606
+  -> success | pred='Patricia C. Wrede' | any_match=True
+[324/9756] run popqa_1187611
+  -> success | pred='Jean Hegland' | any_match=False
+[325/9756] run popqa_1188328
+  -> success | pred='Ruthann Friedman' | any_match=True
+[326/9756] run popqa_1189069
+  -> success | pred='Hip hop' | any_match=False
+[327/9756] run popqa_1189292
+  -> success | pred='Michael Hoffman' | any_match=True
+[328/9756] run popqa_1189733
+  -> success | pred='Jonny Dollar' | any_match=False
+[329/9756] run popqa_1189879
+  -> success | pred='Badminton' | any_match=True
+[330/9756] run popqa_11905
+  -> success | pred='Nick Sansano' | any_match=False
+[331/9756] run popqa_1191123
+  -> success | pred='Nathan Chapman' | any_match=False
+[332/9756] run popqa_119179
+  -> success | pred='Japan' | any_match=True
+[333/9756] run popqa_1192191
+  -> success | pred='Roman religion (ancient Roman religion / polytheism)' | any_match=False
+[334/9756] run popqa_1192195
+  -> success | pred='Rome' | any_match=True
+[335/9756] run popqa_1194892
+  -> success | pred='Comedy' | any_match=False
+[336/9756] run popqa_1194907
+  -> success | pred='Chris Columbus' | any_match=True
+[337/9756] run popqa_1194908
+  -> success | pred='Tim Herlihy' | any_match=True
+[338/9756] run popqa_1195104
+  -> success | pred='Frascati' | any_match=True
+[339/9756] run popqa_1195252
+  -> success | pred='Franc Roddam' | any_match=True
+[340/9756] run popqa_1195400
+  -> success | pred='R&B' | any_match=False
+[341/9756] run popqa_1195583
+  -> success | pred='Jack Rapke' | any_match=False
+[342/9756] run popqa_1195622
+  -> success | pred='Brian De Palma' | any_match=False
+[343/9756] run popqa_1195624
+  -> success | pred='Brian De Palma' | any_match=False
+[344/9756] run popqa_1195980
+  -> success | pred='Thomas Langmann' | any_match=True
+[345/9756] run popqa_1195988
+  -> success | pred='Michel Hazanavicius' | any_match=True
+[346/9756] run popqa_1195991
+  -> success | pred='Ludovic Bource' | any_match=True
+[347/9756] run popqa_1196168
+  -> success | pred='K-pop' | any_match=True
+[348/9756] run popqa_1196176
+  -> success | pred='South Korea' | any_match=False
+[349/9756] run popqa_1196350
+  -> success | pred='ice hockey' | any_match=True
+[350/9756] run popqa_1196428
+  -> success | pred='Norway' | any_match=True
+[351/9756] run popqa_1196975
+  -> success | pred='Matsudaira Hirotada' | any_match=True
+[352/9756] run popqa_1197254
+  -> success | pred='actress' | any_match=True
+[353/9756] run popqa_1198239
+  -> success | pred='anime' | any_match=False
+[354/9756] run popqa_1198269
+  -> success | pred='Ontario' | any_match=True
+[355/9756] run popqa_1200109
+  -> success | pred='Baseball' | any_match=False
+[356/9756] run popqa_1200458
+  -> success | pred='Ian McEwan' | any_match=True
+[357/9756] run popqa_1200695
+  -> success | pred='São Paulo' | any_match=False
+[358/9756] run popqa_1201118
+  -> success | pred='Catholicism' | any_match=False
+[359/9756] run popqa_1201284
+  -> success | pred='Antibes' | any_match=True
+[360/9756] run popqa_1201315
+  -> success | pred='Maurizio Lucidi' | any_match=True
+[361/9756] run popqa_1201777
+  -> success | pred='Rock' | any_match=False
+[362/9756] run popqa_1201778
+  -> success | pred='Jay Russell' | any_match=True
+[363/9756] run popqa_1201824
+  -> success | pred='San Diego' | any_match=True
+[364/9756] run popqa_12022
+  -> success | pred='England (United Kingdom)' | any_match=False
+[365/9756] run popqa_1202978
+  -> success | pred='France' | any_match=True
+[366/9756] run popqa_1203489
+  -> success | pred='Pink Floyd' | any_match=False
+[367/9756] run popqa_1203494
+  -> success | pred='Nino Oliviero' | any_match=False
+[368/9756] run popqa_1203961
+  -> success | pred='Odin' | any_match=True
+[369/9756] run popqa_1204499
+  -> success | pred='United Kingdom' | any_match=True
+[370/9756] run popqa_1204905
+  -> success | pred='politician' | any_match=True
+[371/9756] run popqa_1205536
+  -> success | pred='Formula One (motorsport/racing)' | any_match=False
+[372/9756] run popqa_1206290
+  -> success | pred='Euclid' | any_match=True
+[373/9756] run popqa_1206927
+  -> success | pred='soccer (association football)' | any_match=False
+[374/9756] run popqa_1207133
+  -> success | pred='Dave Bassett' | any_match=False
+[375/9756] run popqa_1207361
+  -> success | pred='Montgomery' | any_match=True
+[376/9756] run popqa_1207757
+  -> success | pred='Schweinfurt' | any_match=False
+[377/9756] run popqa_1207788
+  -> success | pred='Nikolsk District' | any_match=False
+[378/9756] run popqa_1208048
+  -> success | pred='Basketball' | any_match=False
+[379/9756] run popqa_1208074
+  -> success | pred='Singer, songwriter, musician' | any_match=False
+[380/9756] run popqa_1211085
+  -> success | pred='Alrik Bursell' | any_match=False
+[381/9756] run popqa_1212498
+  -> success | pred='Luther Blissett' | any_match=True
+[382/9756] run popqa_1213220
+  -> success | pred='Dublin' | any_match=True
+[383/9756] run popqa_1214123
+  -> success | pred='Tennis' | any_match=True
+[384/9756] run popqa_1214913
+  -> success | pred='Drama' | any_match=False
+[385/9756] run popqa_1215539
+  -> success | pred='Eurodance' | any_match=False
+[386/9756] run popqa_1216659
+  -> success | pred='Maimana' | any_match=False
+[387/9756] run popqa_1216777
+  -> success | pred='Christianity' | any_match=False
+[388/9756] run popqa_1219902
+  -> success | pred='Guarulhos' | any_match=True
+[389/9756] run popqa_1220191
+  -> success | pred='Charles Brackett' | any_match=True
+[390/9756] run popqa_1220857
+  -> success | pred='Catholicism' | any_match=False
+[391/9756] run popqa_1222235
+  -> success | pred='Sean Penn' | any_match=True
+[392/9756] run popqa_1222272
+  -> success | pred='Archduke Karl Ludwig of Austria' | any_match=False
+[393/9756] run popqa_122289
+  -> success | pred='France' | any_match=True
+[394/9756] run popqa_1223107
+  -> success | pred='Khouribga' | any_match=True
+[395/9756] run popqa_1223902
+  -> success | pred='baseball player' | any_match=False
+[396/9756] run popqa_1224190
+  -> success | pred='Analisa Moreno' | any_match=False
+[397/9756] run popqa_122591
+  -> success | pred='Luc Besson' | any_match=False
+[398/9756] run popqa_122592
+  -> success | pred='Luc Besson' | any_match=False
+[399/9756] run popqa_122728
+  -> success | pred='Redwood City' | any_match=True
+[400/9756] run popqa_1227346
+  -> success | pred='horror film' | any_match=False
+[401/9756] run popqa_1227698
+  -> success | pred='Eddie Kramer' | any_match=False
+[402/9756] run popqa_1227810
+  -> success | pred='Michael De Luca' | any_match=False
+[403/9756] run popqa_1228921
+  -> success | pred='Football (soccer)' | any_match=False
+[404/9756] run popqa_1228957
+  -> success | pred='William Wyler' | any_match=True
+[405/9756] run popqa_1228958
+  -> success | pred='Lillian Hellman' | any_match=True
+[406/9756] run popqa_1229238
+  -> success | pred='Puzzle-platform' | any_match=False
+[407/9756] run popqa_1229624
+  -> success | pred='United States' | any_match=False
+[408/9756] run popqa_1230066
+  -> success | pred='K-pop' | any_match=True
+[409/9756] run popqa_1230846
+  -> success | pred='Football (soccer)' | any_match=False
+[410/9756] run popqa_1230874
+  -> success | pred='Brian Grazer' | any_match=False
+[411/9756] run popqa_1230880
+  -> success | pred='Randy Newman' | any_match=True
+[412/9756] run popqa_1231098
+  -> success | pred='Roald Dahl' | any_match=True
+[413/9756] run popqa_1231270
+  -> success | pred='London' | any_match=True
+[414/9756] run popqa_1232112
+  -> success | pred='Thomas Palmer Jr.' | any_match=False
+[415/9756] run popqa_1232838
+  -> success | pred='Bob Peterson' | any_match=True
+[416/9756] run popqa_1232843
+  -> success | pred='Michael Giacchino' | any_match=True
+[417/9756] run popqa_1233077
+  -> success | pred='Ben Court and Caroline Ip' | any_match=False
+[418/9756] run popqa_1233512
+  -> success | pred='Clewiston' | any_match=True
+[419/9756] run popqa_1234983
+  -> success | pred='mathematician' | any_match=True
+[420/9756] run popqa_1235248
+  -> success | pred='Cluj-Napoca' | any_match=True
+[421/9756] run popqa_1236145
+  -> success | pred='Doug Claybourne' | any_match=False
+[422/9756] run popqa_1236283
+  -> success | pred='Beulah Marie Dix' | any_match=False
+[423/9756] run popqa_1236430
+  -> success | pred='Laxmikant-Pyarelal' | any_match=False
+[424/9756] run popqa_1237046
+  -> success | pred='Nicky Bentham' | any_match=False
+[425/9756] run popqa_1237048
+  -> success | pred='Nour Wazzi' | any_match=False
+[426/9756] run popqa_1237176
+  -> success | pred='Jules Dassin' | any_match=True
+[427/9756] run popqa_1237178
+  -> success | pred='Hobart Henley' | any_match=True
+[428/9756] run popqa_1237971
+  -> success | pred='Delbert Mann' | any_match=True
+[429/9756] run popqa_1237972
+  -> success | pred='Paddy Chayefsky' | any_match=True
+[430/9756] run popqa_1238197
+  -> success | pred='Basketball' | any_match=False
+[431/9756] run popqa_1238204
+  -> success | pred='Duncan Jones' | any_match=False
+[432/9756] run popqa_1238475
+  -> success | pred='Jasmin Dizdar' | any_match=True
+[433/9756] run popqa_1238549
+  -> success | pred='Lynn Shelton' | any_match=True
+[434/9756] run popqa_1239340
+  -> success | pred='Hautes-Alpes' | any_match=True
+[435/9756] run popqa_1239812
+  -> success | pred='Dan Snaith' | any_match=True
+[436/9756] run popqa_1242206
+  -> success | pred='Neil Simon' | any_match=True
+[437/9756] run popqa_1243604
+  -> success | pred='Germany' | any_match=True
+[438/9756] run popqa_1243834
+  -> success | pred='K. Asher Levin' | any_match=False
+[439/9756] run popqa_1243835
+  -> success | pred='Banipal Ablakhad and Benhur Ablakhad' | any_match=False
+[440/9756] run popqa_1245440
+  -> success | pred='Lawyer (attorney)' | any_match=False
+[441/9756] run popqa_1246258
+  -> success | pred='ice hockey' | any_match=True
+[442/9756] run popqa_1246493
+  -> success | pred='Randy Newman' | any_match=True
+[443/9756] run popqa_1247200
+  -> success | pred='Bo Goldman' | any_match=True
+[444/9756] run popqa_1247229
+  -> success | pred='Mick Garris' | any_match=True
+[445/9756] run popqa_1247396
+  -> success | pred='Oslo is the capital of Norway. But "Osu" — Osu is a district/neighborhood in Accra, Ghana. If the question means Oslo, the answer is Norway.' | any_match=False
+[446/9756] run popqa_1247533
+  -> success | pred='Novel' | any_match=False
+[447/9756] run popqa_1248080
+  -> success | pred='Kevin Downes, Amanda Llewellyn, and Wes Llewellyn' | any_match=False
+[448/9756] run popqa_12488
+  -> success | pred='Bolivia' | any_match=False
+[449/9756] run popqa_1248994
+  -> success | pred='John Landis' | any_match=True
+[450/9756] run popqa_1249014
+  -> success | pred='Action/adventure' | any_match=False
+[451/9756] run popqa_1249920
+  -> success | pred='Louis Sachar' | any_match=True
+[452/9756] run popqa_1250393
+  -> success | pred='William D. Wittliff and Jessica Lange' | any_match=False
+[453/9756] run popqa_1250539
+  -> success | pred='Ian Anderson' | any_match=False
+[454/9756] run popqa_1250606
+  -> success | pred='Lars von Trier' | any_match=True
+[455/9756] run popqa_1250614
+  -> success | pred='Roger Swaybill and Alan Ormsby' | any_match=False
+[456/9756] run popqa_1250772
+  -> success | pred='William Alland' | any_match=True
+[457/9756] run popqa_1251042
+  -> success | pred='Bones Howe' | any_match=True
+[458/9756] run popqa_1251072
+  -> success | pred='J.J. Abrams' | any_match=False
+[459/9756] run popqa_1251079
+  -> success | pred='American football' | any_match=True
+[460/9756] run popqa_1251460
+  -> success | pred='Athens' | any_match=True
+[461/9756] run popqa_1251752
+  -> success | pred='Thornton Wilder' | any_match=True
+[462/9756] run popqa_1251804
+  -> success | pred='Steve Shagan' | any_match=True
+[463/9756] run popqa_1253050
+  -> success | pred='Football (soccer)' | any_match=False
+[464/9756] run popqa_125315
+  -> success | pred='Greece' | any_match=False
+[465/9756] run popqa_1254144
+  -> success | pred='Sissili Province' | any_match=False
+[466/9756] run popqa_1254733
+  -> success | pred='Greg Egan' | any_match=True
+[467/9756] run popqa_1254817
+  -> success | pred='Tony Gatlif' | any_match=True
+[468/9756] run popqa_1255905
+  -> success | pred='Marcy Kelly' | any_match=False
+[469/9756] run popqa_1256119
+  -> success | pred='Bernardo Bertolucci' | any_match=False
+[470/9756] run popqa_1256814
+  -> success | pred='Terry Southern and Christopher Isherwood' | any_match=False
+[471/9756] run popqa_1257380
+  -> success | pred='novel' | any_match=False
+[472/9756] run popqa_1258451
+  -> success | pred='Crime, Drama' | any_match=False
+[473/9756] run popqa_1258478
+  -> success | pred='Live album' | any_match=False
+[474/9756] run popqa_1258700
+  -> success | pred='Starring Robert Ryan, the 1968 film "The Split" was directed by Gordon Flemyng.' | any_match=False
+[475/9756] run popqa_1258701
+  -> success | pred='Quincy Jones' | any_match=True
+[476/9756] run popqa_1259497
+  -> success | pred='Quebec City' | any_match=True
+[477/9756] run popqa_1259584
+  -> success | pred='Tancred Ibsen' | any_match=True
+[478/9756] run popqa_1260252
+  -> success | pred='Billy Crystal' | any_match=True
+[479/9756] run popqa_1260310
+  -> success | pred='Aditya Chopra' | any_match=True
+[480/9756] run popqa_1260399
+  -> success | pred='Documentary' | any_match=True
+[481/9756] run popqa_1260547
+  -> success | pred='Bent Hamer' | any_match=True
+[482/9756] run popqa_1260548
+  -> success | pred='Bent Hamer' | any_match=True
+[483/9756] run popqa_1262267
+  -> success | pred='Gary Wolf' | any_match=False
+[484/9756] run popqa_1263354
+  -> success | pred='Justin Reardon' | any_match=False
+[485/9756] run popqa_1263355
+  -> success | pred='Justin McCarthy' | any_match=False
+[486/9756] run popqa_126364
+  -> success | pred='Bill Phillips' | any_match=False
+[487/9756] run popqa_1263745
+  -> success | pred='Jack J. Gross' | any_match=False
+[488/9756] run popqa_1266132
+  -> success | pred='Sébastien Lifshitz' | any_match=False
+[489/9756] run popqa_1266165
+  -> success | pred='Charles Jarrott' | any_match=True
+[490/9756] run popqa_1267360
+  -> success | pred='Roland Emmerich' | any_match=True
+[491/9756] run popqa_1268889
+  -> success | pred='Scotland' | any_match=False
+[492/9756] run popqa_1269483
+  -> success | pred='William Beaudine' | any_match=False
+[493/9756] run popqa_1270194
+  -> success | pred='Jon Hoeber and Erich Hoeber' | any_match=False
+[494/9756] run popqa_1271874
+  -> success | pred='Maxim Gorky' | any_match=False
+[495/9756] run popqa_1272890
+  -> success | pred='Aeson' | any_match=True
+[496/9756] run popqa_1273302
+  -> success | pred='Spain' | any_match=True
+[497/9756] run popqa_1273342
+  -> success | pred='Jamshed Usmonov' | any_match=True
+[498/9756] run popqa_1274037
+  -> success | pred='Rene Gutteridge' | any_match=False
+[499/9756] run popqa_1274377
+  -> success | pred='Charlie Chaplin' | any_match=True
+[500/9756] run popqa_1274659
+  -> success | pred='Verity Lambert' | any_match=True
+[501/9756] run popqa_127565
+  -> success | pred='Tennis' | any_match=True
+[502/9756] run popqa_1276510
+  -> success | pred='Woody Allen' | any_match=True
+[503/9756] run popqa_1276984
+  -> success | pred='George Dance the Elder' | any_match=True
+[504/9756] run popqa_1277504
+  -> success | pred='Alex Gansa and Howard Gordon' | any_match=False
+[505/9756] run popqa_1278936
+  -> success | pred='Nahshon' | any_match=True
+[506/9756] run popqa_1279784
+  -> success | pred='Jacob' | any_match=True
+[507/9756] run popqa_1279858
+  -> success | pred='Comedy-drama' | any_match=False
+[508/9756] run popqa_1279864
+  -> success | pred='Claude Pinoteau' | any_match=True
+[509/9756] run popqa_1279871
+  -> success | pred='Romanos Diogenes' | any_match=False
+[510/9756] run popqa_1281223
+  -> success | pred='Latvia' | any_match=True
+[511/9756] run popqa_1281428
+  -> success | pred='Sammy Fain' | any_match=False
+[512/9756] run popqa_1283559
+  -> success | pred='Jacob' | any_match=True
+[513/9756] run popqa_1283560
+  -> success | pred="Leah (or Zilpah, depending on the source — in the Bible, Zilpah, Leah's handmaid, is the birth mother of Asher)" | any_match=False
+[514/9756] run popqa_1283652
+  -> success | pred='Lee Daniels' | any_match=False
+[515/9756] run popqa_1283737
+  -> success | pred='United States' | any_match=True
+[516/9756] run popqa_1286040
+  -> success | pred='Franz Waxman' | any_match=False
+[517/9756] run popqa_1286497
+  -> success | pred='Duncan I of Scotland' | any_match=False
+[518/9756] run popqa_1287272
+  -> success | pred='Fredrikstad' | any_match=False
+[519/9756] run popqa_1287587
+  -> success | pred='Pavlovo-Posadsky District' | any_match=True
+[520/9756] run popqa_1287920
+  -> success | pred='Jessi Alexander and Jon Mabe' | any_match=False
+[521/9756] run popqa_1288173
+  -> success | pred='Pomabamba Province' | any_match=False
+[522/9756] run popqa_1289515
+  -> success | pred='Rock' | any_match=True
+[523/9756] run popqa_1290236
+  -> success | pred='Gilles Paquet-Brenner' | any_match=True
+[524/9756] run popqa_1290542
+  -> success | pred='Herman Raucher' | any_match=True
+[525/9756] run popqa_1292164
+  -> success | pred='Fred Barron' | any_match=False
+[526/9756] run popqa_1292165
+  -> success | pred='Gregory Nava' | any_match=True
+[527/9756] run popqa_1292166
+  -> success | pred='Gregory Nava' | any_match=True
+[528/9756] run popqa_1292419
+  -> success | pred='Theia' | any_match=True
+[529/9756] run popqa_1292989
+  -> success | pred='Italy' | any_match=True
+[530/9756] run popqa_129320
+  -> success | pred='Hip hop' | any_match=False
+[531/9756] run popqa_1293585
+  -> success | pred='Matthew Holt' | any_match=False
+[532/9756] run popqa_1294396
+  -> success | pred='Joe Strummer' | any_match=True
+[533/9756] run popqa_1294431
+  -> success | pred='Nicholas Meyer' | any_match=True
+[534/9756] run popqa_1295145
+  -> success | pred='Artern' | any_match=True
+[535/9756] run popqa_1296421
+  -> success | pred='Football (soccer)' | any_match=False
+[536/9756] run popqa_1297540
+  -> success | pred='Inachus' | any_match=True
+[537/9756] run popqa_129760
+  -> success | pred='Andrés Vicente Gómez' | any_match=False
+[538/9756] run popqa_1297664
+  -> success | pred='Kota Kinabalu' | any_match=True
+[539/9756] run popqa_1298301
+  -> success | pred='Michael Apted' | any_match=True
+[540/9756] run popqa_1299757
+  -> success | pred='Michael Land' | any_match=True
+[541/9756] run popqa_130213
+  -> success | pred='politician' | any_match=True
+[542/9756] run popqa_1302251
+  -> success | pred='Sankt Goarshausen' | any_match=True
+[543/9756] run popqa_1302358
+  -> success | pred='Ryan Larkin' | any_match=True
+[544/9756] run popqa_1302705
+  -> success | pred='Mechelen' | any_match=False
+[545/9756] run popqa_1302706
+  -> success | pred='Edward I of England' | any_match=False
+[546/9756] run popqa_1302707
+  -> success | pred='Philippa of Hainault' | any_match=True
+[547/9756] run popqa_1303276
+  -> success | pred='Dhule' | any_match=True
+[548/9756] run popqa_1303570
+  -> success | pred='Heavy metal' | any_match=True
+[549/9756] run popqa_1303963
+  -> success | pred='Sooraj R. Barjatya' | any_match=True
+[550/9756] run popqa_130446
+  -> success | pred='Dominic Mitchell' | any_match=False
+[551/9756] run popqa_13046
+  -> success | pred='Maseru' | any_match=True
+[552/9756] run popqa_1305068
+  -> success | pred='Nathan Chapman' | any_match=False
+[553/9756] run popqa_1305167
+  -> success | pred='Romance novel' | any_match=False
+[554/9756] run popqa_1305274
+  -> success | pred='Bob Swaim' | any_match=True
+[555/9756] run popqa_1305275
+  -> success | pred='Bob Swaim' | any_match=True
+[556/9756] run popqa_1305346
+  -> success | pred='Angelina Jolie' | any_match=True
+[557/9756] run popqa_1305682
+  -> success | pred='Richard Price and Steven Zaillian' | any_match=False
+[558/9756] run popqa_1305807
+  -> success | pred='Anand district' | any_match=True
+[559/9756] run popqa_1305822
+  -> success | pred='Christianity' | any_match=False
+[560/9756] run popqa_1306160
+  -> success | pred='Amqui' | any_match=True
+[561/9756] run popqa_1306567
+  -> success | pred='Methodist' | any_match=False
+[562/9756] run popqa_1307801
+  -> success | pred='Action role-playing game' | any_match=False
+[563/9756] run popqa_1307804
+  -> success | pred='Hiromichi Tanaka' | any_match=True
+[564/9756] run popqa_1307810
+  -> success | pred='Koichi Ishii' | any_match=True
+[565/9756] run popqa_1307811
+  -> success | pred='Hiroki Kikuta' | any_match=True
+[566/9756] run popqa_1308133
+  -> success | pred='Bladud' | any_match=True
+[567/9756] run popqa_1309417
+  -> success | pred='California' | any_match=True
+[568/9756] run popqa_130950
+  -> success | pred='Todd Black' | any_match=False
+[569/9756] run popqa_1310942
+  -> success | pred='Gilbert Shelton' | any_match=True
+[570/9756] run popqa_1311100
+  -> success | pred='Australia' | any_match=True
+[571/9756] run popqa_1312121
+  -> success | pred='John Herzfeld, Keith Addis, Nick Wechsler, David Blocker' | any_match=False
+[572/9756] run popqa_1312124
+  -> success | pred='John Herzfeld' | any_match=True
+[573/9756] run popqa_1312410
+  -> success | pred='Walt Disney' | any_match=True
+[574/9756] run popqa_1315628
+  -> success | pred='Lucinda Coxon' | any_match=False
+[575/9756] run popqa_1316699
+  -> success | pred='Football (soccer)' | any_match=False
+[576/9756] run popqa_1317713
+  -> success | pred='Rock' | any_match=False
+[577/9756] run popqa_1318559
+  -> success | pred='Iran' | any_match=False
+[578/9756] run popqa_1318756
+  -> success | pred='Football (soccer)' | any_match=False
+[579/9756] run popqa_1319191
+  -> success | pred='Jason Blum' | any_match=False
+[580/9756] run popqa_1319307
+  -> success | pred='unknown' | any_match=False
+[581/9756] run popqa_1319309
+  -> success | pred='Unknown' | any_match=False
+[582/9756] run popqa_1319519
+  -> success | pred='Basketball' | any_match=True
+[583/9756] run popqa_1319664
+  -> success | pred='Hunt Stromberg' | any_match=False
+[584/9756] run popqa_1321614
+  -> success | pred='Douglas Hofstadter' | any_match=True
+[585/9756] run popqa_1322853
+  -> success | pred='India' | any_match=True
+[586/9756] run popqa_1323193
+  -> success | pred='United States' | any_match=True
+[587/9756] run popqa_1323264
+  -> success | pred='Stanley Kubrick' | any_match=False
+[588/9756] run popqa_1323296
+  -> success | pred='Thriller' | any_match=False
+[589/9756] run popqa_1323570
+  -> success | pred='Zhongli' | any_match=False
+[590/9756] run popqa_1324871
+  -> success | pred='Andrew Haigh' | any_match=False
+[591/9756] run popqa_1325196
+  -> success | pred='Balachandra Menon' | any_match=True
+[592/9756] run popqa_1325197
+  -> success | pred='Balachandra Menon' | any_match=True
+[593/9756] run popqa_1325968
+  -> success | pred='Duccio Tessari' | any_match=False
+[594/9756] run popqa_1326922
+  -> success | pred='Yoon Eun-hye' | any_match=True
+[595/9756] run popqa_1327142
+  -> success | pred='Association football' | any_match=True
+[596/9756] run popqa_1327434
+  -> success | pred='Vicente Aranda' | any_match=False
+[597/9756] run popqa_1327800
+  -> success | pred='Basu Chatterjee' | any_match=False
+[598/9756] run popqa_1330638
+  -> success | pred='Silvester Slavenburg' | any_match=False
+[599/9756] run popqa_1330642
+  -> success | pred='Charles MacArthur' | any_match=True
+[600/9756] run popqa_1331223
+  -> success | pred='Moshe Edery' | any_match=False
+[601/9756] run popqa_1331226
+  -> success | pred='Avi Nesher' | any_match=True
+[602/9756] run popqa_1332312
+  -> success | pred='David Riker' | any_match=False
+[603/9756] run popqa_1332334
+  -> success | pred='Haiti' | any_match=True
+[604/9756] run popqa_1334076
+  -> success | pred='Comedy-drama' | any_match=False
+[605/9756] run popqa_1334085
+  -> success | pred='Nancy Meyers' | any_match=True
+[606/9756] run popqa_1334087
+  -> success | pred='Nancy Meyers' | any_match=True
+[607/9756] run popqa_1334089
+  -> success | pred='Nancy Meyers' | any_match=True
+[608/9756] run popqa_1334114
+  -> success | pred='Stuart Heisler' | any_match=False
+[609/9756] run popqa_1334439
+  -> success | pred='Sarah Kernochan' | any_match=True
+[610/9756] run popqa_133487
+  -> success | pred='Pier Paolo Pasolini' | any_match=True
+[611/9756] run popqa_1335671
+  -> success | pred='Maurine Dallas Watkins' | any_match=True
+[612/9756] run popqa_1335873
+  -> success | pred='John Ritter' | any_match=True
+[613/9756] run popqa_1336640
+  -> success | pred='Josh Singer and Tom McCarthy' | any_match=False
+[614/9756] run popqa_1337112
+  -> success | pred='Michael Douglas' | any_match=True
+[615/9756] run popqa_1337178
+  -> success | pred='Terry Goodkind' | any_match=True
+[616/9756] run popqa_1337411
+  -> success | pred='John Francis Daley and Jonathan Goldstein' | any_match=False
+[617/9756] run popqa_1338147
+  -> success | pred='Robert Munsch' | any_match=False
+[618/9756] run popqa_1340076
+  -> success | pred='William Shakespeare' | any_match=True
+[619/9756] run popqa_1341110
+  -> success | pred='Margarethe von Trotta' | any_match=True
+[620/9756] run popqa_1342774
+  -> success | pred='Kevin Kadish' | any_match=True
+[621/9756] run popqa_1343087
+  -> success | pred='Franz Schubert' | any_match=False
+[622/9756] run popqa_1345136
+  -> success | pred='Ulrich Seidl' | any_match=True
+[623/9756] run popqa_1345252
+  -> success | pred='Drama' | any_match=False
+[624/9756] run popqa_1345256
+  -> success | pred='Amanda McBroom' | any_match=False
+[625/9756] run popqa_1345361
+  -> success | pred='Bandla Ganesh' | any_match=True
+[626/9756] run popqa_1345495
+  -> success | pred='Stephanie Linus' | any_match=False
+[627/9756] run popqa_1346062
+  -> success | pred='Bent Hamer' | any_match=False
+[628/9756] run popqa_1346306
+  -> success | pred='Shirley Jackson' | any_match=True
+[629/9756] run popqa_1346774
+  -> success | pred='Alternative rock' | any_match=True
+[630/9756] run popqa_1346942
+  -> success | pred='Judaism' | any_match=False
+[631/9756] run popqa_1347010
+  -> success | pred='Cho Chul-hyun' | any_match=False
+[632/9756] run popqa_1347286
+  -> success | pred='ice hockey' | any_match=False
+[633/9756] run popqa_1347439
+  -> success | pred='Ennis' | any_match=True
+[634/9756] run popqa_134749
+  -> success | pred='Hisaya Nakajo' | any_match=True
+[635/9756] run popqa_1348054
+  -> success | pred='Netherlands' | any_match=True
+[636/9756] run popqa_1349344
+  -> success | pred='Octave Mirbeau' | any_match=True
+[637/9756] run popqa_1349429
+  -> success | pred='Mikael Salomon' | any_match=True
+[638/9756] run popqa_1349455
+  -> success | pred='Christianity' | any_match=False
+[639/9756] run popqa_1349825
+  -> success | pred='Dhaka' | any_match=True
+[640/9756] run popqa_1350913
+  -> success | pred='Katherine Paterson' | any_match=True
+[641/9756] run popqa_1351559
+  -> success | pred='Ang Lee' | any_match=True
+[642/9756] run popqa_1352311
+  -> success | pred='Roland Joffé' | any_match=False
+[643/9756] run popqa_1352442
+  -> success | pred='Dennis Lehane' | any_match=True
+[644/9756] run popqa_1352506
+  -> success | pred='Francine Rivers' | any_match=True
+[645/9756] run popqa_1352541
+  -> success | pred='Shyam' | any_match=False
+[646/9756] run popqa_1352598
+  -> success | pred='Jack London' | any_match=False
+[647/9756] run popqa_1353084
+  -> success | pred='P. Chandrakumar' | any_match=True
+[648/9756] run popqa_1353319
+  -> success | pred='Adam Nevill' | any_match=True
+[649/9756] run popqa_1353558
+  -> success | pred='Pankaj Mullick' | any_match=True
+[650/9756] run popqa_1354085
+  -> success | pred='Siva Nageswara Rao' | any_match=False
+[651/9756] run popqa_1354806
+  -> success | pred='John Lasseter' | any_match=True
+[652/9756] run popqa_1356748
+  -> success | pred='Kathmandu' | any_match=False
+[653/9756] run popqa_1357592
+  -> success | pred='Cockburn Town' | any_match=True
+[654/9756] run popqa_1358353
+  -> success | pred='Stephen Frears' | any_match=True
+[655/9756] run popqa_1358512
+  -> success | pred='Science fiction' | any_match=False
+[656/9756] run popqa_1359147
+  -> success | pred='Robin Hobb' | any_match=True
+[657/9756] run popqa_13600
+  -> success | pred='Hoysala Empire' | any_match=True
+[658/9756] run popqa_1360148
+  -> success | pred='Dasharatha' | any_match=False
+[659/9756] run popqa_1361227
+  -> success | pred='Jeff Rendell' | any_match=False
+[660/9756] run popqa_136172
+  -> success | pred='Rodney Jerkins' | any_match=True
+[661/9756] run popqa_1362345
+  -> success | pred='Randy Bachman' | any_match=False
+[662/9756] run popqa_1362626
+  -> success | pred='Typhon' | any_match=True
+[663/9756] run popqa_1363172
+  -> success | pred='Turn-based strategy' | any_match=False
+[664/9756] run popqa_1363357
+  -> success | pred='Association football' | any_match=True
+[665/9756] run popqa_1363778
+  -> success | pred='Berlin' | any_match=True
+[666/9756] run popqa_136399
+  -> success | pred='Oriana Fallaci' | any_match=True
+[667/9756] run popqa_1364500
+  -> success | pred='Winston Churchill' | any_match=True
+[668/9756] run popqa_1364849
+  -> success | pred='Abdulaziz ibn Saud' | any_match=False
+[669/9756] run popqa_136561
+  -> success | pred='Henry Koster' | any_match=True
+[670/9756] run popqa_1366004
+  -> success | pred='Indie rock' | any_match=False
+[671/9756] run popqa_1366262
+  -> success | pred='Peshawar' | any_match=True
+[672/9756] run popqa_1366412
+  -> success | pred='Tom Bradby' | any_match=True
+[673/9756] run popqa_136686
+  -> success | pred='American football' | any_match=True
+[674/9756] run popqa_1367178
+  -> success | pred='L.A. Reid' | any_match=False
+[675/9756] run popqa_1367376
+  -> success | pred='Turn-based tactics' | any_match=False
+[676/9756] run popqa_1367838
+  -> success | pred='Lenin Rajendran' | any_match=True
+[677/9756] run popqa_1368071
+  -> success | pred='Ginny NiCarthy' | any_match=False
+[678/9756] run popqa_1368385
+  -> success | pred='Film director' | any_match=True
+[679/9756] run popqa_1369042
+  -> success | pred='Puzzle' | any_match=False
+[680/9756] run popqa_1369060
+  -> success | pred='C. Radhakrishnan' | any_match=True
+[681/9756] run popqa_13691
+  -> success | pred='Durand is the capital of Pepin County, Wisconsin.' | any_match=False
+[682/9756] run popqa_1369273
+  -> success | pred='politician' | any_match=True
+[683/9756] run popqa_1371300
+  -> success | pred='Musician (rapper)' | any_match=False
+[684/9756] run popqa_1371350
+  -> success | pred='Corey Deshon' | any_match=False
+[685/9756] run popqa_1371496
+  -> success | pred='B. Jaya' | any_match=False
+[686/9756] run popqa_1371635
+  -> success | pred='Dr. Seuss' | any_match=True
+[687/9756] run popqa_1372528
+  -> success | pred='K. S. Sethumadhavan' | any_match=True
+[688/9756] run popqa_1373498
+  -> success | pred='Priyadarshan' | any_match=False
+[689/9756] run popqa_1373934
+  -> success | pred='Sreekumaran Thampi' | any_match=True
+[690/9756] run popqa_1374895
+  -> success | pred='Sidney Olcott' | any_match=True
+[691/9756] run popqa_1375670
+  -> success | pred='Brian Robbins' | any_match=False
+[692/9756] run popqa_1376141
+  -> success | pred='Raveendran' | any_match=False
+[693/9756] run popqa_1376164
+  -> success | pred='United States' | any_match=True
+[694/9756] run popqa_1376178
+  -> success | pred='Steponas Darius' | any_match=True
+[695/9756] run popqa_1376294
+  -> success | pred='Sarah Koenig' | any_match=True
+[696/9756] run popqa_1376388
+  -> success | pred='Chuck Palahniuk' | any_match=True
+[697/9756] run popqa_1377069
+  -> success | pred='Shyam' | any_match=True
+[698/9756] run popqa_1377224
+  -> success | pred='Rugby league' | any_match=False
+[699/9756] run popqa_1377228
+  -> success | pred='Weightlifting' | any_match=False
+[700/9756] run popqa_1377824
+  -> success | pred='P. Chandrakumar' | any_match=False
+[701/9756] run popqa_1378543
+  -> success | pred='White' | any_match=True
+[702/9756] run popqa_1380246
+  -> success | pred='Rudolf Friml' | any_match=True
+[703/9756] run popqa_1380289
+  -> success | pred='India' | any_match=True
+[704/9756] run popqa_1380887
+  -> success | pred='United States' | any_match=True
+[705/9756] run popqa_1381547
+  -> success | pred='Clarence G. Badger' | any_match=False
+[706/9756] run popqa_1382188
+  -> success | pred='Shafi Kollam' | any_match=False
+[707/9756] run popqa_1382342
+  -> success | pred='Mia Farrow' | any_match=False
+[708/9756] run popqa_1383429
+  -> success | pred='Jose Javier Reyes' | any_match=True
+[709/9756] run popqa_138405
+  -> success | pred='politician' | any_match=True
+[710/9756] run popqa_13849
+  -> success | pred='Ai Otsuka' | any_match=True
+[711/9756] run popqa_1386224
+  -> success | pred='Laura Amy Schlitz' | any_match=True
+[712/9756] run popqa_1387011
+  -> success | pred='sitcom' | any_match=True
+[713/9756] run popqa_1387110
+  -> success | pred='Henri Verneuil' | any_match=False
+[714/9756] run popqa_1387341
+  -> success | pred='Simon Garfield' | any_match=True
+[715/9756] run popqa_1387948
+  -> success | pred='George Ratliff' | any_match=False
+[716/9756] run popqa_1388346
+  -> success | pred='Balu Kiriyath' | any_match=True
+[717/9756] run popqa_1390388
+  -> success | pred='Alfonso Cuarón' | any_match=False
+[718/9756] run popqa_1390909
+  -> success | pred='Poland' | any_match=True
+[719/9756] run popqa_1390922
+  -> success | pred='Zeus' | any_match=True
+[720/9756] run popqa_139141
+  -> success | pred='Girona' | any_match=True
+[721/9756] run popqa_1391744
+  -> success | pred='Nitra' | any_match=True
+[722/9756] run popqa_1391764
+  -> success | pred='Reinhold Glière' | any_match=False
+[723/9756] run popqa_1391948
+  -> success | pred='Comedy-drama' | any_match=False
+[724/9756] run popqa_1391953
+  -> success | pred='Blake Edwards' | any_match=True
+[725/9756] run popqa_1391954
+  -> success | pred='Blake Edwards' | any_match=True
+[726/9756] run popqa_1392065
+  -> success | pred='Harald Kloser' | any_match=False
+[727/9756] run popqa_1392068
+  -> success | pred='Roland Emmerich' | any_match=True
+[728/9756] run popqa_1392070
+  -> success | pred='Roland Emmerich and Harald Kloser' | any_match=False
+[729/9756] run popqa_1394409
+  -> success | pred='Ring Lardner Jr.' | any_match=False
+[730/9756] run popqa_1394666
+  -> success | pred='Spain' | any_match=True
+[731/9756] run popqa_1394968
+  -> success | pred='Robert Louis Stevenson' | any_match=True
+[732/9756] run popqa_1395564
+  -> success | pred='football (soccer)' | any_match=False
+[733/9756] run popqa_1396461
+  -> success | pred='Synth-pop' | any_match=False
+[734/9756] run popqa_1396880
+  -> success | pred='Martin Ransohoff' | any_match=False
+[735/9756] run popqa_1397284
+  -> success | pred='Red, green, black, and yellow' | any_match=False
+[736/9756] run popqa_139788
+  -> success | pred='Susan Minot' | any_match=True
+[737/9756] run popqa_1398108
+  -> success | pred='composer' | any_match=True
+[738/9756] run popqa_1398683
+  -> success | pred='South Vietnam' | any_match=True
+[739/9756] run popqa_139870
+  -> success | pred='Steve Brown' | any_match=False
+[740/9756] run popqa_1398876
+  -> success | pred='Bruce Joel Rubin' | any_match=False
+[741/9756] run popqa_13998
+  -> success | pred='Monrovia' | any_match=True
+[742/9756] run popqa_1401026
+  -> success | pred='Amos Bronson Alcott' | any_match=True
+[743/9756] run popqa_1401285
+  -> success | pred='Ajay Devgn and Leena Deore' | any_match=False
+[744/9756] run popqa_14017
+  -> success | pred='France' | any_match=True
+[745/9756] run popqa_1401960
+  -> success | pred='Horror film' | any_match=True
+[746/9756] run popqa_1401999
+  -> success | pred='Indra' | any_match=True
+[747/9756] run popqa_1402278
+  -> success | pred='Jean-Patrick Manchette' | any_match=True
+[748/9756] run popqa_1402351
+  -> success | pred='Football (soccer)' | any_match=False
+[749/9756] run popqa_1402418
+  -> success | pred='Roger Birnbaum' | any_match=True
+[750/9756] run popqa_1402420
+  -> success | pred='Thomas Moore' | any_match=False
+[751/9756] run popqa_1402531
+  -> success | pred='George M. Cohan' | any_match=False
+[752/9756] run popqa_1402872
+  -> success | pred='Scott Rudin, Dana Brunetti, Michael De Luca, Ceán Chaffin' | any_match=False
+[753/9756] run popqa_1402952
+  -> success | pred='Association football' | any_match=True
+[754/9756] run popqa_1403630
+  -> success | pred='Curt Siodmak' | any_match=True
+[755/9756] run popqa_1404259
+  -> success | pred='Pop punk' | any_match=False
+[756/9756] run popqa_1404476
+  -> success | pred='Lutheran' | any_match=False
+[757/9756] run popqa_1404478
+  -> success | pred='United States' | any_match=True
+[758/9756] run popqa_1404706
+  -> success | pred='Rúnar Rúnarsson' | any_match=False
+[759/9756] run popqa_1405876
+  -> success | pred='Bolivia' | any_match=True
+[760/9756] run popqa_1406824
+  -> success | pred='architect' | any_match=True
+[761/9756] run popqa_1407469
+  -> success | pred='Nathan Barr' | any_match=True
+[762/9756] run popqa_1408084
+  -> success | pred='Robert Kardashian' | any_match=True
+[763/9756] run popqa_140869
+  -> success | pred='Kang Hyeong-cheol' | any_match=False
+[764/9756] run popqa_1409748
+  -> success | pred='Sufjan Stevens' | any_match=False
+[765/9756] run popqa_1409758
+  -> success | pred='Charli XCX' | any_match=False
+[766/9756] run popqa_1410036
+  -> success | pred='Charles Reisner' | any_match=True
+[767/9756] run popqa_1410219
+  -> success | pred='Charles Reisner' | any_match=True
+[768/9756] run popqa_1410521
+  -> success | pred='Aneesh Chaganty' | any_match=False
+[769/9756] run popqa_1412286
+  -> success | pred='Football (soccer)' | any_match=False
+[770/9756] run popqa_1412527
+  -> success | pred='politician' | any_match=True
+[771/9756] run popqa_1412677
+  -> success | pred='Actor' | any_match=True
+[772/9756] run popqa_141296
+  -> success | pred='politician' | any_match=True
+[773/9756] run popqa_1413462
+  -> success | pred='Carmine Gallone' | any_match=True
+[774/9756] run popqa_1416177
+  -> success | pred='Iran' | any_match=False
+[775/9756] run popqa_1416375
+  -> success | pred='George Smith Patton Sr.' | any_match=False
+[776/9756] run popqa_1416925
+  -> success | pred='Red' | any_match=True
+[777/9756] run popqa_1417211
+  -> success | pred='David Benioff' | any_match=True
+[778/9756] run popqa_1417212
+  -> success | pred='James Horner' | any_match=True
+[779/9756] run popqa_141739
+  -> success | pred='Chilperic II' | any_match=False
+[780/9756] run popqa_1419351
+  -> success | pred='Slovenia' | any_match=True
+[781/9756] run popqa_1419959
+  -> success | pred='politician' | any_match=True
+[782/9756] run popqa_1421095
+  -> success | pred='Football (soccer)' | any_match=False
+[783/9756] run popqa_1422402
+  -> success | pred='Author' | any_match=False
+[784/9756] run popqa_1422712
+  -> success | pred='Soul music' | any_match=False
+[785/9756] run popqa_1422910
+  -> success | pred='Yanni' | any_match=False
+[786/9756] run popqa_1423107
+  -> success | pred='Emma Donoghue' | any_match=True
+[787/9756] run popqa_1423129
+  -> success | pred='Hannah Fidell' | any_match=True
+[788/9756] run popqa_1423143
+  -> success | pred='Victor Heerman' | any_match=False
+[789/9756] run popqa_1423258
+  -> success | pred='S. J. Suryah' | any_match=False
+[790/9756] run popqa_1423371
+  -> success | pred='Comedy-drama' | any_match=False
+[791/9756] run popqa_1423373
+  -> success | pred='Guy Ritchie' | any_match=False
+[792/9756] run popqa_1423374
+  -> success | pred='Andrew Bujalski' | any_match=True
+[793/9756] run popqa_142383
+  -> success | pred='David Logan' | any_match=True
+[794/9756] run popqa_1423912
+  -> success | pred='American football' | any_match=True
+[795/9756] run popqa_1424104
+  -> success | pred='Timothy Reckart' | any_match=False
+[796/9756] run popqa_1424448
+  -> success | pred='Film director' | any_match=False
+[797/9756] run popqa_1424851
+  -> success | pred='Elmer Clifton' | any_match=True
+[798/9756] run popqa_1424942
+  -> success | pred='Peter Foldy' | any_match=False
+[799/9756] run popqa_1425545
+  -> success | pred='Claret and blue' | any_match=False
+[800/9756] run popqa_1425557
+  -> success | pred='Author, journalist, historian' | any_match=False
+[801/9756] run popqa_1425603
+  -> success | pred='Alfred the Great' | any_match=True
+[802/9756] run popqa_1427860
+  -> success | pred='Nashville' | any_match=False
+[803/9756] run popqa_1429700
+  -> success | pred='Boxing' | any_match=False
+[804/9756] run popqa_1430021
+  -> success | pred='Czech Republic' | any_match=True
+[805/9756] run popqa_1430436
+  -> success | pred='Football (soccer)' | any_match=False
+[806/9756] run popqa_1430723
+  -> success | pred='Red and white' | any_match=False
+[807/9756] run popqa_14319
+  -> success | pred='Nan Province' | any_match=False
+[808/9756] run popqa_1432988
+  -> success | pred='Fayette' | any_match=False
+[809/9756] run popqa_1436355
+  -> success | pred='Abu Dhabi' | any_match=True
+[810/9756] run popqa_1436486
+  -> success | pred='Andrew Stanton' | any_match=True
+[811/9756] run popqa_1437323
+  -> success | pred='Clarence G. Badger' | any_match=False
+[812/9756] run popqa_1437335
+  -> success | pred='R&B' | any_match=False
+[813/9756] run popqa_1437438
+  -> success | pred='DaHeala' | any_match=False
+[814/9756] run popqa_1437610
+  -> success | pred='David Baldacci' | any_match=True
+[815/9756] run popqa_143788
+  -> success | pred='Don DeLillo' | any_match=True
+[816/9756] run popqa_1437954
+  -> success | pred='Lincoln Child' | any_match=True
+[817/9756] run popqa_1437961
+  -> success | pred='Jon Klassen' | any_match=True
+[818/9756] run popqa_1438470
+  -> success | pred='Yangzom Brauen' | any_match=True
+[819/9756] run popqa_1438497
+  -> success | pred='Shiva Nageswara Rao' | any_match=True
+[820/9756] run popqa_1438536
+  -> success | pred='Catholicism' | any_match=False
+[821/9756] run popqa_1438772
+  -> success | pred='Paul Haggis' | any_match=True
+[822/9756] run popqa_1438857
+  -> success | pred='James Parrott' | any_match=False
+[823/9756] run popqa_144024
+  -> success | pred='Bitonto' | any_match=True
+[824/9756] run popqa_144038
+  -> success | pred='J. G. Ballard' | any_match=True
+[825/9756] run popqa_1440910
+  -> success | pred='Singer' | any_match=False
+[826/9756] run popqa_1441120
+  -> success | pred='S. A. Chandrasekhar' | any_match=False
+[827/9756] run popqa_1441686
+  -> success | pred='Rosamunde Pilcher' | any_match=False
+[828/9756] run popqa_1443034
+  -> success | pred="Bobb'e J. Thompson" | any_match=False
+[829/9756] run popqa_1443341
+  -> success | pred='Sally Potter' | any_match=True
+[830/9756] run popqa_1443831
+  -> success | pred='Gérard Pirès' | any_match=False
+[831/9756] run popqa_1444314
+  -> success | pred='Steve Fisher' | any_match=False
+[832/9756] run popqa_1444653
+  -> success | pred='Sweden' | any_match=False
+[833/9756] run popqa_1445424
+  -> success | pred='Indie rock' | any_match=True
+[834/9756] run popqa_1445727
+  -> success | pred='Sylvester Stallone' | any_match=True
+[835/9756] run popqa_1445728
+  -> success | pred='Bill Conti' | any_match=True
+[836/9756] run popqa_1445881
+  -> success | pred='United States' | any_match=True
+[837/9756] run popqa_1446309
+  -> success | pred='Rockabilly' | any_match=False
+[838/9756] run popqa_1446344
+  -> success | pred='United States' | any_match=True
+[839/9756] run popqa_1446352
+  -> success | pred='State Shinto' | any_match=False
+[840/9756] run popqa_1446356
+  -> success | pred='Tokyo' | any_match=True
+[841/9756] run popqa_1446642
+  -> success | pred='film director' | any_match=True
+[842/9756] run popqa_1447026
+  -> success | pred='football' | any_match=True
+[843/9756] run popqa_1447370
+  -> success | pred='Craig Safan' | any_match=True
+[844/9756] run popqa_1447840
+  -> success | pred='Daniel Taradash' | any_match=False
+[845/9756] run popqa_144816
+  -> success | pred='France' | any_match=True
+[846/9756] run popqa_1448303
+  -> success | pred='Nick Lowe' | any_match=False
+[847/9756] run popqa_1448499
+  -> success | pred='Kabul' | any_match=True
+[848/9756] run popqa_1448611
+  -> success | pred='Nepal' | any_match=False
+[849/9756] run popqa_1448737
+  -> success | pred='François Poisson' | any_match=False
+[850/9756] run popqa_144894
+  -> success | pred='Marek Krajewski' | any_match=False
+[851/9756] run popqa_1449028
+  -> success | pred='Reykjavik' | any_match=True
+[852/9756] run popqa_1449543
+  -> success | pred='Comedy-drama' | any_match=True
+[853/9756] run popqa_1450145
+  -> success | pred='Ireland' | any_match=True
+[854/9756] run popqa_1450333
+  -> success | pred='William C. deMille' | any_match=False
+[855/9756] run popqa_1451981
+  -> success | pred='actor' | any_match=False
+[856/9756] run popqa_145308
+  -> success | pred='Mani Ratnam' | any_match=True
+[857/9756] run popqa_1454116
+  -> success | pred='Swimming (aquatic sports)' | any_match=False
+[858/9756] run popqa_1454237
+  -> success | pred='Béla Bartók' | any_match=False
+[859/9756] run popqa_1454728
+  -> success | pred='Coky Giedroyc' | any_match=True
+[860/9756] run popqa_145561
+  -> success | pred='Maastricht' | any_match=False
+[861/9756] run popqa_145630
+  -> success | pred='Robert I of Capua' | any_match=True
+[862/9756] run popqa_1456705
+  -> success | pred='Sean Bailey' | any_match=False
+[863/9756] run popqa_1456710
+  -> success | pred='Edward Kitsis and Adam Horowitz' | any_match=False
+[864/9756] run popqa_1456897
+  -> success | pred='Noise rock' | any_match=False
+[865/9756] run popqa_1457141
+  -> success | pred='Maria Theresa' | any_match=True
+[866/9756] run popqa_1459024
+  -> success | pred='American football' | any_match=True
+[867/9756] run popqa_1461108
+  -> success | pred='Alternative rock' | any_match=True
+[868/9756] run popqa_1462306
+  -> success | pred='Billy Wilder' | any_match=True
+[869/9756] run popqa_1462605
+  -> success | pred='Daft Punk' | any_match=True
+[870/9756] run popqa_1463819
+  -> success | pred='Sitcom' | any_match=False
+[871/9756] run popqa_1463824
+  -> success | pred='George A. Romero' | any_match=True
+[872/9756] run popqa_1464242
+  -> success | pred='Toronto' | any_match=True
+[873/9756] run popqa_1465433
+  -> success | pred='Chris Parker' | any_match=False
+[874/9756] run popqa_1465497
+  -> success | pred='Jazz' | any_match=True
+[875/9756] run popqa_1465830
+  -> success | pred='Michael Daugherty' | any_match=True
+[876/9756] run popqa_1466594
+  -> success | pred='Downpatrick' | any_match=True
+[877/9756] run popqa_1466918
+  -> success | pred='F. Sionil José' | any_match=False
+[878/9756] run popqa_146692
+  -> success | pred='Arthur Laurents' | any_match=True
+[879/9756] run popqa_1467376
+  -> success | pred='Actress' | any_match=True
+[880/9756] run popqa_1468152
+  -> success | pred='Andrew Kevin Walker' | any_match=True
+[881/9756] run popqa_1468621
+  -> success | pred='Matthew Richey' | any_match=True
+[882/9756] run popqa_1468996
+  -> success | pred='Tallinn' | any_match=True
+[883/9756] run popqa_1469534
+  -> success | pred='United States' | any_match=True
+[884/9756] run popqa_1471819
+  -> success | pred='Roman Catholicism' | any_match=False
+[885/9756] run popqa_1473125
+  -> success | pred='Loki' | any_match=True
+[886/9756] run popqa_1473215
+  -> success | pred='Eger' | any_match=True
+[887/9756] run popqa_147357
+  -> success | pred='Rock' | any_match=False
+[888/9756] run popqa_1473780
+  -> success | pred='United States' | any_match=False
+[889/9756] run popqa_1474580
+  -> success | pred='Drama' | any_match=False
+[890/9756] run popqa_1474587
+  -> success | pred='Joe Pasternak' | any_match=False
+[891/9756] run popqa_1475320
+  -> success | pred='United States' | any_match=True
+[892/9756] run popqa_1475379
+  -> success | pred='Melbourne' | any_match=False
+[893/9756] run popqa_1475631
+  -> success | pred='Spain' | any_match=True
+[894/9756] run popqa_1476158
+  -> success | pred='Andrew Lloyd Webber' | any_match=True
+[895/9756] run popqa_147798
+  -> success | pred='BTS' | any_match=False
+[896/9756] run popqa_1478112
+  -> success | pred='United States' | any_match=True
+[897/9756] run popqa_1478183
+  -> success | pred='Guizhou' | any_match=True
+[898/9756] run popqa_1478845
+  -> success | pred='Peter Horton' | any_match=False
+[899/9756] run popqa_1478846
+  -> success | pred='Robert Kuhn' | any_match=False
+[900/9756] run popqa_1478869
+  -> success | pred='Tartu' | any_match=True
+[901/9756] run popqa_1479687
+  -> success | pred='Writer' | any_match=False
+[902/9756] run popqa_1480979
+  -> success | pred='Horror' | any_match=False
+[903/9756] run popqa_1481126
+  -> success | pred='Kevin Rodney Sullivan' | any_match=False
+[904/9756] run popqa_1481181
+  -> success | pred='association football' | any_match=True
+[905/9756] run popqa_1482020
+  -> success | pred='Jon Favreau' | any_match=True
+[906/9756] run popqa_1484274
+  -> success | pred='architect' | any_match=True
+[907/9756] run popqa_1485343
+  -> success | pred='Hard rock' | any_match=True
+[908/9756] run popqa_1485443
+  -> success | pred='Akiva Goldsman and David Koepp' | any_match=False
+[909/9756] run popqa_1486222
+  -> success | pred='Canada' | any_match=True
+[910/9756] run popqa_1486818
+  -> success | pred='Phil Collins' | any_match=True
+[911/9756] run popqa_1487383
+  -> success | pred='Politician' | any_match=False
+[912/9756] run popqa_1487811
+  -> success | pred='Bernhard Schlink' | any_match=False
+[913/9756] run popqa_1487881
+  -> success | pred='Minnesota' | any_match=False
+[914/9756] run popqa_1487902
+  -> success | pred='Oliver Stoltz' | any_match=False
+[915/9756] run popqa_1488053
+  -> success | pred='Sonic Youth' | any_match=True
+[916/9756] run popqa_1490897
+  -> success | pred='Kanye West' | any_match=False
+[917/9756] run popqa_1491532
+  -> success | pred='Roman Catholicism' | any_match=False
+[918/9756] run popqa_1492692
+  -> success | pred='George Harrison' | any_match=True
+[919/9756] run popqa_149290
+  -> success | pred='jazz' | any_match=False
+[920/9756] run popqa_149440
+  -> success | pred='Logan' | any_match=True
+[921/9756] run popqa_1494964
+  -> success | pred='Madonna' | any_match=False
+[922/9756] run popqa_1495150
+  -> success | pred='Phillip B. Goldfine' | any_match=False
+[923/9756] run popqa_1495173
+  -> success | pred='Dorothy Arzner' | any_match=True
+[924/9756] run popqa_1495280
+  -> success | pred='Victor Schertzinger' | any_match=True
+[925/9756] run popqa_1495281
+  -> success | pred='Doris Anderson' | any_match=False
+[926/9756] run popqa_1495476
+  -> success | pred='William Dieterle' | any_match=False
+[927/9756] run popqa_1495624
+  -> success | pred='Hal Walker' | any_match=True
+[928/9756] run popqa_1495761
+  -> success | pred='George Marion Jr.' | any_match=False
+[929/9756] run popqa_1495957
+  -> success | pred='Sharon Dymkowski' | any_match=False
+[930/9756] run popqa_1495975
+  -> success | pred='Stuart Walker' | any_match=True
+[931/9756] run popqa_1495976
+  -> success | pred='Arthur Kober, Eve Unsell, and William C. deMille' | any_match=False
+[932/9756] run popqa_1496073
+  -> success | pred='Donald Crisp' | any_match=False
+[933/9756] run popqa_1496387
+  -> success | pred='Ice hockey' | any_match=True
+[934/9756] run popqa_1496437
+  -> success | pred='Steven Seagal' | any_match=False
+[935/9756] run popqa_1496439
+  -> success | pred='Ali Smith' | any_match=True
+[936/9756] run popqa_1496507
+  -> success | pred='Julia Quinn' | any_match=True
+[937/9756] run popqa_1496612
+  -> success | pred='Puebla' | any_match=True
+[938/9756] run popqa_1497050
+  -> success | pred='Iñaki Dorronsoro' | any_match=False
+[939/9756] run popqa_149716
+  -> success | pred='psychiatrist' | any_match=True
+[940/9756] run popqa_149790
+  -> success | pred='politician' | any_match=False
+[941/9756] run popqa_1499215
+  -> success | pred='Romance novel' | any_match=False
+[942/9756] run popqa_1500007
+  -> success | pred='Scott Sanders' | any_match=False
+[943/9756] run popqa_1500135
+  -> success | pred='Richard Linklater' | any_match=False
+[944/9756] run popqa_1501207
+  -> success | pred='Pop' | any_match=True
+[945/9756] run popqa_1504173
+  -> success | pred='Rock' | any_match=True
+[946/9756] run popqa_1504862
+  -> success | pred='Huamachuco' | any_match=True
+[947/9756] run popqa_1504893
+  -> success | pred='Alexandra Patsavas' | any_match=False
+[948/9756] run popqa_1505006
+  -> success | pred='Association football (soccer)' | any_match=False
+[949/9756] run popqa_1505982
+  -> success | pred='screenwriter' | any_match=False
+[950/9756] run popqa_1506440
+  -> success | pred='United States' | any_match=True
+[951/9756] run popqa_1507451
+  -> success | pred='Rick Rubin' | any_match=False
+[952/9756] run popqa_1507495
+  -> success | pred='Novel / Historical fiction' | any_match=False
+[953/9756] run popqa_1509169
+  -> success | pred='Winnipeg' | any_match=True
+[954/9756] run popqa_1509468
+  -> success | pred='Magazine' | any_match=False
+[955/9756] run popqa_1509854
+  -> success | pred='Novel (literary fiction)' | any_match=False
+[956/9756] run popqa_1511830
+  -> success | pred='Edmonton' | any_match=True
+[957/9756] run popqa_151201
+  -> success | pred='Olivier Assayas' | any_match=True
+[958/9756] run popqa_151260
+  -> success | pred='Renny Harlin' | any_match=True
+[959/9756] run popqa_1512895
+  -> success | pred='Kirkcaldy' | any_match=False
+[960/9756] run popqa_1515801
+  -> success | pred='Halifax' | any_match=True
+[961/9756] run popqa_1516465
+  -> success | pred='Octave Mirbeau' | any_match=True
+[962/9756] run popqa_1516720
+  -> success | pred='Ian Fleming' | any_match=True
+[963/9756] run popqa_1516934
+  -> success | pred='Robert Smith' | any_match=False
+[964/9756] run popqa_1517122
+  -> success | pred='Karelicy' | any_match=False
+[965/9756] run popqa_151719
+  -> success | pred='Norway' | any_match=False
+[966/9756] run popqa_1518377
+  -> success | pred='Marcus Dunstan' | any_match=True
+[967/9756] run popqa_1518691
+  -> success | pred='Oliver Sacks' | any_match=True
+[968/9756] run popqa_1518766
+  -> success | pred='Darrell Roodt' | any_match=False
+[969/9756] run popqa_1518842
+  -> success | pred='Dustin Hoffman' | any_match=True
+[970/9756] run popqa_151894
+  -> success | pred='Sophia Lin' | any_match=False
+[971/9756] run popqa_151896
+  -> success | pred='Craig Zobel' | any_match=True
+[972/9756] run popqa_1519072
+  -> success | pred='Weightlifting' | any_match=False
+[973/9756] run popqa_1519345
+  -> success | pred='Rob Zombie' | any_match=True
+[974/9756] run popqa_1519349
+  -> success | pred='John 5' | any_match=False
+[975/9756] run popqa_1522534
+  -> success | pred='Fanni Metelius' | any_match=False
+[976/9756] run popqa_1522558
+  -> success | pred='Red and black' | any_match=False
+[977/9756] run popqa_1522836
+  -> success | pred='Board game' | any_match=False
+[978/9756] run popqa_1523833
+  -> success | pred='G. K. Venkatesh' | any_match=False
+[979/9756] run popqa_152398
+  -> success | pred='Alfred Hitchcock' | any_match=True
+[980/9756] run popqa_1524983
+  -> success | pred='Blue' | any_match=False
+[981/9756] run popqa_152564
+  -> success | pred='Joseph Strick' | any_match=True
+[982/9756] run popqa_152565
+  -> success | pred='Ben Maddow' | any_match=True
+[983/9756] run popqa_1527071
+  -> success | pred='Association football (soccer)' | any_match=False
+[984/9756] run popqa_1527157
+  -> success | pred='Marshall Curry' | any_match=True
+[985/9756] run popqa_1527376
+  -> success | pred='Ilaiyaraaja' | any_match=True
+[986/9756] run popqa_1527903
+  -> success | pred='Zhang Yimou' | any_match=True
+[987/9756] run popqa_1528049
+  -> success | pred='Red and white' | any_match=False
+[988/9756] run popqa_1528050
+  -> success | pred='Association football' | any_match=True
+[989/9756] run popqa_152871
+  -> success | pred='France' | any_match=True
+[990/9756] run popqa_1528899
+  -> success | pred='Association football (soccer)' | any_match=False
+[991/9756] run popqa_1530085
+  -> success | pred='Thriller' | any_match=False
+[992/9756] run popqa_1530395
+  -> success | pred='Renny Harlin' | any_match=False
+[993/9756] run popqa_1530632
+  -> success | pred='United States' | any_match=True
+[994/9756] run popqa_1530696
+  -> success | pred='Bapu' | any_match=False
+[995/9756] run popqa_1531301
+  -> success | pred='Hamsalekha' | any_match=True
+[996/9756] run popqa_1533065
+  -> success | pred='Red and white' | any_match=False
+[997/9756] run popqa_1534275
+  -> success | pred='Nicole Garcia and Jacques Fieschi' | any_match=False
+[998/9756] run popqa_1534287
+  -> success | pred='Matt Williams' | any_match=True
+[999/9756] run popqa_1534505
+  -> success | pred='Kiyoshi Kurosawa' | any_match=True
+[1000/9756] run popqa_1534696
+  -> success | pred='Matt Thiessen' | any_match=False
+[1001/9756] run popqa_1535067
+  -> success | pred='Todd Haynes' | any_match=True
+[1002/9756] run popqa_1535277
+  -> success | pred='Stephen Walker' | any_match=False
+[1003/9756] run popqa_1535458
+  -> success | pred='Karyn Kusama' | any_match=True
+[1004/9756] run popqa_1535497
+  -> success | pred='Claude Lelouch' | any_match=True
+[1005/9756] run popqa_1535999
+  -> success | pred='Folk metal' | any_match=True
+[1006/9756] run popqa_1536329
+  -> success | pred='Association football (soccer)' | any_match=False
+[1007/9756] run popqa_1536600
+  -> success | pred='actress' | any_match=True
+[1008/9756] run popqa_1537488
+  -> success | pred='Atom Egoyan' | any_match=True
+[1009/9756] run popqa_1537651
+  -> success | pred='Fredericton' | any_match=True
+[1010/9756] run popqa_1538783
+  -> success | pred='Glen Cook' | any_match=True
+[1011/9756] run popqa_1541610
+  -> success | pred='Comedian' | any_match=False
+[1012/9756] run popqa_1542205
+  -> success | pred='politician' | any_match=False
+[1013/9756] run popqa_1545214
+  -> success | pred='Conway' | any_match=True
+[1014/9756] run popqa_1545923
+  -> success | pred='Jeju City' | any_match=False
+[1015/9756] run popqa_1547277
+  -> success | pred='Unknown' | any_match=False
+[1016/9756] run popqa_1547297
+  -> success | pred='Al Gore Sr.' | any_match=False
+[1017/9756] run popqa_1547299
+  -> success | pred='Pauline Gore' | any_match=False
+[1018/9756] run popqa_1547756
+  -> success | pred='Russia' | any_match=True
+[1019/9756] run popqa_1547771
+  -> success | pred='Roman Catholicism' | any_match=False
+[1020/9756] run popqa_1547780
+  -> success | pred='Russia' | any_match=True
+[1021/9756] run popqa_1547989
+  -> success | pred='Ridley Scott' | any_match=False
+[1022/9756] run popqa_154868
+  -> success | pred='Saverio Costanzo' | any_match=True
+[1023/9756] run popqa_1548949
+  -> success | pred='Sam Brown' | any_match=False
+[1024/9756] run popqa_1549444
+  -> success | pred='France' | any_match=False
+[1025/9756] run popqa_1549592
+  -> success | pred='Billy Wilder' | any_match=True
+[1026/9756] run popqa_155029
+  -> success | pred='Comedy' | any_match=False
+[1027/9756] run popqa_155033
+  -> success | pred='Michael Frayn' | any_match=True
+[1028/9756] run popqa_155034
+  -> success | pred='George Fenton' | any_match=True
+[1029/9756] run popqa_155062
+  -> success | pred='Jermaine Dupri' | any_match=False
+[1030/9756] run popqa_155064
+  -> success | pred='Justin McCarthy' | any_match=False
+[1031/9756] run popqa_1550705
+  -> success | pred='United States' | any_match=True
+[1032/9756] run popqa_1551846
+  -> success | pred='Horror' | any_match=False
+[1033/9756] run popqa_1551849
+  -> success | pred='Sam Raimi' | any_match=True
+[1034/9756] run popqa_1551931
+  -> success | pred='Buddhism' | any_match=True
+[1035/9756] run popqa_155196
+  -> success | pred='Cliff Bole' | any_match=True
+[1036/9756] run popqa_155197
+  -> success | pred='C.J. Holland and Gene Roddenberry' | any_match=False
+[1037/9756] run popqa_1552926
+  -> success | pred='Douglas Heyes' | any_match=False
+[1038/9756] run popqa_1553715
+  -> success | pred='Oliba Cabreta' | any_match=True
+[1039/9756] run popqa_1554686
+  -> success | pred='Zheng Zhilong' | any_match=True
+[1040/9756] run popqa_1554687
+  -> success | pred='Tagawa Matsu' | any_match=True
+[1041/9756] run popqa_155638
+  -> success | pred='Michael Crichton' | any_match=True
+[1042/9756] run popqa_1556437
+  -> success | pred='John Norman' | any_match=True
+[1043/9756] run popqa_1557851
+  -> success | pred='Mark Sandman' | any_match=False
+[1044/9756] run popqa_1557995
+  -> success | pred='politician' | any_match=True
+[1045/9756] run popqa_1558096
+  -> success | pred='Carl von Clausewitz' | any_match=True
+[1046/9756] run popqa_1558369
+  -> success | pred='Pop' | any_match=False
+[1047/9756] run popqa_1558376
+  -> success | pred='Adam Levine' | any_match=False
+[1048/9756] run popqa_1560459
+  -> success | pred='Hans Zimmer' | any_match=False
+[1049/9756] run popqa_1560899
+  -> success | pred='C. Gardner Sullivan' | any_match=False
+[1050/9756] run popqa_156146
+  -> success | pred='David Grellier' | any_match=False
+[1051/9756] run popqa_1562003
+  -> success | pred='United States' | any_match=True
+[1052/9756] run popqa_1562438
+  -> success | pred='United States' | any_match=True
+[1053/9756] run popqa_1562677
+  -> success | pred='Gustavo Santaolalla' | any_match=True
+[1054/9756] run popqa_1563085
+  -> success | pred='Catholic' | any_match=False
+[1055/9756] run popqa_1564832
+  -> success | pred='Jean Renoir' | any_match=True
+[1056/9756] run popqa_1565458
+  -> success | pred='Akira Kurosawa' | any_match=True
+[1057/9756] run popqa_156556
+  -> success | pred='Rock' | any_match=True
+[1058/9756] run popqa_1565606
+  -> success | pred='Charles Chaplin' | any_match=True
+[1059/9756] run popqa_1565610
+  -> success | pred='Charlie Chaplin' | any_match=True
+[1060/9756] run popqa_1565801
+  -> success | pred='Catholic' | any_match=False
+[1061/9756] run popqa_1565960
+  -> success | pred='Ridley Scott' | any_match=True
+[1062/9756] run popqa_1566372
+  -> success | pred='Bihor County' | any_match=False
+[1063/9756] run popqa_1566723
+  -> success | pred='Model (beauty pageant contestant)' | any_match=False
+[1064/9756] run popqa_1567160
+  -> success | pred='Denmark' | any_match=True
+[1065/9756] run popqa_1567735
+  -> success | pred='Irving Thalberg' | any_match=False
+[1066/9756] run popqa_1568692
+  -> success | pred='Football (soccer)' | any_match=False
+[1067/9756] run popqa_1568724
+  -> success | pred='Khujand' | any_match=False
+[1068/9756] run popqa_1570230
+  -> success | pred='comedy film' | any_match=True
+[1069/9756] run popqa_1570782
+  -> success | pred='Prague' | any_match=True
+[1070/9756] run popqa_1571110
+  -> success | pred='Rock' | any_match=False
+[1071/9756] run popqa_1571598
+  -> success | pred='Emily Anthes' | any_match=False
+[1072/9756] run popqa_1571718
+  -> success | pred='Drama' | any_match=False
+[1073/9756] run popqa_1572221
+  -> success | pred='Michèle Benson' | any_match=False
+[1074/9756] run popqa_1573571
+  -> success | pred='Oslo' | any_match=True
+[1075/9756] run popqa_157382
+  -> success | pred='Mark Schwahn' | any_match=True
+[1076/9756] run popqa_1574928
+  -> success | pred='Ice hockey' | any_match=True
+[1077/9756] run popqa_1575762
+  -> success | pred='Hip hop' | any_match=False
+[1078/9756] run popqa_1576238
+  -> success | pred='William Cameron Menzies' | any_match=True
+[1079/9756] run popqa_1576431
+  -> success | pred="St. John's" | any_match=True
+[1080/9756] run popqa_1576553
+  -> success | pred='Singer' | any_match=False
+[1081/9756] run popqa_1577066
+  -> success | pred='Life simulation' | any_match=False
+[1082/9756] run popqa_1577478
+  -> success | pred='Black metal' | any_match=True
+[1083/9756] run popqa_157814
+  -> success | pred='Glenn Danzig' | any_match=False
+[1084/9756] run popqa_1580098
+  -> success | pred='Clarence Brown' | any_match=True
+[1085/9756] run popqa_1580482
+  -> success | pred='Anees Bazmee' | any_match=True
+[1086/9756] run popqa_15805
+  -> success | pred='Tripoli' | any_match=True
+[1087/9756] run popqa_1580690
+  -> success | pred='Ice hockey' | any_match=True
+[1088/9756] run popqa_1580995
+  -> success | pred='Portugal' | any_match=False
+[1089/9756] run popqa_1581712
+  -> success | pred='Progressive rock' | any_match=True
+[1090/9756] run popqa_158234
+  -> success | pred='Bemidji' | any_match=True
+[1091/9756] run popqa_1582387
+  -> success | pred='Egypt' | any_match=True
+[1092/9756] run popqa_1582605
+  -> success | pred='Aaron Rosenberg' | any_match=False
+[1093/9756] run popqa_1582607
+  -> success | pred='Mark Robson' | any_match=True
+[1094/9756] run popqa_1584754
+  -> success | pred='George William Kitchin' | any_match=True
+[1095/9756] run popqa_1585269
+  -> success | pred='Shahla Riahi' | any_match=False
+[1096/9756] run popqa_1585746
+  -> success | pred='Zeus' | any_match=True
+[1097/9756] run popqa_1585914
+  -> success | pred='playwright, poet, novelist' | any_match=False
+[1098/9756] run popqa_158657
+  -> success | pred='J. Peter Robinson' | any_match=True
+[1099/9756] run popqa_1587190
+  -> success | pred='basketball player' | any_match=False
+[1100/9756] run popqa_1587765
+  -> success | pred='Azerbaijan' | any_match=False
+[1101/9756] run popqa_1587861
+  -> success | pred='biographical film' | any_match=True
+[1102/9756] run popqa_1587871
+  -> success | pred='Dustin Lance Black' | any_match=True
+[1103/9756] run popqa_1588466
+  -> success | pred='Motoi Sakuraba' | any_match=True
+[1104/9756] run popqa_1588488
+  -> success | pred='Jan van Os' | any_match=True
+[1105/9756] run popqa_158986
+  -> success | pred='Shridhar Raghavan' | any_match=False
+[1106/9756] run popqa_1590323
+  -> success | pred='Matthew Wilder' | any_match=True
+[1107/9756] run popqa_1590546
+  -> success | pred='Christoph Willibald Gluck' | any_match=False
+[1108/9756] run popqa_1590983
+  -> success | pred='Poland' | any_match=True
+[1109/9756] run popqa_15917
+  -> success | pred='Bamberg' | any_match=True
+[1110/9756] run popqa_1592046
+  -> success | pred='Forfar' | any_match=True
+[1111/9756] run popqa_1592681
+  -> success | pred='Valdemar IV of Denmark' | any_match=True
+[1112/9756] run popqa_1592682
+  -> success | pred='Helvig of Schleswig' | any_match=True
+[1113/9756] run popqa_1592930
+  -> success | pred='Iqaluit' | any_match=True
+[1114/9756] run popqa_1593572
+  -> success | pred='Jerry Wald' | any_match=True
+[1115/9756] run popqa_1594053
+  -> success | pred='Documentary' | any_match=True
+[1116/9756] run popqa_1594214
+  -> success | pred='Totsky District' | any_match=True
+[1117/9756] run popqa_1594309
+  -> success | pred='Politician' | any_match=True
+[1118/9756] run popqa_1594698
+  -> success | pred='Ireland' | any_match=False
+[1119/9756] run popqa_1594903
+  -> success | pred='Walter Greene' | any_match=False
+[1120/9756] run popqa_1595711
+  -> success | pred='Record label' | any_match=False
+[1121/9756] run popqa_1596119
+  -> success | pred='Andrespol' | any_match=True
+[1122/9756] run popqa_1596354
+  -> success | pred='Norway' | any_match=False
+[1123/9756] run popqa_1597302
+  -> success | pred='Israel' | any_match=False
+[1124/9756] run popqa_1597737
+  -> success | pred='Jay Roach' | any_match=True
+[1125/9756] run popqa_1598742
+  -> success | pred='Mississippi' | any_match=False
+[1126/9756] run popqa_1599107
+  -> success | pred='United States' | any_match=True
+[1127/9756] run popqa_1599275
+  -> success | pred='Kei Fujiwara' | any_match=True
+[1128/9756] run popqa_1599851
+  -> success | pred='Anar Rzayev' | any_match=True
+[1129/9756] run popqa_1599950
+  -> success | pred='Dennis Potter' | any_match=True
+[1130/9756] run popqa_1600144
+  -> success | pred='Kevin Bray' | any_match=True
+[1131/9756] run popqa_1601571
+  -> success | pred='Robert Zemeckis' | any_match=False
+[1132/9756] run popqa_1603143
+  -> success | pred='Enid Blyton' | any_match=True
+[1133/9756] run popqa_1604691
+  -> success | pred='Poland' | any_match=True
+[1134/9756] run popqa_1605832
+  -> success | pred='Debra Hill and John Carpenter' | any_match=False
+[1135/9756] run popqa_1607405
+  -> success | pred='Rock' | any_match=False
+[1136/9756] run popqa_160839
+  -> success | pred='Industrial music' | any_match=False
+[1137/9756] run popqa_1609087
+  -> success | pred='Peleg' | any_match=True
+[1138/9756] run popqa_1609440
+  -> success | pred='Yolanda Ramke' | any_match=False
+[1139/9756] run popqa_1609532
+  -> success | pred='Pontchartrain' | any_match=False
+[1140/9756] run popqa_1609681
+  -> success | pred='Munich' | any_match=False
+[1141/9756] run popqa_1610116
+  -> success | pred='Alfred Hitchcock' | any_match=True
+[1142/9756] run popqa_1610444
+  -> success | pred='Mito is the capital of Ibaraki Prefecture' | any_match=False
+[1143/9756] run popqa_1611841
+  -> success | pred='ice hockey' | any_match=False
+[1144/9756] run popqa_1612073
+  -> success | pred='Trey Parker' | any_match=True
+[1145/9756] run popqa_1612335
+  -> success | pred='Mehmet Bozdag' | any_match=False
+[1146/9756] run popqa_1612356
+  -> success | pred='Moby' | any_match=True
+[1147/9756] run popqa_1613612
+  -> success | pred='Uttara' | any_match=False
+[1148/9756] run popqa_1614550
+  -> success | pred='Ezra Laderman' | any_match=False
+[1149/9756] run popqa_1614690
+  -> success | pred='Frans Weisz' | any_match=True
+[1150/9756] run popqa_1615181
+  -> success | pred='David Winning' | any_match=True
+[1151/9756] run popqa_1616113
+  -> success | pred='United States' | any_match=True
+[1152/9756] run popqa_1617892
+  -> success | pred='jazz' | any_match=True
+[1153/9756] run popqa_1619948
+  -> success | pred='John Layman' | any_match=True
+[1154/9756] run popqa_1620533
+  -> success | pred='Douglas McGrath' | any_match=True
+[1155/9756] run popqa_1620826
+  -> success | pred='Edo' | any_match=True
+[1156/9756] run popqa_1621812
+  -> success | pred='Andrew Kotting' | any_match=False
+[1157/9756] run popqa_1621813
+  -> success | pred='Simon Baker and Gerard Lee' | any_match=False
+[1158/9756] run popqa_1622787
+  -> success | pred='Fred Frith' | any_match=True
+[1159/9756] run popqa_1623187
+  -> success | pred='Lorne Michaels' | any_match=False
+[1160/9756] run popqa_1623592
+  -> success | pred='Roald Dahl' | any_match=True
+[1161/9756] run popqa_162371
+  -> success | pred='Kiev' | any_match=True
+[1162/9756] run popqa_1625069
+  -> success | pred='David Guetta' | any_match=True
+[1163/9756] run popqa_1625694
+  -> success | pred='James Cruze' | any_match=True
+[1164/9756] run popqa_162573
+  -> success | pred='Visual novel' | any_match=False
+[1165/9756] run popqa_162576
+  -> success | pred='Takeshi Abo' | any_match=True
+[1166/9756] run popqa_1625826
+  -> success | pred='Dave Fleischer' | any_match=True
+[1167/9756] run popqa_1626049
+  -> success | pred='Abbas Mirza' | any_match=True
+[1168/9756] run popqa_1626188
+  -> success | pred='Claude Lelouch' | any_match=True
+[1169/9756] run popqa_1626459
+  -> success | pred='Victor Simpkins' | any_match=False
+[1170/9756] run popqa_1627122
+  -> success | pred='Islam' | any_match=False
+[1171/9756] run popqa_1627185
+  -> success | pred='Cezary Skubiszewski' | any_match=False
+[1172/9756] run popqa_162940
+  -> success | pred='Colchester' | any_match=False
+[1173/9756] run popqa_162965
+  -> success | pred='Theodemir' | any_match=False
+[1174/9756] run popqa_1630183
+  -> success | pred='Martin Scorsese' | any_match=True
+[1175/9756] run popqa_1630937
+  -> success | pred='Mark Robson' | any_match=True
+[1176/9756] run popqa_1631014
+  -> success | pred='Johann Sebastian Bach' | any_match=True
+[1177/9756] run popqa_1631421
+  -> success | pred='Heist film' | any_match=False
+[1178/9756] run popqa_1632004
+  -> success | pred='Zwolle' | any_match=False
+[1179/9756] run popqa_1632400
+  -> success | pred='historical drama film' | any_match=False
+[1180/9756] run popqa_1632526
+  -> success | pred='Jens Lapidus' | any_match=True
+[1181/9756] run popqa_1632835
+  -> success | pred='ice hockey' | any_match=True
+[1182/9756] run popqa_1632873
+  -> success | pred='Racing' | any_match=False
+[1183/9756] run popqa_1633964
+  -> success | pred='George H. W. Bush' | any_match=True
+[1184/9756] run popqa_1633965
+  -> success | pred='Barbara Bush' | any_match=True
+[1185/9756] run popqa_1634003
+  -> success | pred='Dmitri Shostakovich' | any_match=True
+[1186/9756] run popqa_1634617
+  -> success | pred='Yasutaka Tsutsui' | any_match=False
+[1187/9756] run popqa_1634814
+  -> success | pred='Chad Lowe' | any_match=True
+[1188/9756] run popqa_1635284
+  -> success | pred='Don DeVito' | any_match=False
+[1189/9756] run popqa_1635529
+  -> success | pred='Roman Catholicism' | any_match=False
+[1190/9756] run popqa_1635532
+  -> success | pred='Paris' | any_match=True
+[1191/9756] run popqa_1635776
+  -> success | pred='Badminton' | any_match=True
+[1192/9756] run popqa_1635981
+  -> success | pred='United States' | any_match=True
+[1193/9756] run popqa_1636490
+  -> success | pred='soccer (association football)' | any_match=False
+[1194/9756] run popqa_1638066
+  -> success | pred='Adam Levine' | any_match=False
+[1195/9756] run popqa_1638077
+  -> success | pred='George Martin' | any_match=True
+[1196/9756] run popqa_1638818
+  -> success | pred='Robert Zemeckis and Bob Gale' | any_match=False
+[1197/9756] run popqa_1639019
+  -> success | pred='Norway' | any_match=False
+[1198/9756] run popqa_1639325
+  -> success | pred='George Martin' | any_match=True
+[1199/9756] run popqa_1639512
+  -> success | pred='Edinburgh' | any_match=True
+[1200/9756] run popqa_1641120
+  -> success | pred='George Frideric Handel' | any_match=True
+[1201/9756] run popqa_1641149
+  -> success | pred='Ice hockey' | any_match=True
+[1202/9756] run popqa_1641970
+  -> success | pred='James DeMonaco' | any_match=True
+[1203/9756] run popqa_1642428
+  -> success | pred='politician' | any_match=True
+[1204/9756] run popqa_1642787
+  -> success | pred='Vangelis' | any_match=True
+[1205/9756] run popqa_1643922
+  -> success | pred='Western' | any_match=False
+[1206/9756] run popqa_1644539
+  -> success | pred='Vidin' | any_match=False
+[1207/9756] run popqa_1645418
+  -> success | pred='Fever is a song in the pop genre (also described as R&B/pop). Most commonly: pop.' | any_match=False
+[1208/9756] run popqa_1646487
+  -> success | pred='Red' | any_match=True
+[1209/9756] run popqa_1646962
+  -> success | pred='Rihanna' | any_match=False
+[1210/9756] run popqa_164717
+  -> success | pred='actor' | any_match=True
+[1211/9756] run popqa_1647876
+  -> success | pred='Lorin Maazel' | any_match=True
+[1212/9756] run popqa_1648052
+  -> success | pred='George Orwell' | any_match=True
+[1213/9756] run popqa_1648347
+  -> success | pred='Norway' | any_match=True
+[1214/9756] run popqa_1648367
+  -> success | pred='Joel B. Michaels and Garth Drabinsky' | any_match=False
+[1215/9756] run popqa_1648370
+  -> success | pred='Jack Black and Kyle Gass' | any_match=False
+[1216/9756] run popqa_1648721
+  -> success | pred='Rio de Janeiro' | any_match=True
+[1217/9756] run popqa_1649068
+  -> success | pred='Jia Zhangke' | any_match=True
+[1218/9756] run popqa_1649838
+  -> success | pred='David Bowie' | any_match=False
+[1219/9756] run popqa_1649869
+  -> success | pred='Author (crime fiction writer)' | any_match=False
+[1220/9756] run popqa_1650057
+  -> success | pred='Gaël Morel' | any_match=False
+[1221/9756] run popqa_1650366
+  -> success | pred='South Africa' | any_match=True
+[1222/9756] run popqa_165131
+  -> success | pred='Safdar Masud' | any_match=False
+[1223/9756] run popqa_1651969
+  -> success | pred='Yunguyo' | any_match=True
+[1224/9756] run popqa_1652383
+  -> success | pred='pop' | any_match=False
+[1225/9756] run popqa_1652441
+  -> success | pred='Howard County, Maryland' | any_match=False
+[1226/9756] run popqa_1652607
+  -> success | pred='Merriwether Williams' | any_match=False
+[1227/9756] run popqa_1653754
+  -> success | pred='Robert Gist' | any_match=True
+[1228/9756] run popqa_1653801
+  -> success | pred='County Clare' | any_match=False
+[1229/9756] run popqa_1654794
+  -> success | pred='actress' | any_match=True
+[1230/9756] run popqa_1655833
+  -> success | pred='Jessica Bendinger' | any_match=True
+[1231/9756] run popqa_165598
+  -> success | pred='Tracy Gamble' | any_match=False
+[1232/9756] run popqa_1657374
+  -> success | pred='John Carpenter' | any_match=True
+[1233/9756] run popqa_1657651
+  -> success | pred='Drew Pearce and Shane Black' | any_match=False
+[1234/9756] run popqa_1658579
+  -> success | pred='philosopher, politician, scientist' | any_match=False
+[1235/9756] run popqa_1659405
+  -> success | pred='Guy Ferland' | any_match=True
+[1236/9756] run popqa_1659966
+  -> success | pred='Historical drama' | any_match=True
+[1237/9756] run popqa_1660128
+  -> success | pred='Roosevelt' | any_match=False
+[1238/9756] run popqa_1660345
+  -> success | pred='Jon Vitti' | any_match=True
+[1239/9756] run popqa_1660687
+  -> success | pred='Indonesia' | any_match=True
+[1240/9756] run popqa_1661559
+  -> success | pred='Jacques Deray' | any_match=True
+[1241/9756] run popqa_1661560
+  -> success | pred='Jean-Emmanuel Conil, Jean-Claude Carrière, Jacques Deray' | any_match=False
+[1242/9756] run popqa_1661668
+  -> success | pred='Quincy Jones' | any_match=False
+[1243/9756] run popqa_1662253
+  -> success | pred='Rotterdam' | any_match=False
+[1244/9756] run popqa_166237
+  -> success | pred='hip hop' | any_match=False
+[1245/9756] run popqa_1663488
+  -> success | pred='Constantine X Doukas' | any_match=False
+[1246/9756] run popqa_1663711
+  -> success | pred='Keith Jarrett' | any_match=False
+[1247/9756] run popqa_1665270
+  -> success | pred='Zeus' | any_match=True
+[1248/9756] run popqa_1665931
+  -> success | pred='Riga' | any_match=True
+[1249/9756] run popqa_1666339
+  -> success | pred='David Foster Wallace' | any_match=False
+[1250/9756] run popqa_1666876
+  -> success | pred='South Korea' | any_match=True
+[1251/9756] run popqa_1668444
+  -> success | pred='Daniel Dubiecki, Ivan Reitman, Jason Reitman' | any_match=False
+[1252/9756] run popqa_1668450
+  -> success | pred='Jason Reitman' | any_match=True
+[1253/9756] run popqa_1668604
+  -> success | pred='Bruce Lee' | any_match=True
+[1254/9756] run popqa_1669298
+  -> success | pred='Seoul' | any_match=False
+[1255/9756] run popqa_1670057
+  -> success | pred='Brad Wright' | any_match=False
+[1256/9756] run popqa_1670753
+  -> success | pred='Yuna' | any_match=False
+[1257/9756] run popqa_1670840
+  -> success | pred='Peter Hyams' | any_match=True
+[1258/9756] run popqa_1670843
+  -> success | pred='Peter Hyams' | any_match=True
+[1259/9756] run popqa_1670844
+  -> success | pred='Peter Hyams' | any_match=True
+[1260/9756] run popqa_1671685
+  -> success | pred='Pop, rock (soft rock / sunshine pop)' | any_match=False
+[1261/9756] run popqa_1672533
+  -> success | pred='Kyiv' | any_match=True
+[1262/9756] run popqa_1672868
+  -> success | pred='Oranjestad' | any_match=True
+[1263/9756] run popqa_1672999
+  -> success | pred='Peter II of Aragon' | any_match=True
+[1264/9756] run popqa_1673256
+  -> success | pred='Catholicism' | any_match=False
+[1265/9756] run popqa_1673320
+  -> success | pred='Mike Nichols' | any_match=True
+[1266/9756] run popqa_167367
+  -> success | pred='Chris Claremont' | any_match=True
+[1267/9756] run popqa_1673763
+  -> success | pred='Nina Chávez Góngora' | any_match=False
+[1268/9756] run popqa_1673764
+  -> success | pred='Nina Chávez Góngora' | any_match=False
+[1269/9756] run popqa_1673777
+  -> success | pred='Samson Raphaelson' | any_match=False
+[1270/9756] run popqa_1673974
+  -> success | pred='Israel' | any_match=True
+[1271/9756] run popqa_167413
+  -> success | pred='Ukraine' | any_match=True
+[1272/9756] run popqa_1676361
+  -> success | pred='Spain' | any_match=False
+[1273/9756] run popqa_167666
+  -> success | pred='Cardiff' | any_match=True
+[1274/9756] run popqa_1677265
+  -> success | pred='Clark Spencer' | any_match=False
+[1275/9756] run popqa_1677824
+  -> success | pred='Afonso III of Portugal' | any_match=True
+[1276/9756] run popqa_1678688
+  -> success | pred='Prague' | any_match=True
+[1277/9756] run popqa_1678853
+  -> success | pred='Roger Allers and Jill Culton' | any_match=False
+[1278/9756] run popqa_1679170
+  -> success | pred='Allen Fong' | any_match=True
+[1279/9756] run popqa_1679700
+  -> success | pred='Albert Berger and Ron Yerxa' | any_match=False
+[1280/9756] run popqa_1679714
+  -> success | pred='Action' | any_match=False
+[1281/9756] run popqa_1679718
+  -> success | pred='Peter Chan' | any_match=True
+[1282/9756] run popqa_1680080
+  -> success | pred='Australia' | any_match=False
+[1283/9756] run popqa_168059
+  -> success | pred='Christianity' | any_match=False
+[1284/9756] run popqa_1680748
+  -> success | pred='Emma Donoghue' | any_match=True
+[1285/9756] run popqa_168217
+  -> success | pred='Craig Ferguson' | any_match=True
+[1286/9756] run popqa_1683089
+  -> success | pred='Reid Hoffman' | any_match=True
+[1287/9756] run popqa_1683235
+  -> success | pred='Rock opera / musical film' | any_match=False
+[1288/9756] run popqa_1683241
+  -> success | pred='Roger Waters' | any_match=True
+[1289/9756] run popqa_1683267
+  -> success | pred='Brandon Sanderson' | any_match=True
+[1290/9756] run popqa_1683421
+  -> success | pred='Epictetus' | any_match=False
+[1291/9756] run popqa_168423
+  -> success | pred='Waco' | any_match=True
+[1292/9756] run popqa_1684735
+  -> success | pred='Remscheid' | any_match=True
+[1293/9756] run popqa_1685270
+  -> success | pred='Paul Epworth' | any_match=False
+[1294/9756] run popqa_1685298
+  -> success | pred='Bratislava' | any_match=True
+[1295/9756] run popqa_1685874
+  -> success | pred='Landscape' | any_match=True
+[1296/9756] run popqa_1686002
+  -> success | pred='Nova Scotia' | any_match=True
+[1297/9756] run popqa_1686087
+  -> success | pred='Michael Jackson' | any_match=True
+[1298/9756] run popqa_1686432
+  -> success | pred='Marshall Brickman' | any_match=True
+[1299/9756] run popqa_1686867
+  -> success | pred='Don Hertzfeldt' | any_match=True
+[1300/9756] run popqa_1687716
+  -> success | pred='George Frideric Handel' | any_match=True
+[1301/9756] run popqa_1688093
+  -> success | pred='diplomat, soldier, colonial official' | any_match=False
+[1302/9756] run popqa_1688359
+  -> success | pred='politician' | any_match=True
+[1303/9756] run popqa_1688613
+  -> success | pred='Brzeszcze' | any_match=True
+[1304/9756] run popqa_168862
+  -> success | pred='Jean-Luc Godard' | any_match=True
+[1305/9756] run popqa_168951
+  -> success | pred='Doo-wop' | any_match=True
+[1306/9756] run popqa_1689521
+  -> success | pred='Zelophehad\'s daughters... no — Samson\'s mother is unnamed in the Bible, referred to only as "the wife of Manoah."' | any_match=False
+[1307/9756] run popqa_1689760
+  -> success | pred='United States' | any_match=True
+[1308/9756] run popqa_1690931
+  -> success | pred='Eindhoven' | any_match=True
+[1309/9756] run popqa_1691938
+  -> success | pred='Ljubljana' | any_match=True
+[1310/9756] run popqa_1692428
+  -> success | pred='Wigan' | any_match=False
+[1311/9756] run popqa_1692770
+  -> success | pred='Ravindra Jain' | any_match=True
+[1312/9756] run popqa_1693405
+  -> success | pred='Mick Garris' | any_match=True
+[1313/9756] run popqa_1693517
+  -> success | pred='Action film' | any_match=False
+[1314/9756] run popqa_1693978
+  -> success | pred='politician' | any_match=True
+[1315/9756] run popqa_1694258
+  -> success | pred='Horror' | any_match=False
+[1316/9756] run popqa_1694894
+  -> success | pred='Brian Eno' | any_match=False
+[1317/9756] run popqa_1695062
+  -> success | pred='Jimmy Page' | any_match=True
+[1318/9756] run popqa_1695756
+  -> success | pred='Amsterdam' | any_match=True
+[1319/9756] run popqa_1695842
+  -> success | pred='Jacob' | any_match=True
+[1320/9756] run popqa_1696444
+  -> success | pred='United States' | any_match=True
+[1321/9756] run popqa_1697175
+  -> success | pred='screenwriter' | any_match=False
+[1322/9756] run popqa_1697468
+  -> success | pred='Casablanca' | any_match=False
+[1323/9756] run popqa_1697692
+  -> success | pred='Strategy' | any_match=False
+[1324/9756] run popqa_169830
+  -> success | pred='Jason Bloom' | any_match=True
+[1325/9756] run popqa_1698723
+  -> success | pred='John Donne' | any_match=True
+[1326/9756] run popqa_1698898
+  -> success | pred='Rock' | any_match=True
+[1327/9756] run popqa_169984
+  -> success | pred='Musical theatre' | any_match=False
+[1328/9756] run popqa_1701001
+  -> success | pred='Australia' | any_match=True
+[1329/9756] run popqa_1701577
+  -> success | pred='politician, military officer, journalist' | any_match=False
+[1330/9756] run popqa_1703675
+  -> success | pred='Unknown — the question is incomplete (no subject provided)' | any_match=False
+[1331/9756] run popqa_170429
+  -> success | pred='Nanni Loy' | any_match=True
+[1332/9756] run popqa_1705239
+  -> success | pred='Skåne County' | any_match=False
+[1333/9756] run popqa_1705692
+  -> success | pred='Malcolm III' | any_match=False
+[1334/9756] run popqa_1705816
+  -> success | pred='Max Steiner' | any_match=True
+[1335/9756] run popqa_1705833
+  -> success | pred='Nasiruddin Bughra Khan' | any_match=True
+[1336/9756] run popqa_1706241
+  -> success | pred='Scientology' | any_match=True
+[1337/9756] run popqa_1706404
+  -> success | pred='Pianist' | any_match=True
+[1338/9756] run popqa_1706834
+  -> success | pred='Chișinău' | any_match=True
+[1339/9756] run popqa_1706976
+  -> success | pred='Jacob Hellner' | any_match=False
+[1340/9756] run popqa_1708022
+  -> success | pred='South Dakota' | any_match=False
+[1341/9756] run popqa_1709277
+  -> success | pred='Enlil' | any_match=True
+[1342/9756] run popqa_1709278
+  -> success | pred='Ningal' | any_match=False
+[1343/9756] run popqa_1710145
+  -> success | pred='Audio file format' | any_match=True
+[1344/9756] run popqa_1710478
+  -> success | pred='Lawrence Turman' | any_match=True
+[1345/9756] run popqa_1710487
+  -> success | pred='Buck Henry and Calder Willingham' | any_match=False
+[1346/9756] run popqa_1710792
+  -> success | pred='Jack Greenwood' | any_match=False
+[1347/9756] run popqa_1711457
+  -> success | pred='Catholic' | any_match=False
+[1348/9756] run popqa_1712488
+  -> success | pred='Bucharest' | any_match=True
+[1349/9756] run popqa_1713388
+  -> success | pred='Action game' | any_match=False
+[1350/9756] run popqa_1713701
+  -> success | pred='politician' | any_match=True
+[1351/9756] run popqa_1714355
+  -> success | pred='Quincy Jones' | any_match=True
+[1352/9756] run popqa_1715386
+  -> success | pred='Roermond' | any_match=True
+[1353/9756] run popqa_1715945
+  -> success | pred='Tridu Songtsen' | any_match=True
+[1354/9756] run popqa_1717233
+  -> success | pred='Sofia' | any_match=True
+[1355/9756] run popqa_1718273
+  -> success | pred='Rock' | any_match=True
+[1356/9756] run popqa_1719140
+  -> success | pred='Sajid Nadiadwala' | any_match=True
+[1357/9756] run popqa_1719327
+  -> success | pred='Chuck Russell' | any_match=True
+[1358/9756] run popqa_1719895
+  -> success | pred='King Crimson' | any_match=True
+[1359/9756] run popqa_1719999
+  -> success | pred='Charles Dickens' | any_match=True
+[1360/9756] run popqa_1720737
+  -> success | pred='Quneitra' | any_match=True
+[1361/9756] run popqa_1721484
+  -> success | pred='Ruben Fleischer' | any_match=True
+[1362/9756] run popqa_1722071
+  -> success | pred='Vestal Virgin / priestess' | any_match=False
+[1363/9756] run popqa_1722072
+  -> success | pred='Numitor' | any_match=True
+[1364/9756] run popqa_1722345
+  -> success | pred='Reality television' | any_match=False
+[1365/9756] run popqa_1722780
+  -> success | pred='Rock' | any_match=False
+[1366/9756] run popqa_1722784
+  -> success | pred='Gideon Raff' | any_match=True
+[1367/9756] run popqa_1723024
+  -> success | pred='Montana is not a capital; it is a U.S. state. If the question is asking what state Helena is the capital of, the answer is Montana. But Montana itself is a state, not a capital.' | any_match=False
+[1368/9756] run popqa_1723204
+  -> success | pred='William II of the Netherlands' | any_match=True
+[1369/9756] run popqa_1723865
+  -> success | pred='Adam Rifkin' | any_match=True
+[1370/9756] run popqa_1723977
+  -> success | pred='Lewis Carroll' | any_match=True
+[1371/9756] run popqa_1726148
+  -> success | pred='Andrea Barata Ribeiro' | any_match=False
+[1372/9756] run popqa_1726340
+  -> success | pred='Argentina' | any_match=False
+[1373/9756] run popqa_1726946
+  -> success | pred='Martin Scorsese' | any_match=True
+[1374/9756] run popqa_1726948
+  -> success | pred='Nicholas Pileggi and Martin Scorsese' | any_match=False
+[1375/9756] run popqa_1727462
+  -> success | pred='Skopje' | any_match=True
+[1376/9756] run popqa_1727604
+  -> success | pred='Andrei Konchalovsky' | any_match=True
+[1377/9756] run popqa_1727865
+  -> success | pred='Frederick Delius' | any_match=True
+[1378/9756] run popqa_1728025
+  -> success | pred='Heavy metal' | any_match=False
+[1379/9756] run popqa_1728085
+  -> success | pred='John Carpenter' | any_match=True
+[1380/9756] run popqa_1728095
+  -> success | pred='Tarsem Singh' | any_match=True
+[1381/9756] run popqa_1728174
+  -> success | pred='Kathleen Kennedy, Steven Spielberg, Bonnie Curtis' | any_match=False
+[1382/9756] run popqa_1728191
+  -> success | pred='Jay Chou' | any_match=True
+[1383/9756] run popqa_1729004
+  -> success | pred='Science fiction' | any_match=False
+[1384/9756] run popqa_1729008
+  -> success | pred='Rick Berman' | any_match=True
+[1385/9756] run popqa_1729012
+  -> success | pred='Jonathan Frakes' | any_match=True
+[1386/9756] run popqa_1729014
+  -> success | pred='Jerry Goldsmith' | any_match=True
+[1387/9756] run popqa_1729733
+  -> success | pred='Basketball' | any_match=True
+[1388/9756] run popqa_1730422
+  -> success | pred='Central District' | any_match=True
+[1389/9756] run popqa_1730929
+  -> success | pred='politician, economist, academic' | any_match=False
+[1390/9756] run popqa_1733532
+  -> success | pred='Vozhega' | any_match=True
+[1391/9756] run popqa_1734901
+  -> success | pred='Tirana' | any_match=True
+[1392/9756] run popqa_1735139
+  -> success | pred='Role-playing game' | any_match=True
+[1393/9756] run popqa_1735597
+  -> success | pred='Maria Caroline Gibert de Lametz' | any_match=True
+[1394/9756] run popqa_1735717
+  -> success | pred='United States' | any_match=True
+[1395/9756] run popqa_1737166
+  -> success | pred='Football (soccer)' | any_match=False
+[1396/9756] run popqa_1739387
+  -> success | pred='Finland' | any_match=True
+[1397/9756] run popqa_1739721
+  -> success | pred='Dorrell McGowan and Stuart McGowan' | any_match=False
+[1398/9756] run popqa_1740588
+  -> success | pred='Nuuk' | any_match=True
+[1399/9756] run popqa_1740972
+  -> success | pred='United States' | any_match=True
+[1400/9756] run popqa_1741307
+  -> success | pred='United States' | any_match=False
+[1401/9756] run popqa_1742649
+  -> success | pred='Multiplayer online battle arena' | any_match=True
+[1402/9756] run popqa_1742796
+  -> success | pred='Stephen Frears' | any_match=True
+[1403/9756] run popqa_1742797
+  -> success | pred='Peter Morgan' | any_match=True
+[1404/9756] run popqa_1742842
+  -> success | pred='Jeremy Leven' | any_match=False
+[1405/9756] run popqa_174643
+  -> success | pred='David Chase and Terence Winter' | any_match=False
+[1406/9756] run popqa_1746468
+  -> success | pred='Italy' | any_match=False
+[1407/9756] run popqa_1746955
+  -> success | pred='Steve Jablonsky' | any_match=True
+[1408/9756] run popqa_1747485
+  -> success | pred='Al Ruban' | any_match=False
+[1409/9756] run popqa_1747537
+  -> success | pred='Action' | any_match=False
+[1410/9756] run popqa_1748192
+  -> success | pred='Frank Marshall, Sam Mercer, and Kathleen Kennedy' | any_match=False
+[1411/9756] run popqa_1748196
+  -> success | pred='James Newton Howard' | any_match=True
+[1412/9756] run popqa_1750278
+  -> success | pred='Banana Yoshimoto' | any_match=True
+[1413/9756] run popqa_1751617
+  -> success | pred='William Wyler' | any_match=False
+[1414/9756] run popqa_1752279
+  -> success | pred='Sarajevo' | any_match=True
+[1415/9756] run popqa_1752851
+  -> success | pred='punk rock' | any_match=True
+[1416/9756] run popqa_1753227
+  -> success | pred='Lenny Kravitz' | any_match=True
+[1417/9756] run popqa_175358
+  -> success | pred='athletics (hammer throw)' | any_match=False
+[1418/9756] run popqa_1754705
+  -> success | pred='Laurent Cantet' | any_match=True
+[1419/9756] run popqa_1756285
+  -> success | pred='Elliott Kastner' | any_match=False
+[1420/9756] run popqa_1756417
+  -> success | pred='Haarlem' | any_match=True
+[1421/9756] run popqa_1756583
+  -> success | pred='Terry Goodkind' | any_match=True
+[1422/9756] run popqa_1757113
+  -> success | pred='David Bernbaum' | any_match=False
+[1423/9756] run popqa_1757186
+  -> success | pred='Augustus' | any_match=True
+[1424/9756] run popqa_175740
+  -> success | pred='Drama film' | any_match=False
+[1425/9756] run popqa_1757563
+  -> success | pred='Robert Altman' | any_match=True
+[1426/9756] run popqa_1758574
+  -> success | pred='politician' | any_match=True
+[1427/9756] run popqa_1758617
+  -> success | pred='John Farrow' | any_match=True
+[1428/9756] run popqa_1759291
+  -> success | pred='Death metal' | any_match=True
+[1429/9756] run popqa_175943
+  -> success | pred='Germany' | any_match=True
+[1430/9756] run popqa_1759510
+  -> success | pred='Irvine Welsh' | any_match=True
+[1431/9756] run popqa_1760362
+  -> success | pred='Canada' | any_match=True
+[1432/9756] run popqa_1761538
+  -> success | pred='Punk rock' | any_match=True
+[1433/9756] run popqa_1761959
+  -> success | pred='Cyclops (Scott Summers)' | any_match=False
+[1434/9756] run popqa_1761960
+  -> success | pred='Madelyne Pryor' | any_match=True
+[1435/9756] run popqa_1761978
+  -> success | pred='Singer' | any_match=False
+[1436/9756] run popqa_1761996
+  -> success | pred='Subaskaran Allirajah' | any_match=False
+[1437/9756] run popqa_1762129
+  -> success | pred='Nick Hornby' | any_match=True
+[1438/9756] run popqa_1762383
+  -> success | pred='Cesare Zavattini' | any_match=False
+[1439/9756] run popqa_1762902
+  -> success | pred='Visual novel' | any_match=False
+[1440/9756] run popqa_1763729
+  -> success | pred='Baku' | any_match=True
+[1441/9756] run popqa_1764422
+  -> success | pred='Fuyumi Soryo' | any_match=True
+[1442/9756] run popqa_1765512
+  -> success | pred='Turkey' | any_match=False
+[1443/9756] run popqa_1766137
+  -> success | pred='Adventure fiction' | any_match=False
+[1444/9756] run popqa_1766630
+  -> success | pred='Donald Ogden Stewart' | any_match=True
+[1445/9756] run popqa_1767677
+  -> success | pred='Iran' | any_match=False
+[1446/9756] run popqa_1767783
+  -> success | pred='Colin Vearncombe' | any_match=False
+[1447/9756] run popqa_1768080
+  -> success | pred='Ingmar Bergman' | any_match=True
+[1448/9756] run popqa_1769289
+  -> success | pred='Craighead County' | any_match=False
+[1449/9756] run popqa_1769326
+  -> success | pred='Maury Yeston' | any_match=True
+[1450/9756] run popqa_1770493
+  -> success | pred='Andorra la Vella' | any_match=True
+[1451/9756] run popqa_1771125
+  -> success | pred='Ricardo Palma' | any_match=True
+[1452/9756] run popqa_1771692
+  -> success | pred='Buddhism' | any_match=True
+[1453/9756] run popqa_1771806
+  -> success | pred='Laura Ziskin' | any_match=False
+[1454/9756] run popqa_1772462
+  -> success | pred='Antonio Vivaldi' | any_match=True
+[1455/9756] run popqa_1772530
+  -> success | pred='Science fiction' | any_match=False
+[1456/9756] run popqa_1772720
+  -> success | pred='politician' | any_match=False
+[1457/9756] run popqa_177390
+  -> success | pred='Louis J. Gasnier' | any_match=False
+[1458/9756] run popqa_1774445
+  -> success | pred='Harry Langdon' | any_match=True
+[1459/9756] run popqa_177542
+  -> success | pred='Author/journalist' | any_match=False
+[1460/9756] run popqa_1775656
+  -> success | pred='Charles Bukowski' | any_match=True
+[1461/9756] run popqa_1776143
+  -> success | pred='Takeharu Ishimoto' | any_match=True
+[1462/9756] run popqa_1776288
+  -> success | pred='Robert Connolly' | any_match=False
+[1463/9756] run popqa_1776398
+  -> success | pred='Eric II of Norway' | any_match=True
+[1464/9756] run popqa_1776600
+  -> success | pred='Lemony Snicket' | any_match=True
+[1465/9756] run popqa_1777015
+  -> success | pred='Electronic music' | any_match=False
+[1466/9756] run popqa_1777111
+  -> success | pred='Football (soccer)' | any_match=False
+[1467/9756] run popqa_1777228
+  -> success | pred='Kenneth Branagh' | any_match=True
+[1468/9756] run popqa_1777341
+  -> success | pred='Margaret of Angoulême' | any_match=True
+[1469/9756] run popqa_1777529
+  -> success | pred='Ongentheow' | any_match=True
+[1470/9756] run popqa_1777990
+  -> success | pred='Robert I, Duke of Normandy' | any_match=False
+[1471/9756] run popqa_1779223
+  -> success | pred='Ralph Nelson' | any_match=True
+[1472/9756] run popqa_1779237
+  -> success | pred='Anirudh Ravichander' | any_match=False
+[1473/9756] run popqa_1779351
+  -> success | pred='Industrial rock' | any_match=True
+[1474/9756] run popqa_1779880
+  -> success | pred='Wayne Wang' | any_match=False
+[1475/9756] run popqa_1779954
+  -> success | pred='Horror' | any_match=False
+[1476/9756] run popqa_1780093
+  -> success | pred='Bill Clinton' | any_match=True
+[1477/9756] run popqa_1780291
+  -> success | pred='Fashion' | any_match=False
+[1478/9756] run popqa_1781140
+  -> success | pred='Claude Lelouch and Denis Héroux' | any_match=False
+[1479/9756] run popqa_1781815
+  -> success | pred='Wolfgang Kohlhaase' | any_match=True
+[1480/9756] run popqa_1781921
+  -> success | pred='Herbert Wilcox' | any_match=False
+[1481/9756] run popqa_1782118
+  -> success | pred='James Ivory' | any_match=True
+[1482/9756] run popqa_1782279
+  -> success | pred='Robert Drew' | any_match=True
+[1483/9756] run popqa_1782282
+  -> success | pred='Robert Drew' | any_match=True
+[1484/9756] run popqa_1782420
+  -> success | pred='Antonio Vivaldi' | any_match=True
+[1485/9756] run popqa_1782508
+  -> success | pred='Christianity (Anglican/Episcopalian)' | any_match=False
+[1486/9756] run popqa_1782515
+  -> success | pred='Mary Ball Washington' | any_match=True
+[1487/9756] run popqa_1783720
+  -> success | pred='Robert Charles Wilson' | any_match=True
+[1488/9756] run popqa_1784129
+  -> success | pred='Owain' | any_match=False
+[1489/9756] run popqa_1784165
+  -> success | pred='Butch Vig' | any_match=False
+[1490/9756] run popqa_178500
+  -> success | pred="Children's music" | any_match=False
+[1491/9756] run popqa_1785552
+  -> success | pred='Edward Bernds' | any_match=True
+[1492/9756] run popqa_1785593
+  -> success | pred='Michael Jenkins' | any_match=False
+[1493/9756] run popqa_1785594
+  -> success | pred='David Williamson' | any_match=False
+[1494/9756] run popqa_1785792
+  -> success | pred='Samaria' | any_match=False
+[1495/9756] run popqa_1786832
+  -> success | pred='France' | any_match=False
+[1496/9756] run popqa_1787216
+  -> success | pred='Comedy' | any_match=False
+[1497/9756] run popqa_1787218
+  -> success | pred='Lukas Moodysson' | any_match=True
+[1498/9756] run popqa_1787717
+  -> success | pred='Classical music / performing arts' | any_match=False
+[1499/9756] run popqa_1787725
+  -> success | pred='Dario Argento' | any_match=True
+[1500/9756] run popqa_1787726
+  -> success | pred='Antonio Salieri' | any_match=False
+[1501/9756] run popqa_178789
+  -> success | pred='Budapest' | any_match=True
+[1502/9756] run popqa_1787935
+  -> success | pred='Ultron' | any_match=True
+[1503/9756] run popqa_1788458
+  -> success | pred='Ludwig van Beethoven' | any_match=False
+[1504/9756] run popqa_1788652
+  -> success | pred='Paris' | any_match=False
+[1505/9756] run popqa_1788690
+  -> success | pred='Durham' | any_match=True
+[1506/9756] run popqa_1788852
+  -> success | pred='Mark Gordon' | any_match=False
+[1507/9756] run popqa_1789286
+  -> success | pred='Lincoln' | any_match=True
+[1508/9756] run popqa_1789490
+  -> success | pred='Willowdell (now Woodland, Ohio)' | any_match=False
+[1509/9756] run popqa_1790487
+  -> success | pred='Norwich' | any_match=True
+[1510/9756] run popqa_1790865
+  -> success | pred='Sinologist, diplomat, missionary' | any_match=False
+[1511/9756] run popqa_1790890
+  -> success | pred='Tindouf' | any_match=True
+[1512/9756] run popqa_179118
+  -> success | pred='Christophe Gans' | any_match=True
+[1513/9756] run popqa_179126
+  -> success | pred='Abby Aldrich Rockefeller' | any_match=True
+[1514/9756] run popqa_1791490
+  -> success | pred='Gerry Anderson' | any_match=True
+[1515/9756] run popqa_1791523
+  -> success | pred='Claudius' | any_match=True
+[1516/9756] run popqa_179164
+  -> success | pred='Ben Younger' | any_match=True
+[1517/9756] run popqa_1791858
+  -> success | pred='Czech Republic' | any_match=True
+[1518/9756] run popqa_179252
+  -> success | pred='Baptist' | any_match=True
+[1519/9756] run popqa_1793340
+  -> success | pred='England' | any_match=False
+[1520/9756] run popqa_1793343
+  -> success | pred='Exeter' | any_match=True
+[1521/9756] run popqa_1793405
+  -> success | pred='Taunton' | any_match=True
+[1522/9756] run popqa_1793537
+  -> success | pred='Nowy Targ County' | any_match=True
+[1523/9756] run popqa_1793550
+  -> success | pred='Andrew Taggart' | any_match=False
+[1524/9756] run popqa_1793668
+  -> success | pred='Nelson Riddle' | any_match=False
+[1525/9756] run popqa_1794039
+  -> success | pred='Buddhism' | any_match=True
+[1526/9756] run popqa_1794837
+  -> success | pred='Trowbridge' | any_match=True
+[1527/9756] run popqa_1795088
+  -> success | pred='Lil Wayne' | any_match=True
+[1528/9756] run popqa_1795526
+  -> success | pred='E.A. Dupont' | any_match=False
+[1529/9756] run popqa_179571
+  -> success | pred='Anton Bruckner' | any_match=True
+[1530/9756] run popqa_1795710
+  -> success | pred='Mila' | any_match=True
+[1531/9756] run popqa_1796164
+  -> success | pred='Eric Carmen' | any_match=True
+[1532/9756] run popqa_1797066
+  -> success | pred='Valenciennes' | any_match=False
+[1533/9756] run popqa_1797712
+  -> success | pred='Aylesbury' | any_match=True
+[1534/9756] run popqa_1797937
+  -> success | pred='Eudoxia (Aelia Eudocia)' | any_match=False
+[1535/9756] run popqa_1798218
+  -> success | pred='Deir ez-Zor' | any_match=True
+[1536/9756] run popqa_179840
+  -> success | pred='Charles Jarrott' | any_match=True
+[1537/9756] run popqa_1800453
+  -> success | pred='King George I of Greece' | any_match=False
+[1538/9756] run popqa_1800654
+  -> success | pred='Malcolm III' | any_match=False
+[1539/9756] run popqa_1800655
+  -> success | pred='Margaret of Wessex' | any_match=False
+[1540/9756] run popqa_1800833
+  -> success | pred='Catholic' | any_match=False
+[1541/9756] run popqa_1801663
+  -> success | pred='Comedy' | any_match=False
+[1542/9756] run popqa_1802332
+  -> success | pred='Valletta' | any_match=True
+[1543/9756] run popqa_1803351
+  -> success | pred='England' | any_match=True
+[1544/9756] run popqa_180464
+  -> success | pred='Waxy' | any_match=True
+[1545/9756] run popqa_1804783
+  -> success | pred='Art rock, trip hop, alternative' | any_match=False
+[1546/9756] run popqa_1805599
+  -> success | pred='Kenji Ito' | any_match=True
+[1547/9756] run popqa_1805806
+  -> success | pred='Singer' | any_match=False
+[1548/9756] run popqa_1805946
+  -> success | pred='Ukraine' | any_match=False
+[1549/9756] run popqa_1806048
+  -> success | pred='Ill Ju' | any_match=False
+[1550/9756] run popqa_1806713
+  -> success | pred='Burlington' | any_match=False
+[1551/9756] run popqa_1807138
+  -> success | pred='Krzysztof Penderecki' | any_match=True
+[1552/9756] run popqa_180737
+  -> success | pred='Electronic music' | any_match=False
+[1553/9756] run popqa_1808079
+  -> success | pred='Rock' | any_match=False
+[1554/9756] run popqa_1808330
+  -> success | pred='Aristotle' | any_match=True
+[1555/9756] run popqa_1808761
+  -> success | pred='Joyce Summers' | any_match=True
+[1556/9756] run popqa_1808767
+  -> success | pred='AC/DC (Angus Young, Malcolm Young, Brian Johnson)' | any_match=False
+[1557/9756] run popqa_1809276
+  -> success | pred='Raffaella De Laurentiis' | any_match=False
+[1558/9756] run popqa_180937
+  -> success | pred='Gus Van Sant' | any_match=True
+[1559/9756] run popqa_180938
+  -> success | pred='Gus Van Sant' | any_match=True
+[1560/9756] run popqa_1809418
+  -> success | pred='Football (soccer)' | any_match=False
+[1561/9756] run popqa_1809553
+  -> success | pred='Tom Tykwer' | any_match=False
+[1562/9756] run popqa_1809866
+  -> success | pred='King George V' | any_match=True
+[1563/9756] run popqa_181017
+  -> success | pred='Rugby union' | any_match=True
+[1564/9756] run popqa_1810569
+  -> success | pred='Tadeusz Konwicki' | any_match=False
+[1565/9756] run popqa_1811247
+  -> success | pred='Norway' | any_match=True
+[1566/9756] run popqa_1812127
+  -> success | pred='Robert Kiyosaki' | any_match=True
+[1567/9756] run popqa_1812464
+  -> success | pred='Italo Montemezzi' | any_match=True
+[1568/9756] run popqa_1813602
+  -> success | pred='Irv Kupcinet' | any_match=True
+[1569/9756] run popqa_1813753
+  -> success | pred='Maria Carolina of Austria' | any_match=True
+[1570/9756] run popqa_1813878
+  -> success | pred='George Harrison' | any_match=True
+[1571/9756] run popqa_1813983
+  -> success | pred='Jerry Thorpe' | any_match=False
+[1572/9756] run popqa_1814391
+  -> timeout
+[1573/9756] run popqa_181481
+  -> success | pred='Kaunas' | any_match=False
+[1574/9756] run popqa_1815566
+  -> success | pred='Charlie Chaplin' | any_match=True
+[1575/9756] run popqa_1816280
+  -> success | pred='Marc Provissiero' | any_match=False
+[1576/9756] run popqa_1816282
+  -> success | pred='Jane Anderson' | any_match=False
+[1577/9756] run popqa_1817033
+  -> success | pred='politician' | any_match=True
+[1578/9756] run popqa_1817609
+  -> success | pred='Howard Browne' | any_match=True
+[1579/9756] run popqa_1818310
+  -> success | pred='Theodosius I' | any_match=False
+[1580/9756] run popqa_1818407
+  -> success | pred='Czech Republic' | any_match=True
+[1581/9756] run popqa_1820354
+  -> success | pred='Tristram Pye' | any_match=False
+[1582/9756] run popqa_1820483
+  -> success | pred='Annabella Drummond' | any_match=False
+[1583/9756] run popqa_1820953
+  -> success | pred='Garth Ennis' | any_match=False
+[1584/9756] run popqa_1821314
+  -> success | pred='Hal Roach' | any_match=True
+[1585/9756] run popqa_1821506
+  -> success | pred='Latvia' | any_match=False
+[1586/9756] run popqa_1822049
+  -> success | pred='Abraham Quintanilla Jr.' | any_match=False
+[1587/9756] run popqa_1823748
+  -> success | pred='basketball' | any_match=False
+[1588/9756] run popqa_1824126
+  -> success | pred='Michael Giacchino' | any_match=True
+[1589/9756] run popqa_1824463
+  -> success | pred='David Benioff and D. B. Weiss' | any_match=False
+[1590/9756] run popqa_182485
+  -> success | pred='United States' | any_match=True
+[1591/9756] run popqa_1824927
+  -> success | pred='Tamar Simon Hoffs' | any_match=True
+[1592/9756] run popqa_1825771
+  -> success | pred='Béla Bartók' | any_match=False
+[1593/9756] run popqa_1826568
+  -> success | pred='Podgorica' | any_match=True
+[1594/9756] run popqa_1827938
+  -> success | pred='Novel' | any_match=False
+[1595/9756] run popqa_1827971
+  -> success | pred='Ska punk' | any_match=False
+[1596/9756] run popqa_1828233
+  -> success | pred='Bob Ezrin' | any_match=False
+[1597/9756] run popqa_1828237
+  -> success | pred='Norman Krasna' | any_match=True
+[1598/9756] run popqa_1829039
+  -> success | pred='Roy Wood' | any_match=False
+[1599/9756] run popqa_1829067
+  -> success | pred='Thomas Hardy' | any_match=True
+[1600/9756] run popqa_1829089
+  -> success | pred='Laurent Tirard' | any_match=True
+[1601/9756] run popqa_1829094
+  -> success | pred='Hamilton' | any_match=True
+[1602/9756] run popqa_1829362
+  -> success | pred='Hal Hartley' | any_match=True
+[1603/9756] run popqa_18294
+  -> success | pred='K-pop' | any_match=False
+[1604/9756] run popqa_1829966
+  -> success | pred='Rob Burnett' | any_match=False
+[1605/9756] run popqa_1829968
+  -> success | pred='Robert Benton' | any_match=True
+[1606/9756] run popqa_1829990
+  -> success | pred='James Toback' | any_match=True
+[1607/9756] run popqa_1830050
+  -> success | pred='Mubarak Al-Sabah' | any_match=True
+[1608/9756] run popqa_18303
+  -> success | pred='Bang Si-hyuk' | any_match=False
+[1609/9756] run popqa_1830538
+  -> success | pred='Alexander Knaifel' | any_match=False
+[1610/9756] run popqa_1830615
+  -> success | pred='Comedy' | any_match=False
+[1611/9756] run popqa_1830760
+  -> success | pred='King George III' | any_match=True
+[1612/9756] run popqa_183161
+  -> success | pred='Roger Corman' | any_match=True
+[1613/9756] run popqa_1832156
+  -> success | pred='Dmitri Shostakovich' | any_match=True
+[1614/9756] run popqa_1832685
+  -> success | pred='Robert Fripp' | any_match=True
+[1615/9756] run popqa_1832858
+  -> success | pred='Martin Landau' | any_match=True
+[1616/9756] run popqa_1833062
+  -> success | pred='Amkino' | any_match=False
+[1617/9756] run popqa_1833420
+  -> success | pred='Alfonso VI of Castile' | any_match=False
+[1618/9756] run popqa_1834634
+  -> success | pred='Russell Hughes' | any_match=False
+[1619/9756] run popqa_1835172
+  -> success | pred='Carter Burwell' | any_match=True
+[1620/9756] run popqa_1835266
+  -> success | pred='Metis' | any_match=False
+[1621/9756] run popqa_1836202
+  -> success | pred='United States' | any_match=True
+[1622/9756] run popqa_18366
+  -> success | pred='Frank Cottrell Boyce' | any_match=True
+[1623/9756] run popqa_1837093
+  -> success | pred='Joseph Sargent' | any_match=True
+[1624/9756] run popqa_1837867
+  -> success | pred='Robert Ramsey and Matthew Stone' | any_match=False
+[1625/9756] run popqa_1837893
+  -> success | pred='Artaxerxes III' | any_match=False
+[1626/9756] run popqa_183841
+  -> success | pred='São Paulo' | any_match=False
+[1627/9756] run popqa_1838983
+  -> success | pred='Jack Antonoff' | any_match=False
+[1628/9756] run popqa_1839241
+  -> success | pred='Louis XV' | any_match=True
+[1629/9756] run popqa_1839782
+  -> success | pred='Volleyball' | any_match=False
+[1630/9756] run popqa_1840097
+  -> success | pred='Marv Newland' | any_match=True
+[1631/9756] run popqa_184142
+  -> success | pred='United States' | any_match=True
+[1632/9756] run popqa_1842654
+  -> success | pred='Japan' | any_match=False
+[1633/9756] run popqa_184388
+  -> success | pred='Anna Wintour' | any_match=False
+[1634/9756] run popqa_1844051
+  -> success | pred='Villavicencio' | any_match=True
+[1635/9756] run popqa_1845027
+  -> success | pred='Stuart Urban' | any_match=True
+[1636/9756] run popqa_1846195
+  -> success | pred='Thriller' | any_match=False
+[1637/9756] run popqa_1846198
+  -> success | pred='Fabián Bielinsky' | any_match=True
+[1638/9756] run popqa_1847214
+  -> success | pred='Kanchanaburi Province' | any_match=True
+[1639/9756] run popqa_1847844
+  -> success | pred='Eric B. & Rakim' | any_match=False
+[1640/9756] run popqa_184851
+  -> success | pred='Janet Jackson' | any_match=False
+[1641/9756] run popqa_1849031
+  -> success | pred='Clark Gregg' | any_match=False
+[1642/9756] run popqa_1849655
+  -> success | pred='Sy Weintraub' | any_match=True
+[1643/9756] run popqa_1849941
+  -> success | pred='Stamford' | any_match=True
+[1644/9756] run popqa_1850153
+  -> success | pred='Tim Kring' | any_match=False
+[1645/9756] run popqa_185033
+  -> success | pred='superhero film' | any_match=False
+[1646/9756] run popqa_1850637
+  -> success | pred='Geoff Johns' | any_match=True
+[1647/9756] run popqa_1850947
+  -> success | pred='Maurizio Ponzi' | any_match=True
+[1648/9756] run popqa_1851787
+  -> success | pred='John Famiglietti' | any_match=False
+[1649/9756] run popqa_1852352
+  -> success | pred='Khufu' | any_match=True
+[1650/9756] run popqa_1852614
+  -> success | pred='Erich Segal' | any_match=True
+[1651/9756] run popqa_185285
+  -> success | pred='Greenland' | any_match=True
+[1652/9756] run popqa_1853198
+  -> success | pred='Brussels' | any_match=True
+[1653/9756] run popqa_185416
+  -> success | pred='Seton I. Miller' | any_match=False
+[1654/9756] run popqa_1854319
+  -> success | pred='David Fincher' | any_match=False
+[1655/9756] run popqa_1854509
+  -> success | pred='Brannon Braga and Rick Berman' | any_match=False
+[1656/9756] run popqa_185487
+  -> success | pred='Drama' | any_match=False
+[1657/9756] run popqa_1854999
+  -> success | pred='Radomsko' | any_match=True
+[1658/9756] run popqa_1855444
+  -> success | pred='Pop music' | any_match=False
+[1659/9756] run popqa_1855691
+  -> success | pred='Guy Maddin' | any_match=True
+[1660/9756] run popqa_1855692
+  -> success | pred='Guy Maddin and George Toles' | any_match=False
+[1661/9756] run popqa_1856052
+  -> success | pred='Stewart Stern' | any_match=True
+[1662/9756] run popqa_1856673
+  -> success | pred='Lamphun' | any_match=True
+[1663/9756] run popqa_1857340
+  -> success | pred='Soccer (association football)' | any_match=False
+[1664/9756] run popqa_1857343
+  -> success | pred='Gerd Oswald' | any_match=True
+[1665/9756] run popqa_185843
+  -> success | pred='Chile' | any_match=True
+[1666/9756] run popqa_1859573
+  -> success | pred='John Kander' | any_match=True
+[1667/9756] run popqa_1859830
+  -> success | pred='William Osco' | any_match=True
+[1668/9756] run popqa_1860029
+  -> success | pred='Havana' | any_match=True
+[1669/9756] run popqa_1860287
+  -> success | pred='Joachim of Denmark' | any_match=False
+[1670/9756] run popqa_1860470
+  -> success | pred='Ralph Bakshi' | any_match=False
+[1671/9756] run popqa_1861180
+  -> success | pred='Kirsten Munk' | any_match=True
+[1672/9756] run popqa_1861204
+  -> success | pred='Alexander Korda' | any_match=True
+[1673/9756] run popqa_1861492
+  -> success | pred='Amy Redford' | any_match=True
+[1674/9756] run popqa_1861569
+  -> success | pred='Olivier Ducastel and Jacques Martineau' | any_match=False
+[1675/9756] run popqa_1861734
+  -> success | pred='Rock' | any_match=False
+[1676/9756] run popqa_1862353
+  -> success | pred='Composer' | any_match=False
+[1677/9756] run popqa_1862399
+  -> success | pred='Association football' | any_match=True
+[1678/9756] run popqa_1862559
+  -> success | pred='Anders Thomas Jensen' | any_match=True
+[1679/9756] run popqa_1862965
+  -> success | pred='Reality television' | any_match=False
+[1680/9756] run popqa_1863034
+  -> success | pred='Portraiture' | any_match=False
+[1681/9756] run popqa_1863504
+  -> success | pred='England' | any_match=False
+[1682/9756] run popqa_1863511
+  -> success | pred='Western' | any_match=False
+[1683/9756] run popqa_1863566
+  -> success | pred='Jérôme Tonnerre, Jean Cosmos, and Philippe de Broca' | any_match=False
+[1684/9756] run popqa_1864117
+  -> success | pred='Bob Marley' | any_match=False
+[1685/9756] run popqa_1864240
+  -> success | pred='Bruce Hornsby' | any_match=True
+[1686/9756] run popqa_186597
+  -> success | pred='Ales Adamovich and Elem Klimov' | any_match=False
+[1687/9756] run popqa_1866419
+  -> success | pred='Turkey' | any_match=False
+[1688/9756] run popqa_1866996
+  -> success | pred='Pop' | any_match=True
+[1689/9756] run popqa_1867301
+  -> success | pred='Frank Oz' | any_match=True
+[1690/9756] run popqa_1867834
+  -> success | pred='Belmopan' | any_match=True
+[1691/9756] run popqa_186817
+  -> success | pred='Michael Petroni' | any_match=True
+[1692/9756] run popqa_1868517
+  -> success | pred='Samuel Francis Smith' | any_match=False
+[1693/9756] run popqa_1868796
+  -> success | pred='Manoel de Oliveira' | any_match=True
+[1694/9756] run popqa_1869305
+  -> success | pred='Aditya Chopra' | any_match=True
+[1695/9756] run popqa_1872067
+  -> success | pred='Roman Catholic bishop' | any_match=False
+[1696/9756] run popqa_1872913
+  -> success | pred='ice hockey' | any_match=False
+[1697/9756] run popqa_1873377
+  -> success | pred='Short story' | any_match=False
+[1698/9756] run popqa_1873607
+  -> success | pred='Frances Marion' | any_match=True
+[1699/9756] run popqa_1874323
+  -> success | pred='Michael Jackson' | any_match=True
+[1700/9756] run popqa_1875186
+  -> success | pred='Ben Sombogaart' | any_match=True
+[1701/9756] run popqa_1878539
+  -> success | pred='France' | any_match=True
+[1702/9756] run popqa_1879606
+  -> success | pred='Luiz Carlos Barreto' | any_match=False
+[1703/9756] run popqa_1879854
+  -> success | pred='Drama' | any_match=False
+[1704/9756] run popqa_1880763
+  -> success | pred='Dennis Lehane' | any_match=True
+[1705/9756] run popqa_1881360
+  -> success | pred='Anne McCaffrey' | any_match=True
+[1706/9756] run popqa_1881398
+  -> success | pred='film director' | any_match=True
+[1707/9756] run popqa_1882219
+  -> success | pred='Max Brooks' | any_match=True
+[1708/9756] run popqa_1882504
+  -> success | pred='Bridgetown' | any_match=True
+[1709/9756] run popqa_1884148
+  -> success | pred='Football' | any_match=True
+[1710/9756] run popqa_1884191
+  -> success | pred='James Mangold' | any_match=True
+[1711/9756] run popqa_1884192
+  -> success | pred='Thurston Moore' | any_match=True
+[1712/9756] run popqa_1884375
+  -> success | pred='France' | any_match=True
+[1713/9756] run popqa_1884874
+  -> success | pred='Todd Black' | any_match=False
+[1714/9756] run popqa_1886277
+  -> success | pred='Stefan Nemanja' | any_match=True
+[1715/9756] run popqa_1887346
+  -> success | pred='Buster Keaton' | any_match=False
+[1716/9756] run popqa_1887458
+  -> success | pred='Charlie Chaplin' | any_match=True
+[1717/9756] run popqa_1887723
+  -> success | pred='Nikolai Rimsky-Korsakov' | any_match=True
+[1718/9756] run popqa_1887734
+  -> success | pred='United States' | any_match=True
+[1719/9756] run popqa_1888323
+  -> success | pred='Nan' | any_match=True
+[1720/9756] run popqa_1888642
+  -> success | pred='painter' | any_match=False
+[1721/9756] run popqa_1889250
+  -> success | pred='Pomorie' | any_match=True
+[1722/9756] run popqa_1890324
+  -> success | pred='Llywelyn the Great' | any_match=False
+[1723/9756] run popqa_1890562
+  -> success | pred='Charlie Chaplin' | any_match=True
+[1724/9756] run popqa_1890623
+  -> success | pred='Pishin District' | any_match=True
+[1725/9756] run popqa_189068
+  -> success | pred='Free Software Foundation' | any_match=True
+[1726/9756] run popqa_1892618
+  -> success | pred='Basketball' | any_match=True
+[1727/9756] run popqa_189299
+  -> success | pred='John Lennon and Paul McCartney' | any_match=False
+[1728/9756] run popqa_189398
+  -> success | pred='Gospel' | any_match=False
+[1729/9756] run popqa_1895097
+  -> success | pred='Bruce Kimmel' | any_match=True
+[1730/9756] run popqa_1895103
+  -> success | pred='Hungary' | any_match=False
+[1731/9756] run popqa_1895354
+  -> success | pred='England' | any_match=False
+[1732/9756] run popqa_1896635
+  -> success | pred='Kristin Cashore' | any_match=True
+[1733/9756] run popqa_1897477
+  -> success | pred='Ted Templeman' | any_match=False
+[1734/9756] run popqa_1897548
+  -> success | pred='Alain Robbe-Grillet' | any_match=False
+[1735/9756] run popqa_189795
+  -> success | pred='Newton' | any_match=True
+[1736/9756] run popqa_1898138
+  -> success | pred='Pedro II of Brazil' | any_match=True
+[1737/9756] run popqa_1898744
+  -> success | pred='Eurodance' | any_match=True
+[1738/9756] run popqa_1899999
+  -> success | pred='Arthur Lubin' | any_match=True
+[1739/9756] run popqa_1900053
+  -> success | pred='Steve Stockman' | any_match=True
+[1740/9756] run popqa_1900346
+  -> success | pred='Country' | any_match=True
+[1741/9756] run popqa_1901290
+  -> success | pred='Oorlagh George' | any_match=False
+[1742/9756] run popqa_1901465
+  -> success | pred='Referee' | any_match=False
+[1743/9756] run popqa_1901524
+  -> success | pred='Spain' | any_match=False
+[1744/9756] run popqa_1901906
+  -> success | pred='Benin' | any_match=True
+[1745/9756] run popqa_190269
+  -> success | pred='Legal drama' | any_match=True
+[1746/9756] run popqa_1902925
+  -> success | pred='North Macedonia' | any_match=True
+[1747/9756] run popqa_1904656
+  -> success | pred='Plesetsk' | any_match=True
+[1748/9756] run popqa_1904708
+  -> success | pred='Frank Capra' | any_match=True
+[1749/9756] run popqa_1905981
+  -> success | pred='Film director, screenwriter' | any_match=False
+[1750/9756] run popqa_1908053
+  -> success | pred='Phillippa Giles' | any_match=False
+[1751/9756] run popqa_1908054
+  -> success | pred='Éric Besnard' | any_match=False
+[1752/9756] run popqa_1909192
+  -> success | pred='Wheeler County' | any_match=False
+[1753/9756] run popqa_1909249
+  -> success | pred='Novel / Feminist fiction' | any_match=False
+[1754/9756] run popqa_1909483
+  -> success | pred='William Castle' | any_match=True
+[1755/9756] run popqa_1909485
+  -> success | pred='William Friedkin' | any_match=False
+[1756/9756] run popqa_1909486
+  -> success | pred='Tracy Letts' | any_match=False
+[1757/9756] run popqa_1909574
+  -> success | pred='Harrison Birtwistle' | any_match=False
+[1758/9756] run popqa_1911900
+  -> success | pred='Maykop' | any_match=True
+[1759/9756] run popqa_1912392
+  -> success | pred='Tove Jansson' | any_match=False
+[1760/9756] run popqa_1913397
+  -> success | pred='United States' | any_match=True
+[1761/9756] run popqa_1913678
+  -> success | pred='Shohei Imamura' | any_match=False
+[1762/9756] run popqa_1914177
+  -> success | pred='Kwame "K1 Mil"' | any_match=False
+[1763/9756] run popqa_1914432
+  -> success | pred='Barry Sonnenfeld' | any_match=True
+[1764/9756] run popqa_1914433
+  -> success | pred='Michael Dinner' | any_match=True
+[1765/9756] run popqa_1914487
+  -> success | pred='Orson Welles' | any_match=True
+[1766/9756] run popqa_1914727
+  -> success | pred='screenwriter, film producer, director' | any_match=False
+[1767/9756] run popqa_1915421
+  -> success | pred='Charlie Chaplin' | any_match=True
+[1768/9756] run popqa_1915796
+  -> success | pred='Sylvie Pialat' | any_match=False
+[1769/9756] run popqa_1915800
+  -> success | pred='Gustave Kervern and Benoît Delépine' | any_match=False
+[1770/9756] run popqa_1915979
+  -> success | pred='India' | any_match=True
+[1771/9756] run popqa_1916377
+  -> success | pred='Hal B. Wallis' | any_match=False
+[1772/9756] run popqa_1916404
+  -> success | pred='Benny Chan' | any_match=True
+[1773/9756] run popqa_1917497
+  -> success | pred='C.J. Tevlin' | any_match=False
+[1774/9756] run popqa_1917895
+  -> success | pred='Cycling' | any_match=False
+[1775/9756] run popqa_1917994
+  -> success | pred='Singer' | any_match=False
+[1776/9756] run popqa_1918483
+  -> success | pred='United States' | any_match=True
+[1777/9756] run popqa_1918732
+  -> success | pred='Paramaribo' | any_match=True
+[1778/9756] run popqa_1919197
+  -> success | pred='Science fiction' | any_match=False
+[1779/9756] run popqa_1919208
+  -> success | pred='James Cameron' | any_match=True
+[1780/9756] run popqa_1919697
+  -> success | pred='Edwin Justus Mayer' | any_match=False
+[1781/9756] run popqa_192034
+  -> success | pred='Montreal' | any_match=False
+[1782/9756] run popqa_192261
+  -> success | pred='Lili Fini Zanuck' | any_match=False
+[1783/9756] run popqa_192279
+  -> success | pred='Jan Davidsz. de Heem' | any_match=True
+[1784/9756] run popqa_1924631
+  -> success | pred='Patras' | any_match=True
+[1785/9756] run popqa_1925221
+  -> success | pred='Khouribga' | any_match=False
+[1786/9756] run popqa_192572
+  -> success | pred='Gordon Douglas' | any_match=True
+[1787/9756] run popqa_1925753
+  -> success | pred='Ruggero Maccari' | any_match=False
+[1788/9756] run popqa_1925863
+  -> success | pred='Erich Neumann' | any_match=True
+[1789/9756] run popqa_1926922
+  -> success | pred='Soccer (football)' | any_match=False
+[1790/9756] run popqa_1927140
+  -> success | pred='Cardiff' | any_match=True
+[1791/9756] run popqa_1927275
+  -> success | pred='Katy Perry' | any_match=True
+[1792/9756] run popqa_1927385
+  -> success | pred='Rock and roll' | any_match=True
+[1793/9756] run popqa_1927419
+  -> success | pred='Duke Ellington' | any_match=True
+[1794/9756] run popqa_1927671
+  -> success | pred='Jellybean Benitez' | any_match=False
+[1795/9756] run popqa_1927843
+  -> success | pred='Wrestling' | any_match=False
+[1796/9756] run popqa_1927932
+  -> success | pred='Horror' | any_match=False
+[1797/9756] run popqa_1928219
+  -> success | pred='Classical' | any_match=False
+[1798/9756] run popqa_192850
+  -> success | pred='Bobby Garabedian' | any_match=False
+[1799/9756] run popqa_192851
+  -> success | pred='John Debney' | any_match=True
+[1800/9756] run popqa_1931063
+  -> success | pred='Terry Gilliam' | any_match=True
+[1801/9756] run popqa_1931065
+  -> success | pred='Terry Gilliam' | any_match=True
+[1802/9756] run popqa_1931430
+  -> success | pred='Jóhann Jóhannsson' | any_match=False
+[1803/9756] run popqa_193165
+  -> success | pred='Tantième' | any_match=False
+[1804/9756] run popqa_1932128
+  -> success | pred='Western Equatoria' | any_match=False
+[1805/9756] run popqa_1932836
+  -> success | pred='Herodotus' | any_match=False
+[1806/9756] run popqa_1933827
+  -> success | pred='Jonathan Demme' | any_match=True
+[1807/9756] run popqa_1934027
+  -> success | pred='Cecile Kramer' | any_match=False
+[1808/9756] run popqa_193571
+  -> success | pred='Luigi Musini and Roberto Cicutto' | any_match=False
+[1809/9756] run popqa_1936197
+  -> success | pred='Charleston' | any_match=True
+[1810/9756] run popqa_1936428
+  -> success | pred='Ibrahim (Abraham)' | any_match=False
+[1811/9756] run popqa_1936858
+  -> success | pred='Gianni Amelio' | any_match=True
+[1812/9756] run popqa_193744
+  -> success | pred='Drama' | any_match=False
+[1813/9756] run popqa_1937674
+  -> success | pred='Al Jolson' | any_match=False
+[1814/9756] run popqa_1939215
+  -> success | pred='Yukio Mishima' | any_match=True
+[1815/9756] run popqa_1939225
+  -> success | pred='John Ford' | any_match=True
+[1816/9756] run popqa_1939356
+  -> success | pred='Roman Catholicism' | any_match=False
+[1817/9756] run popqa_1939901
+  -> success | pred='Jakarta' | any_match=True
+[1818/9756] run popqa_1940038
+  -> success | pred='Hideaki Anno' | any_match=True
+[1819/9756] run popqa_1940177
+  -> success | pred='Pop music' | any_match=False
+[1820/9756] run popqa_1940679
+  -> success | pred='Abel Ferrara' | any_match=True
+[1821/9756] run popqa_1941419
+  -> success | pred='Paul McCartney' | any_match=True
+[1822/9756] run popqa_1941457
+  -> success | pred='Taekwondo' | any_match=False
+[1823/9756] run popqa_194154
+  -> success | pred='Caroline Shaw' | any_match=False
+[1824/9756] run popqa_1941545
+  -> success | pred='Michael Viner' | any_match=False
+[1825/9756] run popqa_1941759
+  -> success | pred='Netherlands' | any_match=True
+[1826/9756] run popqa_1941761
+  -> success | pred='Willemstad' | any_match=True
+[1827/9756] run popqa_1941852
+  -> success | pred='Peter Handke' | any_match=True
+[1828/9756] run popqa_1941949
+  -> success | pred='Saint Peter Port' | any_match=True
+[1829/9756] run popqa_1942379
+  -> success | pred='United States' | any_match=True
+[1830/9756] run popqa_1942871
+  -> success | pred='John Philip Sousa' | any_match=True
+[1831/9756] run popqa_1943070
+  -> success | pred='Michael Nyman' | any_match=True
+[1832/9756] run popqa_1943507
+  -> success | pred='Age & Scarpelli and Pietro Germi' | any_match=False
+[1833/9756] run popqa_1944453
+  -> success | pred='Martin Scorsese' | any_match=False
+[1834/9756] run popqa_1944892
+  -> success | pred='Timbaland' | any_match=False
+[1835/9756] run popqa_1944925
+  -> success | pred='Willemstad' | any_match=True
+[1836/9756] run popqa_1945092
+  -> success | pred='Salvatore Samperi' | any_match=True
+[1837/9756] run popqa_1946244
+  -> success | pred='Pop' | any_match=False
+[1838/9756] run popqa_1946386
+  -> success | pred='Peter Gabriel and John Metcalfe' | any_match=False
+[1839/9756] run popqa_1946555
+  -> success | pred='Soccer (football)' | any_match=False
+[1840/9756] run popqa_1946842
+  -> success | pred='Hirokazu Tanaka' | any_match=True
+[1841/9756] run popqa_1946956
+  -> success | pred='Stephen Sondheim' | any_match=True
+[1842/9756] run popqa_19472
+  -> success | pred='Antananarivo' | any_match=True
+[1843/9756] run popqa_1948261
+  -> success | pred='Funen' | any_match=False
+[1844/9756] run popqa_1948707
+  -> success | pred='novella' | any_match=True
+[1845/9756] run popqa_1948711
+  -> success | pred='Antoine de Saint-Exupéry' | any_match=True
+[1846/9756] run popqa_1949764
+  -> success | pred='Armenia' | any_match=True
+[1847/9756] run popqa_195002
+  -> success | pred='Ruijin' | any_match=True
+[1848/9756] run popqa_1950413
+  -> success | pred='Tunisia' | any_match=True
+[1849/9756] run popqa_1951267
+  -> success | pred='Jack Kerouac' | any_match=True
+[1850/9756] run popqa_1951358
+  -> success | pred='Klaus Meine and Rudolf Schenker' | any_match=False
+[1851/9756] run popqa_1951573
+  -> success | pred='Rock' | any_match=False
+[1852/9756] run popqa_19518
+  -> success | pred='Mali is a country itself (in West Africa)' | any_match=False
+[1853/9756] run popqa_1952260
+  -> success | pred='Byron Gallimore' | any_match=False
+[1854/9756] run popqa_1952483
+  -> success | pred='Hiroshi Takahashi' | any_match=True
+[1855/9756] run popqa_1952542
+  -> success | pred='Tel Aviv' | any_match=True
+[1856/9756] run popqa_1952646
+  -> success | pred='Emily Gravett' | any_match=False
+[1857/9756] run popqa_1953459
+  -> success | pred='Classical' | any_match=False
+[1858/9756] run popqa_1955142
+  -> success | pred='Hermann II, Duke of Swabia' | any_match=False
+[1859/9756] run popqa_1956088
+  -> success | pred='Vietnam' | any_match=True
+[1860/9756] run popqa_1956321
+  -> success | pred='Chiprovtsi' | any_match=True
+[1861/9756] run popqa_1956636
+  -> success | pred='Andy Bellin and Robert Festinger' | any_match=False
+[1862/9756] run popqa_1958971
+  -> success | pred='David Eisley' | any_match=False
+[1863/9756] run popqa_1959358
+  -> success | pred='martial arts drama' | any_match=False
+[1864/9756] run popqa_1959858
+  -> success | pred='Al Pacino' | any_match=True
+[1865/9756] run popqa_1960242
+  -> success | pred='Kevin Rodney Sullivan' | any_match=True
+[1866/9756] run popqa_1961306
+  -> success | pred='Johann Sebastian Bach' | any_match=True
+[1867/9756] run popqa_1962919
+  -> success | pred='Guru Josh' | any_match=True
+[1868/9756] run popqa_1963287
+  -> success | pred='Vinekh of Bulgaria' | any_match=False
+[1869/9756] run popqa_196395
+  -> success | pred='Catholic' | any_match=False
+[1870/9756] run popqa_1964705
+  -> success | pred='Abbas Kiarostami' | any_match=True
+[1871/9756] run popqa_1965736
+  -> success | pred='Harry Warren' | any_match=True
+[1872/9756] run popqa_1966701
+  -> success | pred='Deepa Mehta' | any_match=True
+[1873/9756] run popqa_196737
+  -> success | pred='Soap opera' | any_match=True
+[1874/9756] run popqa_1967548
+  -> success | pred='Jean Genet' | any_match=True
+[1875/9756] run popqa_1967974
+  -> success | pred='India' | any_match=True
+[1876/9756] run popqa_1968457
+  -> success | pred='Derek Humphry' | any_match=True
+[1877/9756] run popqa_1969466
+  -> success | pred='Islam' | any_match=True
+[1878/9756] run popqa_1969552
+  -> success | pred='Todd Solondz' | any_match=True
+[1879/9756] run popqa_1969958
+  -> success | pred='Fons Rademakers' | any_match=True
+[1880/9756] run popqa_197030
+  -> success | pred='War film' | any_match=False
+[1881/9756] run popqa_1970569
+  -> success | pred='Catholic' | any_match=False
+[1882/9756] run popqa_1970891
+  -> success | pred='Marc Levin' | any_match=True
+[1883/9756] run popqa_1971316
+  -> success | pred='Pô' | any_match=False
+[1884/9756] run popqa_1971693
+  -> success | pred='Joseph Barbera and William Hanna' | any_match=False
+[1885/9756] run popqa_1972096
+  -> success | pred='Christianity' | any_match=False
+[1886/9756] run popqa_197401
+  -> success | pred='Anatole Litvak' | any_match=True
+[1887/9756] run popqa_197403
+  -> success | pred='Anatole Litvak' | any_match=True
+[1888/9756] run popqa_1974999
+  -> success | pred='Ivan Bunin' | any_match=False
+[1889/9756] run popqa_1975786
+  -> success | pred='Ermanno Olmi, Abbas Kiarostami, Ken Loach' | any_match=False
+[1890/9756] run popqa_1976154
+  -> success | pred='action-adventure' | any_match=False
+[1891/9756] run popqa_1976177
+  -> success | pred='Sy Weintraub' | any_match=True
+[1892/9756] run popqa_1976401
+  -> success | pred='Marie Eleonore of Cleves' | any_match=True
+[1893/9756] run popqa_1976664
+  -> success | pred='Edward III of England' | any_match=True
+[1894/9756] run popqa_1976723
+  -> success | pred='Rich Moore' | any_match=True
+[1895/9756] run popqa_1977367
+  -> success | pred='Ermanno Olmi' | any_match=True
+[1896/9756] run popqa_1977383
+  -> success | pred='Rock' | any_match=False
+[1897/9756] run popqa_197777
+  -> success | pred='Borgosesia' | any_match=True
+[1898/9756] run popqa_197895
+  -> success | pred='Russ Meyer' | any_match=False
+[1899/9756] run popqa_1980081
+  -> success | pred='Jack Arnold' | any_match=True
+[1900/9756] run popqa_1980163
+  -> success | pred='Brazil' | any_match=True
+[1901/9756] run popqa_1980542
+  -> success | pred='Basketball' | any_match=False
+[1902/9756] run popqa_1980780
+  -> success | pred='Jamie Linden' | any_match=True
+[1903/9756] run popqa_1980835
+  -> success | pred='David Heyman' | any_match=True
+[1904/9756] run popqa_1980847
+  -> success | pred='Alfonso Cuarón' | any_match=False
+[1905/9756] run popqa_1981390
+  -> success | pred='Jean Grey' | any_match=True
+[1906/9756] run popqa_1982186
+  -> success | pred='Neil Burger' | any_match=False
+[1907/9756] run popqa_1982728
+  -> success | pred='Geoffrey de Mandeville, 2nd Earl of Essex' | any_match=False
+[1908/9756] run popqa_1982916
+  -> success | pred='Bill Geist' | any_match=True
+[1909/9756] run popqa_1983309
+  -> success | pred='George Seaton' | any_match=False
+[1910/9756] run popqa_1983516
+  -> success | pred='Harold Pinter' | any_match=True
+[1911/9756] run popqa_1984429
+  -> success | pred='King Vidor' | any_match=False
+[1912/9756] run popqa_1985795
+  -> success | pred='Claude Lelouch' | any_match=True
+[1913/9756] run popqa_1985979
+  -> success | pred='Eddie Vedder' | any_match=True
+[1914/9756] run popqa_1986529
+  -> success | pred='Michael Rymer' | any_match=False
+[1915/9756] run popqa_1989302
+  -> success | pred='Euphemia of Opole' | any_match=False
+[1916/9756] run popqa_1989375
+  -> success | pred='politician' | any_match=True
+[1917/9756] run popqa_1989978
+  -> success | pred='Tom Waits' | any_match=True
+[1918/9756] run popqa_1990125
+  -> success | pred='Islam' | any_match=True
+[1919/9756] run popqa_1990787
+  -> success | pred='Model' | any_match=True
+[1920/9756] run popqa_1991283
+  -> success | pred='Basketball' | any_match=False
+[1921/9756] run popqa_199300
+  -> success | pred='Brian Grazer' | any_match=True
+[1922/9756] run popqa_1993158
+  -> success | pred='Cycling' | any_match=False
+[1923/9756] run popqa_1993508
+  -> success | pred='Marta Kauffman and David Crane' | any_match=False
+[1924/9756] run popqa_1993521
+  -> success | pred='T.J. Miller' | any_match=False
+[1925/9756] run popqa_1993825
+  -> success | pred='Aida Begić' | any_match=False
+[1926/9756] run popqa_1993835
+  -> success | pred='Larry Weinstein' | any_match=False
+[1927/9756] run popqa_1993836
+  -> timeout
+[1928/9756] run popqa_199412
+  -> success | pred='Jean Raspail' | any_match=True
+[1929/9756] run popqa_1994847
+  -> success | pred='Tsai Ming-liang' | any_match=False
+[1930/9756] run popqa_1995480
+  -> success | pred='Upton Sinclair' | any_match=True
+[1931/9756] run popqa_1995512
+  -> success | pred='Takeshi Kitano' | any_match=True
+[1932/9756] run popqa_1995513
+  -> success | pred='Takeshi Kitano' | any_match=True
+[1933/9756] run popqa_1995533
+  -> success | pred='Robert Vince' | any_match=False
+[1934/9756] run popqa_1995895
+  -> success | pred='United States' | any_match=True
+[1935/9756] run popqa_1997152
+  -> success | pred='Ingmar Bergman' | any_match=True
+[1936/9756] run popqa_1998386
+  -> success | pred='Nick Hirschkorn' | any_match=False
+[1937/9756] run popqa_1998694
+  -> success | pred='Comedy-drama' | any_match=True
+[1938/9756] run popqa_1998723
+  -> success | pred='David Leland' | any_match=True
+[1939/9756] run popqa_1999019
+  -> success | pred='John Hough' | any_match=True
+[1940/9756] run popqa_1999149
+  -> success | pred='Tank District' | any_match=True
+[1941/9756] run popqa_2001044
+  -> success | pred='Deepa Mehta' | any_match=False
+[1942/9756] run popqa_2002522
+  -> success | pred='Uzbekistan' | any_match=True
+[1943/9756] run popqa_200353
+  -> success | pred='Michael Lewis' | any_match=True
+[1944/9756] run popqa_2004111
+  -> success | pred='Dustin Lance Black' | any_match=True
+[1945/9756] run popqa_200416
+  -> success | pred='Christian Nyby' | any_match=True
+[1946/9756] run popqa_200418
+  -> success | pred='Charles Lederer' | any_match=False
+[1947/9756] run popqa_2004556
+  -> success | pred='Association football (soccer)' | any_match=False
+[1948/9756] run popqa_2005603
+  -> success | pred='Claude Lelouch' | any_match=True
+[1949/9756] run popqa_2005607
+  -> success | pred='Francis Lai' | any_match=True
+[1950/9756] run popqa_2005687
+  -> success | pred='Marc Platt' | any_match=False
+[1951/9756] run popqa_2005692
+  -> success | pred='Filippo Bologna' | any_match=False
+[1952/9756] run popqa_2006136
+  -> success | pred='Islam' | any_match=False
+[1953/9756] run popqa_2006740
+  -> success | pred='Michael De Luca' | any_match=False
+[1954/9756] run popqa_2006987
+  -> success | pred='Science fiction' | any_match=False
+[1955/9756] run popqa_200699
+  -> success | pred='Rock' | any_match=False
+[1956/9756] run popqa_2007997
+  -> success | pred='Muhammad ibn Abi Bakr' | any_match=True
+[1957/9756] run popqa_2008493
+  -> success | pred='Anders Thomas Jensen' | any_match=False
+[1958/9756] run popqa_2009603
+  -> success | pred='Tartu' | any_match=True
+[1959/9756] run popqa_2010305
+  -> success | pred='Documentary' | any_match=True
+[1960/9756] run popqa_2011131
+  -> success | pred='Hiroyuki Sawano' | any_match=False
+[1961/9756] run popqa_2011238
+  -> success | pred='politician' | any_match=False
+[1962/9756] run popqa_2011604
+  -> success | pred='Henning Mankell' | any_match=False
+[1963/9756] run popqa_2011856
+  -> success | pred='Jay Chou' | any_match=True
+[1964/9756] run popqa_2013041
+  -> success | pred='Creed Taylor' | any_match=False
+[1965/9756] run popqa_2013401
+  -> success | pred='Don DeLillo' | any_match=True
+[1966/9756] run popqa_2013686
+  -> success | pred='Glasgow' | any_match=False
+[1967/9756] run popqa_2014194
+  -> success | pred='Slovakia' | any_match=True
+[1968/9756] run popqa_2014205
+  -> success | pred='Randa Haines' | any_match=True
+[1969/9756] run popqa_2014345
+  -> success | pred='Reed Richards' | any_match=True
+[1970/9756] run popqa_2014346
+  -> success | pred='Sue Storm' | any_match=False
+[1971/9756] run popqa_2014591
+  -> success | pred='Eureka' | any_match=True
+[1972/9756] run popqa_2015316
+  -> success | pred='Lori Brighton' | any_match=False
+[1973/9756] run popqa_201598
+  -> success | pred='Paul W. S. Anderson' | any_match=True
+[1974/9756] run popqa_2016203
+  -> success | pred='Roman Catholic' | any_match=False
+[1975/9756] run popqa_2016599
+  -> success | pred='Boxing' | any_match=True
+[1976/9756] run popqa_201725
+  -> success | pred='Frank Ross' | any_match=True
+[1977/9756] run popqa_201736
+  -> success | pred='Alfred Newman' | any_match=True
+[1978/9756] run popqa_2017477
+  -> success | pred='Tarnoga' | any_match=False
+[1979/9756] run popqa_2017508
+  -> success | pred='Joseph Bonaparte' | any_match=True
+[1980/9756] run popqa_2018026
+  -> success | pred='Ian Iqbal Rashid' | any_match=True
+[1981/9756] run popqa_2018481
+  -> success | pred='Yarmouth' | any_match=True
+[1982/9756] run popqa_2019093
+  -> success | pred='Cooking' | any_match=False
+[1983/9756] run popqa_2019633
+  -> success | pred='William Goldman' | any_match=True
+[1984/9756] run popqa_2020002
+  -> success | pred='video game' | any_match=False
+[1985/9756] run popqa_2020103
+  -> success | pred='Frank Zappa' | any_match=True
+[1986/9756] run popqa_202024
+  -> success | pred='Lampasas' | any_match=True
+[1987/9756] run popqa_202079
+  -> success | pred='Rick Bieber' | any_match=False
+[1988/9756] run popqa_202080
+  -> success | pred='Hans-Christian Schmid' | any_match=True
+[1989/9756] run popqa_2021037
+  -> success | pred='Reggio Calabria' | any_match=False
+[1990/9756] run popqa_2021831
+  -> success | pred='Hal Hartley' | any_match=True
+[1991/9756] run popqa_2022571
+  -> success | pred='Basketball' | any_match=True
+[1992/9756] run popqa_2022959
+  -> success | pred='Rugby union' | any_match=False
+[1993/9756] run popqa_2023102
+  -> success | pred='weightlifting' | any_match=False
+[1994/9756] run popqa_2024054
+  -> success | pred='Football (soccer)' | any_match=False
+[1995/9756] run popqa_2024285
+  -> success | pred='France' | any_match=True
+[1996/9756] run popqa_2024395
+  -> success | pred='polo' | any_match=False
+[1997/9756] run popqa_2024401
+  -> success | pred='Georgy Sviridov' | any_match=True
+[1998/9756] run popqa_2024715
+  -> success | pred='Geoff Johns, Grant Morrison, Greg Rucka, and Mark Waid' | any_match=False
+[1999/9756] run popqa_20250
+  -> success | pred='Lilongwe' | any_match=True
+[2000/9756] run popqa_2025544
+  -> success | pred='Basketball' | any_match=False
+[2001/9756] run popqa_2026207
+  -> success | pred='Juan Carlos Piñeiro Escoriaza' | any_match=False
+[2002/9756] run popqa_2027065
+  -> success | pred='Platform game' | any_match=True
+[2003/9756] run popqa_202860
+  -> success | pred='Soul/R&B' | any_match=False
+[2004/9756] run popqa_2029828
+  -> success | pred='Dale Wasserman' | any_match=True
+[2005/9756] run popqa_2029841
+  -> success | pred='Walt Disney' | any_match=False
+[2006/9756] run popqa_2029972
+  -> success | pred='Soccer (Football)' | any_match=False
+[2007/9756] run popqa_2030712
+  -> success | pred='Pee Wee Ellis' | any_match=False
+[2008/9756] run popqa_2030715
+  -> success | pred='Claude Berri' | any_match=True
+[2009/9756] run popqa_2031175
+  -> success | pred='Crime drama' | any_match=False
+[2010/9756] run popqa_2031364
+  -> success | pred='Sitcom' | any_match=True
+[2011/9756] run popqa_2031416
+  -> success | pred='Masami Kurumada' | any_match=True
+[2012/9756] run popqa_2032651
+  -> success | pred='Association football (soccer)' | any_match=False
+[2013/9756] run popqa_203286
+  -> success | pred='Hamamatsu' | any_match=False
+[2014/9756] run popqa_203437
+  -> success | pred='Nairobi' | any_match=True
+[2015/9756] run popqa_2034822
+  -> success | pred='Pop rock' | any_match=False
+[2016/9756] run popqa_2036135
+  -> success | pred='Tashkent' | any_match=True
+[2017/9756] run popqa_2037355
+  -> success | pred='Akira Kurosawa' | any_match=False
+[2018/9756] run popqa_203754
+  -> success | pred='American football' | any_match=True
+[2019/9756] run popqa_2037807
+  -> success | pred='Eadbald of Kent' | any_match=True
+[2020/9756] run popqa_2038231
+  -> success | pred='Italy' | any_match=False
+[2021/9756] run popqa_2038373
+  -> success | pred='Turkey' | any_match=False
+[2022/9756] run popqa_2038506
+  -> success | pred='Craiova' | any_match=False
+[2023/9756] run popqa_204048
+  -> success | pred='Cormac McCarthy' | any_match=True
+[2024/9756] run popqa_2040678
+  -> success | pred='James Foley' | any_match=False
+[2025/9756] run popqa_2040976
+  -> success | pred='Ghent' | any_match=False
+[2026/9756] run popqa_2041604
+  -> success | pred='Cameron McVey' | any_match=True
+[2027/9756] run popqa_204177
+  -> success | pred='Minoru Kawasaki' | any_match=True
+[2028/9756] run popqa_2042431
+  -> success | pred='Roger Corman' | any_match=True
+[2029/9756] run popqa_2043035
+  -> success | pred='Amanda Gusack' | any_match=False
+[2030/9756] run popqa_2043042
+  -> success | pred='Actor' | any_match=True
+[2031/9756] run popqa_2043043
+  -> success | pred='Beijing' | any_match=True
+[2032/9756] run popqa_2043873
+  -> success | pred='Speedway' | any_match=True
+[2033/9756] run popqa_2043960
+  -> success | pred='football' | any_match=True
+[2034/9756] run popqa_2044236
+  -> success | pred='Yuan Baoju (Emperor Wen of Western Wei)' | any_match=False
+[2035/9756] run popqa_2044332
+  -> success | pred='Alex van Warmerdam' | any_match=True
+[2036/9756] run popqa_2044414
+  -> success | pred='Anniston' | any_match=False
+[2037/9756] run popqa_2044426
+  -> success | pred='Milward Kennedy' | any_match=False
+[2038/9756] run popqa_204496
+  -> success | pred='Horror' | any_match=False
+[2039/9756] run popqa_2045728
+  -> success | pred='Mark Gordon' | any_match=True
+[2040/9756] run popqa_2045837
+  -> success | pred='Shoegaze' | any_match=False
+[2041/9756] run popqa_204621
+  -> success | pred='Nile Rodgers and Bernard Edwards' | any_match=False
+[2042/9756] run popqa_204625
+  -> success | pred='Siddharth Malhotra' | any_match=False
+[2043/9756] run popqa_2047924
+  -> success | pred='Reginald Barker' | any_match=False
+[2044/9756] run popqa_2049193
+  -> success | pred='Jincheng' | any_match=False
+[2045/9756] run popqa_2049384
+  -> success | pred='Martin Ritt' | any_match=False
+[2046/9756] run popqa_2049387
+  -> success | pred='Maurits Binger' | any_match=True
+[2047/9756] run popqa_2049458
+  -> success | pred='Catullus' | any_match=True
+[2048/9756] run popqa_2049787
+  -> success | pred='Henry III of England' | any_match=False
+[2049/9756] run popqa_205012
+  -> success | pred='Ken Hughes' | any_match=True
+[2050/9756] run popqa_2050209
+  -> success | pred='Chris Biondo' | any_match=False
+[2051/9756] run popqa_2051142
+  -> success | pred='oil field' | any_match=False
+[2052/9756] run popqa_2051232
+  -> success | pred='Mysore' | any_match=True
+[2053/9756] run popqa_2053574
+  -> success | pred='United States' | any_match=True
+[2054/9756] run popqa_205432
+  -> success | pred='Bryan Singer' | any_match=True
+[2055/9756] run popqa_205531
+  -> success | pred='Rock' | any_match=True
+[2056/9756] run popqa_2055647
+  -> success | pred='Duncan Jones' | any_match=True
+[2057/9756] run popqa_2055648
+  -> success | pred='Nathan Parker' | any_match=False
+[2058/9756] run popqa_205566
+  -> success | pred='Spike Lee' | any_match=True
+[2059/9756] run popqa_205570
+  -> success | pred='Spike Lee' | any_match=True
+[2060/9756] run popqa_2056642
+  -> success | pred='Randal Kleiser' | any_match=True
+[2061/9756] run popqa_2058319
+  -> success | pred='Pieter Verhoeff' | any_match=True
+[2062/9756] run popqa_2058348
+  -> success | pred='Jack Jungmeyer' | any_match=False
+[2063/9756] run popqa_2059485
+  -> success | pred='Slovenia' | any_match=False
+[2064/9756] run popqa_2059763
+  -> success | pred='Actress' | any_match=True
+[2065/9756] run popqa_205996
+  -> success | pred='Andrew Bergman' | any_match=True

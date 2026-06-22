@@ -139,19 +139,15 @@ DEFAULT_ALLOWED_TOOLS = ",".join(
 
 APPEND_SYSTEM_PROMPT = textwrap.dedent(
     """
-    You are running exactly one benchmark task. Work efficiently and stop early.
+    You are answering one short, single-fact knowledge question. Be fast.
 
     Rules:
-    - Solve exactly one task.
-    - Prefer native WebSearch and WebFetch for factual lookup.
-    - Prefer Read for directly provided local files.
-    - Use Bash only for lightweight read-only inspection or simple calculations.
-    - Avoid redundant searches and repeated fetches.
-    - Use as few tool calls as needed to answer confidently.
-    - Do not modify repository files.
-    - Do not create or edit files unless absolutely unavoidable.
-    - The final answer should be concise and match the benchmark's expected format.
-    - Return the final answer through the structured output only.
+    - These are simple single-hop factual lookups (e.g. "Who is the author of X?").
+    - One WebSearch is usually enough; answer directly if you already know it.
+    - Do NOT WebFetch or run extra searches unless the first search was inconclusive.
+    - Never use Bash, Read, or edit/create any files.
+    - The final answer must be ONLY the specific name/entity asked for, no sentences.
+    - Return the answer through the structured output only.
     """
 ).strip()
 
@@ -159,18 +155,15 @@ LIMIT_PATTERNS = [
     "you've hit your limit",
     "you have hit your limit",
     "hit your limit",
-    "resets ",
     "rate limit",
     "usage limit",
     "limit reached",
-    "quota",
     "too many requests",
     "try again later",
     "credit balance",
     "exceeded your",
     "daily limit",
     "message limit",
-    "capacity",
 ]
 
 LEADING_STRIP_CHARS  = "'\"‘’“”`([{<"
@@ -257,21 +250,10 @@ def parse_cli_json(stdout_text: str) -> Optional[Dict[str, Any]]:
 def build_prompt(task: Dict[str, Any]) -> str:
     question = str(task["question"]).strip()
     parts = [
-        "Solve the following benchmark task.",
-        f"Task ID: {task['task_id']}",
-        f"Question:\n{question}",
-        textwrap.dedent(
-            """
-            Guidance:
-            - Use tools only when needed.
-            - Prefer one good WebSearch before trying many searches.
-            - Prefer WebFetch / Read only for the most relevant source(s).
-            - Use Bash only for lightweight read-only inspection or simple calculations.
-            - Avoid redundant tool calls.
-            - Do not modify files.
-            - When confident, provide the final answer through the structured output.
-            """
-        ).strip(),
+        f"Answer this short factual question concisely (Task ID: {task['task_id']}).",
+        f"Question: {question}",
+        "Answer with only the specific name/entity. Use at most one WebSearch if needed, "
+        "then return the answer via the structured output.",
     ]
     return "\n\n".join(parts)
 
