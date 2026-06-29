@@ -1,0 +1,92 @@
+# EKB Edge Serving Research Review and Brainstorm
+
+## What your current report already establishes
+
+Your report already contains the core empirical insight that should shape the rest of the project: **execution reuse is real, but only in the high-similarity regime**. On GAIA paraphrases, semantically close queries execute much more similarly than arbitrary pairs, but that relationship does **not** persist as a smooth global law; on FRAMES, where near-duplicates are scarce, embedding similarity and execution structure are almost decoupled. At the same time, rigid L1 plan injection is roughly **accuracy-neutral** but gives a repeatable **latency win** of about 15% on GAIA, with the biggest gains concentrated in the expensive tail rather than uniformly across all queries. PopQA, by contrast, looks much more promising for L2/L3 reuse because the tasks are short, repetitive, and structurally uniform. In other words, the report already says the bottleneck is **not** “find a slightly better nearest neighbor,” but rather “decide, *before execution*, whether this query is reusable, cheap enough for a lighter path, or novel enough to send to a heavier path.” fileciteturn0file0
+
+That is an important turning point, because it means the strongest version of the paper is **not** “semantic similarity broadly predicts agent execution,” which your own FRAMES results would undermine. The stronger version is: **agent workloads have a cacheable head and a novel tail; the system should discriminate between them early, and edge nodes are a natural place to do that discrimination plus the cheap/reusable work.** That is much more consistent with your evidence and with the broader routing literature, which repeatedly finds that cheap routers can recover a large fraction of high-model quality at substantially lower cost when the system separates easy from hard inputs well. RouteLLM reports over 2× cost reduction without materially hurting quality in some settings, Hybrid LLM reports up to 40% fewer calls to the large model with no quality drop, and FrugalGPT shows that cascade-style selective use of stronger models can dramatically reduce cost. citeturn18view9turn18view7turn18view8
+
+## A stronger story for the project
+
+The most convincing story, in my view, is this:
+
+**CDNs cache content objects because web traffic is skewed. EKB/ADN should cache execution objects because agent traffic is skewed too.** The object being reused is no longer only a byte sequence; it can be a final answer, an intermediate tool result, a reusable execution skeleton, a verifier signal, or even a routing decision. Your report already demonstrates that such reusable structure exists for at least some workloads, especially paraphrase-like or template-like ones, and that rigid plan reuse mostly helps latency rather than accuracy. fileciteturn0file0
+
+That framing becomes stronger if you explicitly say that **edge nodes are not miniature copies of the full cloud agent**. They should instead be the place where the system performs the operations that benefit most from proximity, locality, and reuse: request termination, lightweight difficulty estimation, L3/L2 cache lookup, cheap-model handling of routine tasks, freshness checks, streaming the first tokens quickly, and escalating genuinely novel or expensive queries to a central model only when needed. Mobile-edge and collaborative edge–cloud surveys make essentially this point: edge placement is attractive not because the edge can always do everything, but because it offers a better latency/privacy/bandwidth point than pure cloud while the cloud remains necessary for the hardest computations. citeturn18view0turn18view1turn18view2turn0academia2
+
+That also makes the “streaming” part of the design more defensible. For interactive LLM systems, user experience depends heavily on **time to first token** and steady streaming responsiveness, not just final completion time. TokenFlow highlights TTFT and streaming smoothness as first-class objectives for real-time LLM serving, and edge-oriented LLM work repeatedly motivates proximity as a way to reduce latency and improve responsiveness. So the edge story is not simply “put some FLOPs closer to the user”; it is “put the **router, caches, and streaming control-plane** closer to the user, and only send the miss path to the core.” citeturn18view5turn18view0turn18view3
+
+I would therefore recommend a paper narrative like this:
+
+**From content delivery to execution delivery.** Classic CDNs exploit popularity in static objects. Agent systems face popularity in **intents, tool traces, retrieval results, and reasoning budgets**. EKB extends caching from “what bytes were returned” to “how this query was solved.” The edge is valuable because it sits at the right place to exploit repeated demand, regional locality, low-latency streaming, and privacy-aware local data access. Your own results then become the evidence that tells us **which layer belongs where**: L3/L2 are likely head-of-workload wins; L1 is a more selective latency optimization; and FRAMES-like novelty requires escalation. fileciteturn0file0 citeturn18view4turn18view6turn20view2
+
+## Which applications make edge execution knowledge genuinely worthwhile
+
+The right application story is **not** “all agents should run at the edge.” It is “agents with repeated workflow families, strong latency sensitivity, or local-data dependence should be partially served at the edge.” That distinction matters.
+
+| Application family | Why edge makes sense | Which EKB layer is most plausible |
+|---|---|---|
+| Public-web assistants for common intents such as shopping, travel, product lookup, local facts, and entity questions | These workloads have popularity skew and topic locality; search systems already benefit from topic-aware caching, and your PopQA results show near-template execution patterns | L2/L3 first, then selective L1 fileciteturn0file0 citeturn18view4 |
+| Enterprise copilots over tenant-local corpora or on-prem tools | Data locality, privacy, and governance make local processing attractive; Federated RAG work explicitly uses multi-tier caches to cut latency and redundant computation | L2 plus tenant-scoped L3; edge as privacy boundary citeturn18view6turn14academia0 |
+| Voice/mobile assistants and multimodal interfaces | User experience is highly sensitive to streaming delay and interruption; edge–cloud routing is a natural fit because many requests are simple but some need cloud reasoning | Difficulty routing plus fast local path for easy requests citeturn18view5turn13academia0turn13academia2 |
+| Repetitive service workflows such as customer support, order tracking, returns, account questions, or structured web tasks | These tasks repeat high-level plans even when entities differ; adaptive reasoning/routing papers show that selective effort allocation is effective in multi-step agents | L1 as soft guidance, but only after routing predicts payoff citeturn19view0turn20view2 |
+
+For your project specifically, I would emphasize three use cases.
+
+The first is **web-facing assistants with repeated intent classes**. This is the closest match to your current evidence. PopQA already looks like an almost ideal “execution-head” workload: short trajectories, narrow workflow forms, and what appears to be stable query templates. Search-engine literature has long exploited result caching precisely because query streams have temporal and topical locality, and your report’s PopQA findings suggest the same phenomenon may exist one level higher, at the level of agent execution rather than ranked results. fileciteturn0file0 citeturn18view4
+
+The second is **privacy-sensitive enterprise or institutional agents**. This is where the edge story gains an advantage that pure central routing does not have. In federated or on-prem settings, the edge can hold tenant-specific caches, retrieval indexes, tool outputs, and intermediate representations without forcing all data into a central cloud path. HyFedRAG is a useful precedent because it explicitly combines edge–cloud collaboration with a three-tier cache to improve latency and avoid redundant work on privacy-sensitive data. citeturn18view6turn17view7
+
+The third is **interactive assistants where time-to-first-token matters**. If the user is speaking, browsing, or waiting for step-by-step assistance, the value of a geographically close node increases. Even when the full answer still requires escalation, the edge can run the router, hit L3/L2 if safe, manage session state, and keep the stream responsive. This is where “edge server streaming” sounds most natural: the edge is the low-latency front-end for serving and session continuity, while the cloud is the deep-reasoning back-end for misses. citeturn18view5turn18view1turn13academia0
+
+So yes, I think **“Agentic Web” can be part of the story**, but I would make it more concrete: say **web-centric assistants over high-frequency intent families and local/tenant context**, rather than relying on the vague label alone. The strongest phrase may be something like: **“ADN is a CDN for repeated agent executions, especially for latency-sensitive, locality-rich workloads where many requests share tool traces, retrieved evidence, or partial reasoning artifacts.”** That is more solid and more falsifiable. fileciteturn0file0 citeturn18view4turn18view6turn18view0
+
+## What the next experiments should actually test
+
+My main recommendation is to shift from asking only **“Can we predict difficulty?”** to asking the more operational question:
+
+**“Can we predict the expected utility of each serving path before paying the full execution cost?”** fileciteturn0file0 citeturn17view0turn19view0turn20view3
+
+That distinction matters because your report already shows that within the cache-hit regime, **more similarity does not reliably mean more value**, while baseline cost is much more related to savings. So if you train only a generic “easy vs hard” classifier, you may miss the real deployment decision. The router should estimate something closer to:
+
+\[
+U(a \mid q)=\mathbb{E}[\text{quality}\mid q,a]-\lambda \,\mathbb{E}[\text{latency}\mid q,a]-\mu \,\mathbb{E}[\text{tokens}\mid q,a]
+\]
+
+where \(a\) is one of several actions: direct answer cache, tool-result cache, edge lightweight model, edge lightweight model with fallback, cloud full agent, or cloud full agent with soft plan hint. That formulation is closely aligned with the routing literature, which generally optimizes quality–cost tradeoffs rather than a raw notion of “difficulty.” citeturn17view0turn18view7turn20view3
+
+I would prioritize the next experiments in this order:
+
+| Priority | Question | Why it matters | Best initial benchmark |
+|---|---|---|---|
+| Cacheability prediction | Can a lightweight router predict whether a query has a safe L2/L3 opportunity or a useful L1 neighbor? | This is the missing link between your FRAMES negative result and your PopQA opportunity | PopQA first, then GAIA |
+| Cheap-path success prediction | Can we predict whether a small agent/LLM will meet a quality threshold on this query? | This is the direct prerequisite for edge offloading | PopQA and an easier GAIA slice |
+| Expected-savings prediction | Can we predict tokens/latency saved by each route, not just binary difficulty? | Your own data suggests payoff is concentrated in expensive tasks | GAIA first, then FRAMES |
+| Selective soft L1 | Does advisory/abstracted plan reuse help when gated by predicted payoff? | This turns L1 from a blunt tool into a targeted latency optimization | GAIA |
+| End-to-end routing policy | Does the full edge cascade beat “always cloud” and “always small model” on the cost/quality frontier? | This is the paper-level systems result | Mixed workload: PopQA + GAIA + FRAMES |
+
+The first concrete experiment I would run is **cacheability prediction**. Your current report already suggests that the important classification is not “is the query semantically similar to something?” but “is there a neighbor dense and trustworthy enough that reuse is worthwhile?” The features should therefore go beyond the raw query embedding. I would include: top-1/top-k similarity, similarity margin, neighborhood density above thresholds, variance of plan costs among the top-k neighbors, answer agreement among neighbors, tool-sequence agreement among neighbors, intent/domain tags, and maybe cheap lexical features such as WH-word class and named-entity count. A classifier trained on these features can predict labels such as `L3_safe`, `L2_viable`, `L1_viable`, or `cold_only`. This is directly motivated by your own observation that a hard threshold does more work than fine-grained similarity. fileciteturn0file0
+
+The second experiment is **small-model success prediction**, but with a crucial design requirement: you need **counterfactual labels**. Right now, most of your traces come from one strong agent configuration. To test edge offloading properly, you need at least a subset where the *same query* is run under multiple policies: small local model, strong cloud model, strong cloud model with soft L1, and perhaps a lightweight edge agent with limited tools. Only then can you train a router that predicts whether the cheap path meets a target quality floor. This is exactly the basic setup behind Hybrid LLM and RouteLLM: the router learns whether the weaker path will be good enough before calling the stronger one. citeturn18view7turn17view0
+
+The third experiment is **expected-savings prediction**, which I think is more interesting than raw difficulty prediction. Since your report shows that savings correlate more with baseline cost than with refined similarity inside the hit regime, train regressors for `tokens_saved`, `latency_saved`, and `probability_of_quality_preservation` under each action. Then route by expected utility rather than a single difficulty label. This is also where recent adaptive-agent work is relevant: Ares shows that step-level lightweight routing can sharply reduce reasoning tokens in agents, and DAAO argues for difficulty-aware operator/model selection instead of static workflows. fileciteturn0file0 citeturn19view0turn20view2
+
+The fourth experiment should be **soft, abstracted L1**, not more rigid L1. I would stop spending much effort on strict “follow this exact tool sequence” prompting, because your report already suggests the upside is mainly latency and the brittleness is real. Instead, compare three variants: a literal sequence hint, an abstracted substantive skeleton, and a cost-budget hint such as “queries like this usually take 2–3 web searches and 1 fetch.” The hypothesis should be that abstraction preserves the latency benefit while reducing the rigidity tax. That would also fit the edge story better, because edge nodes should distribute *portable execution knowledge*, not brittle traces. fileciteturn0file0
+
+The fifth experiment is the one that turns the project into a systems paper: **a layered edge-routing cascade**. I would define a routing policy with four states: `L3 direct`, `L2 reuse`, `small edge model`, `cloud full agent`, with optional soft L1 only on the cloud path when the predictor says it is worth it. Then compare against three baselines: always-cloud, always-small, and threshold-only similarity routing. The headline metrics should be answer quality, median and p95 latency, TTFT, token cost, miss-path frequency, and stale-answer rate. If you want one single decision criterion, use “minimize cost subject to ≤ ε quality drop relative to always-cloud.” That framing will be immediately recognizable to readers from RouteLLM, FrugalGPT, and budget-aware routing work such as SeqRoute. citeturn18view9turn18view8turn20view3turn20view4
+
+## The most important feedback on research direction
+
+My strongest opinion is that the project should pivot from a primarily **retrieval-of-plans** story to a **predict-then-route edge serving** story.
+
+That does **not** mean abandoning EKB. It means repositioning EKB as the memory substrate that enables several serving actions, not just plan reuse. Right now, the most compelling evidence in your report is actually broader than L1: you have shown where naive plan transfer works, where it fails, where realistic novelty appears, and where highly repetitive workloads exist. That naturally motivates an architecture in which the edge first asks “what class of request is this?” and only then decides whether to answer from L3, reuse an intermediate from L2, provide a soft plan prior from L1, or escalate cold to the core. fileciteturn0file0
+
+If you present the paper this way, the FRAMES negative result becomes a **strength**, not a weakness. It demonstrates that a generic “semantic similarity implies reusable execution” claim is too broad. That is exactly why a routing layer is needed. In fact, that tension is the intellectual center of the paper: **near-duplicate reuse is powerful but sparse; therefore the system must detect when reuse is worth trying.** That is a much sharper research contribution than yet another cache mechanism evaluated only on favorable workloads. fileciteturn0file0
+
+I would also be careful with the phrase “offload to the edge.” In your setting, the best architecture is probably **split serving**, not wholesale offloading. The edge should own the cheap, local, reusable, and latency-critical part of the request path; the cloud should own the long-tail reasoning and low-hit-rate cases. Edge-computing surveys and collaborative inference papers strongly support this hybrid rather than edge-only picture. citeturn18view0turn18view1turn18view3
+
+Finally, if you want a crisp thesis sentence, I would write it this way:
+
+**“Agent serving has a head–tail structure. The repetitive head should be served at the network edge using cached answers, cached tool results, lightweight models, and reusable execution priors; the novel tail should be escalated to the cloud. An Execution Knowledge Base is the memory that makes this routing possible.”** fileciteturn0file0 citeturn18view4turn18view6turn18view9
+
+That story is faithful to your results, technically plausible, and much easier to defend than a universal claim about execution similarity.

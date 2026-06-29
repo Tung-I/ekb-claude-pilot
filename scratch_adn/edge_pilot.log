@@ -1,0 +1,94 @@
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[1/40] skip popqa_2311628 (already exists)
+[2/40] skip popqa_1611611 (already exists)
+[3/40] run popqa_2647016
+  -> success | pred='Ralph Senensky' | any_match=True
+[4/40] run popqa_1180394
+  -> success | pred='Ben Lovett' | any_match=False
+[5/40] run popqa_1294427
+  -> success | pred='Comedy' | any_match=False
+[6/40] run popqa_3222218
+  -> success | pred='André Bijelic and Vincenzo Natali' | any_match=False
+[7/40] run popqa_1392964
+  -> success | pred='Progressive metal' | any_match=False
+[8/40] run popqa_248527
+  -> success | pred='Delhi' | any_match=True
+[9/40] run popqa_3520653
+  -> success | pred='Hardcore punk' | any_match=False
+[10/40] skip popqa_1231851 (already exists)
+[11/40] run popqa_308893
+  -> success | pred='Michael Spierig and Peter Spierig' | any_match=False
+[12/40] run popqa_1851890
+  -> success | pred='Marlen Haushofer' | any_match=False
+[13/40] run popqa_1152380
+  -> success | pred='Katell Quillévéré (2013 film)' | any_match=False
+[14/40] run popqa_1368387
+  -> success | pred='I. V. Sasi' | any_match=True
+[15/40] run popqa_2821163
+  -> success | pred='Jim Sheridan' | any_match=True
+[16/40] run popqa_2761782
+  -> success | pred='Andrew Bernstein' | any_match=False
+[17/40] run popqa_1288509
+  -> success | pred='Xavier Gens' | any_match=True
+[18/40] run popqa_1964398
+  -> success | pred='Jorunn Myklebust Syversen' | any_match=False
+[19/40] run popqa_138403
+  -> success | pred='Nicholas Sparks' | any_match=False
+[20/40] run popqa_3321084
+  -> success | pred='Scott Sigler' | any_match=True
+[21/40] run popqa_2782790
+  -> success | pred='United States' | any_match=True
+[22/40] run popqa_1237382
+  -> success | pred='Folk' | any_match=False
+[23/40] run popqa_3424338
+  -> success | pred='Justin Bieber, Christina Milian, Tricky Stewart, and The-Dream' | any_match=False
+[24/40] run popqa_1505834
+  -> success | pred='Sangrur' | any_match=True
+[25/40] run popqa_1891599
+  -> success | pred='Mexico' | any_match=False
+[26/40] run popqa_1252784
+  -> success | pred='Bob Clearmountain' | any_match=False
+[27/40] skip popqa_3493816 (already exists)
+[28/40] skip popqa_3531037 (already exists)
+[29/40] run popqa_2648600
+  -> success | pred='King Vidor' | any_match=True
+[30/40] run popqa_1182633
+  -> success | pred='Uwe Boll' | any_match=True
+[31/40] run popqa_1886272
+  -> success | pred='Orthodox Christianity' | any_match=False
+[32/40] run popqa_117543
+  -> success | pred='Ken Loach' | any_match=True
+[33/40] run popqa_3351073
+  -> success | pred='Brian May' | any_match=True
+[34/40] run popqa_1536808
+  -> success | pred='Spas-Demensky District' | any_match=True
+[35/40] run popqa_2148183
+  -> success | pred='Art Linson and Richard Hashimoto' | any_match=False
+[36/40] run popqa_2764747
+  -> success | pred='Catholic' | any_match=False
+[37/40] run popqa_1585747
+  -> success | pred='Themis' | any_match=True
+[38/40] run popqa_326507
+  -> success | pred='Irving Berlin' | any_match=True
+[39/40] run popqa_1492499
+  -> success | pred='Drama, Romance, War' | any_match=False
+[40/40] run popqa_3461881
+  -> success | pred='Marian Engel' | any_match=False
+{
+  "input": "/Users/tungi/ekb-claude-pilot/scratch_adn/edge_pilot_ids.jsonl",
+  "run_name": "popqa_edge_haiku_pilot",
+  "started_at": "2026-06-28T08:19:53.453206+00:00",
+  "ended_at": "2026-06-28T08:32:08.247439+00:00",
+  "selected_tasks": 40,
+  "completed": 35,
+  "failed": 0,
+  "skipped": 5,
+  "any_match_count": 15,
+  "any_match_rate": 0.42857142857142855,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 2864115,
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}

@@ -1,0 +1,191 @@
+[Sun Jun 28 05:33:04 PDT 2026] === Haiku edge: PopQA test (1202) ===
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[1/2431] run popqa_1000541
+  -> success | pred='Darrell Schweitzer' | any_match=True
+[2/2431] run popqa_1000754
+  -> success | pred='Jimmy Van Heusen' | any_match=True
+[3/2431] run popqa_10011
+  -> success | pred='Daniel Caesar' | any_match=False
+[4/2431] run popqa_1001163
+  -> success | pred='David Sedaris' | any_match=True
+[5/2431] run popqa_1001697
+  -> success | pred='Peter Chernin (primary producer); also produced by Jenno Topping, Paul Feig, and Jessie Henderson' | any_match=False
+[6/2431] run popqa_1001701
+  -> success | pred='Paul Feig' | any_match=True
+[7/2431] run popqa_1002384
+  -> success | pred='Loren Bouchard' | any_match=False
+[8/2431] run popqa_1002532
+  -> success | pred='Detroit' | any_match=True
+[9/2431] run popqa_1003808
+  -> success | pred='Hanover' | any_match=True
+[10/2431] run popqa_1011657
+  -> success | pred='Vancouver' | any_match=True
+[11/2431] run popqa_101224
+  -> success | pred='Henry David Thoreau' | any_match=True
+[12/2431] run popqa_1014859
+  -> success | pred='Oklahoma City' | any_match=True
+[13/2431] run popqa_1015466
+  -> success | pred='Nashua' | any_match=False
+[14/2431] run popqa_1020077
+  -> success | pred='Fernando Meirelles' | any_match=True
+[15/2431] run popqa_1022802
+  -> success | pred='Colorado' | any_match=True
+[16/2431] run popqa_1023183
+  -> success | pred='Arizona' | any_match=True
+[17/2431] run popqa_1025288
+  -> success | pred='Animation, Adventure, Comedy' | any_match=False
+[18/2431] run popqa_1026190
+  -> success | pred='Yalutorovsk' | any_match=True
+[19/2431] run popqa_1026220
+  -> success | pred='France' | any_match=True
+[20/2431] run popqa_1030164
+  -> success | pred='Turin' | any_match=True
+[21/2431] run popqa_1032898
+  -> success | pred='Pago Pago' | any_match=True
+[22/2431] run popqa_1033176
+  -> success | pred='Saipan' | any_match=True
+[23/2431] run popqa_103528
+  -> success | pred='Wales' | any_match=True
+[24/2431] run popqa_1037480
+  -> success | pred='John Sayles' | any_match=True
+[25/2431] run popqa_103951
+  -> success | pred='Cooktown' | any_match=True
+[26/2431] run popqa_1045293
+  -> success | pred='rock and folk' | any_match=False
+[27/2431] run popqa_1045939
+  -> success | pred='Tomás Hardiman' | any_match=False
+[28/2431] run popqa_1046068
+  -> success | pred='Thriller' | any_match=False
+[29/2431] run popqa_1046216
+  -> success | pred='Politician' | any_match=True
+[30/2431] run popqa_1048694
+  -> success | pred='Gérard Brach, John Brownjohn, and Roman Polanski (for Pirates, 1986)' | any_match=False
+[31/2431] run popqa_1049941
+  -> success | pred='Tucker Gates' | any_match=True
+[32/2431] run popqa_1050849
+  -> success | pred='Football (Association Football)' | any_match=False
+[33/2431] run popqa_1058324
+  -> success | pred='Uliastai' | any_match=True
+[34/2431] run popqa_1063348
+  -> success | pred='Peter Pohl' | any_match=True
+[35/2431] run popqa_1065097
+  -> success | pred='Mark Lothar' | any_match=True
+[36/2431] run popqa_1066844
+  -> success | pred='Jed Mercurio' | any_match=True
+[37/2431] run popqa_1069392
+  -> success | pred='Comedy, Drama' | any_match=False
+[38/2431] run popqa_1070535
+  -> success | pred='Football' | any_match=True
+[39/2431] run popqa_1074863
+  -> success | pred='Satire' | any_match=False
+[40/2431] run popqa_107903
+  -> success | pred='Rock' | any_match=True
+[41/2431] run popqa_1080826
+  -> success | pred='Monterrey' | any_match=True
+[42/2431] run popqa_1081675
+  -> success | pred='Peru' | any_match=True
+[43/2431] run popqa_108188
+  -> success | pred='Carlos Reygadas' | any_match=True
+[44/2431] run popqa_1085496
+  -> success | pred='writer and poet' | any_match=False
+[45/2431] run popqa_10956
+  -> success | pred='Praia' | any_match=True
+[46/2431] run popqa_1096857
+  -> success | pred='India' | any_match=True
+[47/2431] run popqa_1098931
+  -> success | pred='Iran' | any_match=True
+[48/2431] run popqa_110614
+  -> success | pred='Rocky Johnson' | any_match=True
+[49/2431] run popqa_1107870
+  -> success | pred='Red, Blue, and White' | any_match=False
+[50/2431] run popqa_1108980
+  -> success | pred='Tian Han' | any_match=True
+[51/2431] run popqa_1110027
+  -> success | pred='Terry Hughes' | any_match=True
+[52/2431] run popqa_1111661
+  -> success | pred='field hockey' | any_match=True
+[53/2431] run popqa_1115292
+  -> success | pred='Dan Vyleta' | any_match=False
+[54/2431] run popqa_1117503
+  -> success | pred='Garet Garrett' | any_match=True
+[55/2431] run popqa_1117608
+  -> success | pred='Terry McMillan' | any_match=True
+[56/2431] run popqa_1121371
+  -> success | pred='Luigi Cherubini' | any_match=True
+[57/2431] run popqa_1121401
+  -> success | pred='South Africa' | any_match=False
+[58/2431] run popqa_1121589
+  -> success | pred='Drum and Bass (subgenre: Liquid Drum and Bass)' | any_match=False
+[59/2431] run popqa_112596
+  -> success | pred='Timbaland' | any_match=False
+[60/2431] run popqa_1126309
+  -> success | pred='John Carpenter' | any_match=False
+[61/2431] run popqa_1127226
+  -> success | pred='C.L. Taylor' | any_match=False
+[62/2431] run popqa_1134039
+  -> success | pred='Kij Johnson' | any_match=True
+[63/2431] run popqa_1134377
+  -> success | pred='politician' | any_match=True
+[64/2431] run popqa_1135839
+  -> success | pred='Chris Rock' | any_match=True
+[65/2431] run popqa_1136148
+  -> success | pred='Jan Mark' | any_match=True
+[66/2431] run popqa_1136863
+  -> success | pred='Trevor Horn' | any_match=True
+[67/2431] run popqa_1138499
+  -> success | pred='Crime drama' | any_match=False
+[68/2431] run popqa_1139143
+  -> success | pred='Queens' | any_match=True
+[69/2431] run popqa_1140030
+  -> success | pred='Brett Haley' | any_match=False
+[70/2431] run popqa_1141657
+  -> success | pred='Alexander Buzo' | any_match=True
+[71/2431] run popqa_1143958
+  -> success | pred='There are multiple Juma Masjid Mosques in different countries. The most prominent are in Azerbaijan (Shamakhi and Baku), but there are also notable ones in South Africa (Durban), Uzbekistan (Khiva), and Georgia (Tbilisi). If referring to the historically significant one, it is in Azerbaijan.' | any_match=False
+[72/2431] run popqa_1146794
+  -> success | pred='Elie Wiesel' | any_match=False
+[73/2431] run popqa_1147746
+  -> success | pred='Diane Hoh' | any_match=False
+[74/2431] run popqa_1148015
+  -> success | pred='Kamala Das' | any_match=False
+[75/2431] run popqa_1150155
+  -> success | pred='Comedy' | any_match=False
+[76/2431] run popqa_1151837
+  -> success | pred='Uzhhorod' | any_match=True
+[77/2431] run popqa_1152380
+  -> success | pred='Katell Quillévéré' | any_match=False
+[78/2431] run popqa_1153122
+  -> success | pred='United Kingdom' | any_match=True
+[79/2431] run popqa_1153600
+  -> success | pred='Julie Lynn' | any_match=False
+[80/2431] run popqa_1153613
+  -> success | pred='Rodrigo García' | any_match=False
+[81/2431] run popqa_1156358
+  -> success | pred='Football' | any_match=True
+[82/2431] run popqa_1157413
+  -> success | pred='Lauren Shuler Donner' | any_match=False
+[83/2431] run popqa_115795
+  -> success | pred='Kangxi Emperor' | any_match=True
+[84/2431] run popqa_1159643
+  -> success | pred='Unable to determine - specific composition titled "Mexico" not found' | any_match=False
+[85/2431] run popqa_1161343
+  -> success | pred='Harlan Ellison' | any_match=True
+[86/2431] run popqa_1162864
+  -> success | pred='Emily Rodda' | any_match=True
+[87/2431] run popqa_1163254
+  -> success | pred='E.M. Forster' | any_match=False
+[88/2431] run popqa_1163745
+  -> success | pred="Thomas D'Alesandro Jr." | any_match=False
+[89/2431] run popqa_1164239
+  -> success | pred='Thomas Robert Chapman' | any_match=False
+[90/2431] run popqa_1164783
+  -> success | pred='Elmore Leonard' | any_match=True
+[91/2431] run popqa_1165760
+  -> success | pred='Comedy-Drama' | any_match=True
+[92/2431] run popqa_1165762
+  -> success | pred='Rex Ingram' | any_match=True
+[93/2431] run popqa_1170670
+  -> success | pred='Roman Catholicism' | any_match=False
+[94/2431] run popqa_1173109
+  -> success | pred='Vikram K. Kumar and Mukund Pandey' | any_match=False

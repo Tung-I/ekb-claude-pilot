@@ -1,5 +1,9 @@
 # EKB benchmark instructions
 
+> **ADN experiment sessions (HPC cluster):** if you were launched to run the ADN pilot experiments
+> (routing predictor / savings ceiling / discriminator), the rules below are NOT your task. Read
+> **`adn-cluster-guide.md`** (operations) and **`adn-pilot-roadmap.md`** (the plan) instead.
+
 You are running benchmark tasks for GAIA Level 1.
 Work efficiently.
 

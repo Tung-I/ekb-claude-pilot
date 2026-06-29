@@ -1,0 +1,157 @@
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+/Users/tungi/.local/lib/python3.9/site-packages/whisper/transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[setup] hook:     /Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py
+[setup] settings: /Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json
+[1/51] run 0383a3ee-47a7-41a4-b493-519bdefe0488
+  -> success | pred='Rockhopper Penguin'
+[2/51] run 11af4e1a-5f45-467d-9aeb-46f4bb0bf034
+  -> success | pred='6'
+[3/51] run 1f975693-876d-457b-a649-393859e79bf3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/data/gaia/raw/1f975693-876d-457b-a649-393859e79bf3.mp3 …
+[transcribe] failed: Failed to load audio: ffmpeg version 6.1.1 Copyright (c) 2000-2023 the FFmpeg developers
+  built with Apple clang version 14.0.0 (clang-1400.0.29.202)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/6.1.1_6 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopenvino --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x600000144000] Error opening input: No such file or directory
+Error opening input file /work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/data/gaia/raw/1f975693-876d-457b-a649-393859e79bf3.mp3.
+Error opening input files: No such file or directory
+
+  -> success | pred='132, 133, 134, 197, 245'
+[4/51] run 23dd907f-1261-4488-b21c-e9185af91d5e
+  -> success | pred='2'
+[5/51] run 27d5d136-8563-469e-92bf-fd103c28b57c
+  -> success | pred='(¬A → B) ↔ (A ∨ ¬B)'
+[6/51] run 305ac316-eef6-4446-960a-92d80d542f82
+  -> success | pred='Wojciech'
+[7/51] run 389793a7-ca17-4e82-81cb-2b3a2391b4b9
+  -> success | pred='3'
+[8/51] run 3cef3a44-215e-4aed-8e3b-b1e3f08063b7
+  -> success | pred='broccoli, celery, fresh basil, lettuce, sweet potatoes'
+[9/51] run 3f57289b-8c60-48be-bd80-01f8099ca449
+  -> success | pred='525'
+[10/51] run 42576abe-0deb-4869-8c63-225c2d75a95a
+  -> success | pred='Maktay Mato Apple'
+[11/51] run 46719c30-f4c3-4cad-be07-d5cb21eee6bb
+  -> success | pred="A new software agent 'learning' algorithm"
+[12/51] run 4b650a35-8529-4695-89ed-8dc7a500a498
+  -> success | pred='Pineapple'
+[13/51] run 4fc2f1ae-8625-45b5-ab34-ad4433bc21f8
+  -> success | pred='FunkMonk'
+[14/51] run 50ad0280-0819-4bd9-b275-5de32d3b5bcb
+  -> success | pred='The seagull glided peacefully to my chair.'
+[15/51] run 50ec8903-b81f-4257-9450-1085afd2c319
+  -> success | pred='Green, White'
+[16/51] run 5188369a-3bbe-43d8-8b94-11558f909a08
+  -> success | pred='Annie Levin'
+[17/51] run 5a0c1adf-205e-4841-a666-7c3ef95def9d
+  -> success | pred='Claus'
+[18/51] run 5cfb274c-0207-4aa7-9575-6ac0bd95d9b2
+  -> success | pred='No'
+[19/51] run 5d0080cb-90d7-4712-bc33-848150e917d3
+  -> success | pred='0.1777'
+[20/51] run 65afbc8a-89ca-4ad5-8d62-355bb401f61d
+  -> success | pred='FFFF00'
+[21/51] run 6f37996b-2ac7-44b0-8e68-6d28256631b4
+  -> success | pred='b,e'
+[22/51] run 72e110e7-464c-453c-a309-90a95aed6538
+  -> success | pred='Guatemala'
+[23/51] run 7673d772-ef80-4f0f-a602-1bf4485c9b43
+  -> failed
+[24/51] run 7bd855d8-463d-4ed5-93ca-5fe35145f733
+  -> success | pred='$89706.00'
+[25/51] run 7d4a7d1d-cac6-44a8-96e8-ea9584a70825
+  -> success | pred='22'
+[26/51] run 840bfca7-4f7b-481a-8794-c560c340185d
+  -> success | pred='80GSFC21M0002'
+[27/51] run 8e867cd7-cff9-4e6c-867a-ff5ddc2550be
+  -> success | pred='3'
+[28/51] run 9318445f-fe6a-4e1b-acbf-c68228c9906a
+  -> success | pred='3/4,1/4,2/4,1/2,5/35,7/21,30/5,6/8,4/60,30/90,9/18,8/72,64/48,206/340,1/15,1/3,1/9,4/3,103/170'
+[29/51] run 935e2cff-ae78-4218-b3f5-115589b19dae
+  -> success | pred='Research'
+[30/51] run 99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3
+[transcribe] loading whisper base model …
+[transcribe] transcribing /work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/data/gaia/raw/99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3.mp3 …
+[transcribe] failed: Failed to load audio: ffmpeg version 6.1.1 Copyright (c) 2000-2023 the FFmpeg developers
+  built with Apple clang version 14.0.0 (clang-1400.0.29.202)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/6.1.1_6 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls --enable-gpl --enable-libaom --enable-libaribb24 --enable-libbluray --enable-libdav1d --enable-libharfbuzz --enable-libjxl --enable-libmp3lame --enable-libopus --enable-librav1e --enable-librist --enable-librubberband --enable-libsnappy --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvmaf --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype --enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopenvino --enable-libspeex --enable-libsoxr --enable-libzmq --enable-libzimg --disable-libjack --disable-indev=jack --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[in#0 @ 0x60000376c000] Error opening input: No such file or directory
+Error opening input file /work/pi_rsitaram_umass_edu/tungi/ekb-claude-pilot/data/gaia/raw/99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3.mp3.
+Error opening input files: No such file or directory
+
+  -> success | pred='cornstarch, freshly squeezed lemon juice, granulated sugar, pure vanilla extract, ripe strawberries'
+[31/51] run 9d191bce-651d-4746-be2d-7ef8ecadb9c2
+  -> success | pred='Extremely'
+[32/51] run a0068077-79f4-461a-adfe-75c1a4148545
+  -> failed
+[33/51] run a0c07678-e491-4bbc-8f0b-07405144218f
+  -> success | pred='Yamasaki, Uehara'
+[34/51] run a1e91b78-d3d8-4675-bb8d-62741b4b68a6
+  -> success | pred='3'
+[35/51] run a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c
+  -> success | pred='4'
+[36/51] run b415aba4-4b68-4fc6-9b89-2c812e55a3e1
+  -> success | pred='silicon crystals'
+[37/51] run b816bfce-3d80-4913-a07d-69b752ce6377
+  -> success | pred='fluffy'
+[38/51] run bda648d7-d618-4883-88f4-3466eabd860e
+  -> success | pred='Saint Petersburg'
+[39/51] run c365c1c7-a3db-4d5e-a9a1-66f56eae7865
+  -> success | pred='Honolulu, Quincy'
+[40/51] run c714ab3a-da30-4603-bacd-d008800188b9
+  -> success | pred='100'
+[41/51] run cabe07ed-9eca-40ea-8ead-410ef5e83f91
+  -> success | pred='Louvrier'
+[42/51] run cca530fc-4052-43b2-b130-b30968d8aa44
+  -> success | pred='Nxb5'
+[43/51] run cf106601-ab4f-4af9-b045-5295fe67b37d
+  -> success | pred='CUB'
+[44/51] run cffe0e32-c9a6-4c52-9877-78ceb4aaa9fb
+  -> success | pred='Rebecca'
+[45/51] run d0633230-7067-47a9-9dbf-ee11e0a2cdd6
+  -> success | pred='BaseEnsemble'
+[46/51] run dc22a632-937f-4e6a-b72f-ba0ff3f5ff97
+  -> failed
+[47/51] run dc28cf18-6431-458b-83ef-64b3ce566c10
+  -> success | pred='2'
+[48/51] run e142056d-56ab-4352-b091-b56054bd1359
+  -> timeout
+[49/51] run e1fc63a2-da7a-432f-be78-7c4a95598703
+  -> success | pred='17000'
+[50/51] run ec09fa32-d03f-4bf8-84b0-1f16922c3ae4
+  -> success | pred='3'
+[51/51] run f918266a-b3e0-4914-865d-4faa564f1aef
+  -> success | pred='0'
+{
+  "input": "/Users/tungi/ekb-claude-pilot/data/gaia/gaia_lv1.jsonl",
+  "run_name": "gaia_lv1_edge_haiku",
+  "started_at": "2026-06-28T17:28:57.100304+00:00",
+  "ended_at": "2026-06-28T18:48:06.446504+00:00",
+  "selected_tasks": 51,
+  "completed": 47,
+  "failed": 4,
+  "skipped": 0,
+  "stopped_on_limit": false,
+  "stop_reason": null,
+  "cumulative_total_tokens_this_run": 13802871,
+  "settings_path": "/Users/tungi/ekb-claude-pilot/configs/claude/ekb_trace_settings.json",
+  "hook_path": "/Users/tungi/ekb-claude-pilot/tools/_claude_trace_hook.py"
+}
